@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvu5heb6bvywx"]
+[gd_scene load_steps=9 format=3 uid="uid://cvu5heb6bvywx"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_noarx"]
 [ext_resource type="PackedScene" uid="uid://besjiqf4252ev" path="res://scenes/1_stock_mit_collison.tscn" id="2_noarx"]
 [ext_resource type="PackedScene" uid="uid://drspg6clip85y" path="res://scenes/2_stock.tscn" id="3_jka67"]
 [ext_resource type="PackedScene" uid="uid://bcbkrte5400m6" path="res://scenes/exterior_wood_ecken.tscn" id="4_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://cgrg3yos8ayfj" path="res://scenes/stairs.tscn" id="5_jka67"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,7 +29,7 @@ transform = Transform3D(0.38606668, -0.73038054, 0.5634686, 0.61237234, 0.659739
 shadow_enabled = true
 
 [node name="ProtoController" parent="." instance=ExtResource("1_noarx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 6.799999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0.90000004, 6.799999)
 can_sprint = true
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
@@ -45,3 +46,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0000005, 3.1000001, 0)
 
 [node name="Exterior_Wood_Ecken" parent="CSGCombiner3D" instance=ExtResource("4_r3fl7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="stairs" parent="CSGCombiner3D" instance=ExtResource("5_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4703484e-08, -0.100000024, 0)

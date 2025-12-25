@@ -9,7 +9,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 
 [node name="Corner_Exterior_Wood3" parent="Exterior_Wood" instance=ExtResource("1_jmkn1")]
-transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
+transform = Transform3D(1, 0, 0, 0, 3.1707156, 0, 0, 0, 1, 0, 3.0000002, 0)
 
 [node name="Corner_ExteriorWide_Wood2" parent="Exterior_Wood" instance=ExtResource("2_jrxjg")]
 
@@ -17,7 +17,7 @@ transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -9.900001)
 
 [node name="Corner_Exterior_Wood3" parent="Exterior_Wood2" instance=ExtResource("1_jmkn1")]
-transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
+transform = Transform3D(1, 0, 0, 0, 3.0291457, 0, 0, 0, 1, 0, 3.0000002, 0)
 
 [node name="Corner_ExteriorWide_Wood2" parent="Exterior_Wood2" instance=ExtResource("2_jrxjg")]
 
@@ -25,7 +25,7 @@ transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.900001, 0, -9.900001)
 
 [node name="Corner_Exterior_Wood3" parent="Exterior_Wood3" instance=ExtResource("1_jmkn1")]
-transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
+transform = Transform3D(1, 0, 0, 0, 3.0410004, 0, 0, 0, 1, 0, 3.0000002, 0)
 
 [node name="Corner_ExteriorWide_Wood2" parent="Exterior_Wood3" instance=ExtResource("2_jrxjg")]
 
@@ -33,6 +33,6 @@ transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.900001, 0, -0.1)
 
 [node name="Corner_Exterior_Wood3" parent="Exterior_Wood4" instance=ExtResource("1_jmkn1")]
-transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 3.0000002, 0)
+transform = Transform3D(1, 0, 0, 0, 3.0000744, 0, 0, 0, 1, 0, 3.0000002, 0)
 
 [node name="Corner_ExteriorWide_Wood2" parent="Exterior_Wood4" instance=ExtResource("2_jrxjg")]
