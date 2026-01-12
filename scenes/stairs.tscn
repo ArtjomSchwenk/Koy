@@ -1,0 +1,138 @@
+[gd_scene load_steps=16 format=3 uid="uid://cgrg3yos8ayfj"]
+
+[ext_resource type="PackedScene" uid="uid://ifsiepqafrfp" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Platform.gltf" id="1_frutw"]
+[ext_resource type="PackedScene" uid="uid://tns1rgtey5u7" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_NoFirstStep.gltf" id="2_h1w5o"]
+[ext_resource type="PackedScene" uid="uid://b4lhacuamk0gh" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Sides.gltf" id="3_l6j1o"]
+[ext_resource type="PackedScene" uid="uid://c6v50haab2yl4" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Platform45Clean.gltf" id="4_4b0vu"]
+[ext_resource type="PackedScene" uid="uid://dt7b608pqnd4f" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Straight_Center.gltf" id="5_natfc"]
+[ext_resource type="PackedScene" uid="uid://coov5xogdtw3u" path="res://Assets/Medieval buildings/glTF/Wall_BottomCover.gltf" id="6_h1w5o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l6j1o"]
+size = Vector3(2.0019531, 1, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4b0vu"]
+size = Vector3(2, 1.2, 3.6000001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h1w5o"]
+size = Vector3(6.1565185, 3.2857423, 2.0187988)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_natfc"]
+points = PackedVector3Array(1.0000002, 1, 0.9998877, -1.0000002, 1, 0.9998877, 0.81245124, 0.97562647, 1.0006714, 1.0000002, -3.8206755e-16, 0.9998877, 0.9998045, 1, -1.0000837, -1.0000002, -3.8206755e-16, 0.9998877, -0.81264704, 0.97562647, 1.0006714, -1.0000002, 1, -1.0000837, 0.81245124, 0.781715, 1.0006714, 0.9998045, -3.8206755e-16, -1.0000837, 0.81245124, 0.97562647, -1.0006714, -0.81264704, 0.781715, 1.0006714, -1.0000002, -3.8206755e-16, -1.0000837, -0.81264704, 0.97562647, -1.0006714, 0.81245124, 0.781715, -1.0006714, -0.81264704, 0.781715, -1.0006714)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jdty6"]
+points = PackedVector3Array(1.0000002, -5.094234e-16, 1, -1.0000002, -5.094234e-16, 1, 0.9998045, -5.094234e-16, -1.0001829, 0.9998045, 0.9999999, -1.0001829, -1.0000002, 0.9999999, -1.0001829, -1.0000002, -5.094234e-16, -1.0001829, 0.899961, 0.6114917, -1.077246, 0.899961, 0.8183241, -1.074196, -0.90015686, 0.8183241, -1.074196, -0.90015686, 0.6114917, -1.077246)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f62n8"]
+points = PackedVector3Array(0.99980426, 0.97562647, 1.0006713, 0.99980426, 0.781715, 1.0006713, 0.99980426, 0.98864526, 0.9791292, -0.8001177, 1, 0.99988794, -0.90015686, 0.97562647, 1.0006713, -0.90015686, 0.781715, 1.0006713, -0.8001177, -3.8206755e-16, 0.99988794, 0.99980426, -3.8206755e-16, -0.8000505, 0.99980426, 1, -0.8000505, -1.0000002, 1, 0.99988794, -1.0000002, -3.8206755e-16, 0.99988794, 0.99980426, -3.8206755e-16, -1.0000001, 0.99980426, 1, -1.0000001, -1.0000002, 1, -0.98805404, -1.0000002, -3.8206755e-16, -0.98805404, -0.9880582, -3.8206755e-16, -1.0000001, -0.9880582, 1, -1.0000001)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l6j1o"]
+points = PackedVector3Array(1.0000002, -5.094234e-16, 1, -1.0000002, -5.094234e-16, 1, 0.9998045, -5.094234e-16, -1.0001829, 0.9998045, 0.9999999, -1.0001829, -1.0000002, 0.9999999, -1.0001829, -1.0000002, -5.094234e-16, -1.0001829, 0.899961, 0.6114917, -1.077246, 0.899961, 0.8183241, -1.074196, -0.90015686, 0.8183241, -1.074196, -0.90015686, 0.6114917, -1.077246)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4b0vu"]
+points = PackedVector3Array(1.0000002, -5.094234e-16, 1, -1.0000002, -5.094234e-16, 1, 0.9998045, -5.094234e-16, -1.0001829, 0.9998045, 0.9999999, -1.0001829, -1.0000002, 0.9999999, -1.0001829, -1.0000002, -5.094234e-16, -1.0001829, 0.899961, 0.6114917, -1.077246, 0.899961, 0.8183241, -1.074196, -0.90015686, 0.8183241, -1.074196, -0.90015686, 0.6114917, -1.077246)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h1w5o"]
+points = PackedVector3Array(1.0000002, -5.094234e-16, 1, -1.0000002, -5.094234e-16, 1, 0.9998045, -5.094234e-16, -1.0001829, 0.9998045, 0.9999999, -1.0001829, -1.0000002, 0.9999999, -1.0001829, -1.0000002, -5.094234e-16, -1.0001829, 0.899961, 0.6114917, -1.077246, 0.899961, 0.8183241, -1.074196, -0.90015686, 0.8183241, -1.074196, -0.90015686, 0.6114917, -1.077246)
+
+[node name="stairs" type="Node3D"]
+
+[node name="Treppe2" type="StaticBody3D" parent="."]
+
+[node name="Treppen_Boden_Collisson2" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8009763, 0.7, -3.2)
+shape = SubResource("BoxShape3D_l6j1o")
+
+[node name="Treppen_Boden_Collisson" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -0.19999993, -2.3000002)
+shape = SubResource("BoxShape3D_4b0vu")
+
+[node name="Wand_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.730725, 0.54287124, -5.009399)
+shape = SubResource("BoxShape3D_h1w5o")
+
+[node name="Treppe_Platform_2_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.1000001, 2.2, -5)
+shape = SubResource("ConvexPolygonShape3D_natfc")
+
+[node name="Treppe_4_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.1, 2.2, -5)
+shape = SubResource("ConvexPolygonShape3D_jdty6")
+
+[node name="Treppe_Platform_1_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, 1.2, -5.0000005)
+shape = SubResource("ConvexPolygonShape3D_f62n8")
+
+[node name="Treppe_3_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, 1.2, -3.0000002)
+shape = SubResource("ConvexPolygonShape3D_l6j1o")
+
+[node name="Treppe_2_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, 0.40000004, -1.4000002)
+shape = SubResource("ConvexPolygonShape3D_4b0vu")
+
+[node name="Treppe_1_Collission" type="CollisionShape3D" parent="Treppe2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, -0.4, 0.19999975)
+shape = SubResource("ConvexPolygonShape3D_h1w5o")
+
+[node name="Stairs_Exterior_NoFirstStep3" parent="Treppe2" instance=ExtResource("2_h1w5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, 1.2, -3.0000002)
+
+[node name="Stairs_Exterior_NoFirstStep4" parent="Treppe2" instance=ExtResource("2_h1w5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, 0.40000004, -1.4000002)
+
+[node name="Stairs_Exterior_NoFirstStep5" parent="Treppe2" instance=ExtResource("2_h1w5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, -0.4, 0.19999975)
+
+[node name="Stairs_Exterior_Sides11" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(0.97326064, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0.20000005, -3)
+
+[node name="Stairs_Exterior_Sides12" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(0.98658186, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -0.79999995, -3)
+
+[node name="Stairs_Exterior_Sides14" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -0.59999996, -1.8000001)
+
+[node name="Stairs_Exterior_Platform2" parent="Treppe2" instance=ExtResource("1_frutw")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.1000001, 2.2, -5)
+
+[node name="Stairs_Exterior_NoFirstStep2" parent="Treppe2" instance=ExtResource("2_h1w5o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.1, 2.2, -5)
+
+[node name="Stairs_Exterior_Sides2" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.8508565, 1.2, -5)
+
+[node name="Stairs_Exterior_Sides4" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.840966, 0.20000005, -5)
+
+[node name="Stairs_Exterior_Sides6" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7950454, 0.20000005, -5)
+
+[node name="Stairs_Exterior_Sides8" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.8071487, -0.79999995, -5)
+
+[node name="Stairs_Exterior_Sides7" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.8, 0.20000005, -5)
+
+[node name="Stairs_Exterior_Sides10" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0.20000005, -5)
+
+[node name="Stairs_Exterior_Sides13" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -0.79999995, -5)
+
+[node name="Stairs_Exterior_Sides9" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.8, -0.79999995, -5)
+
+[node name="Stairs_Exterior_Sides5" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.8280976, -0.79999995, -5)
+
+[node name="Stairs_Exterior_Sides3" parent="Treppe2" instance=ExtResource("3_l6j1o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.835704, 1.2, -5)
+
+[node name="Stairs_Exterior_Platform45Clean2" parent="Treppe2" instance=ExtResource("4_4b0vu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7999997, 1.2, -5.0000005)
+
+[node name="Stairs_Exterior_Straight_Center2" parent="Treppe2" instance=ExtResource("5_natfc")]
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, -3.918701, 2.2036886, -4.9910326)
+
+[node name="Wall_BottomCover3" parent="Treppe2" instance=ExtResource("6_h1w5o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.1, 3.1000001, -5)
