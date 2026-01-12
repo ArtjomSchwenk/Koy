@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://db20u4owrygdr"]
+
+[ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="1_i26rj"]
+[ext_resource type="Texture2D" uid="uid://bpjsut1yoraqk" path="res://Assets/Sprites/Menu Sprites/Play_Sprite_2.png" id="2_eiy7p"]
+
+[sub_resource type="Theme" id="Theme_kjwba"]
+default_font = ExtResource("1_i26rj")
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_kjwba")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_constants/shadow_offset_y = 18
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 72
+text = "Village The Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+action_mode = 0
+icon = ExtResource("2_eiy7p")
+flat = true
+icon_alignment = 1
