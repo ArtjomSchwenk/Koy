@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvu5heb6bvywx"]
 
-[ext_resource type="PackedScene" uid="uid://besjiqf4252ev" path="res://scenes/1_stock_mit_collison.tscn" id="2_noarx"]
-[ext_resource type="PackedScene" uid="uid://drspg6clip85y" path="res://scenes/2_stock.tscn" id="3_jka67"]
-[ext_resource type="PackedScene" uid="uid://bcbkrte5400m6" path="res://scenes/exterior_wood_ecken.tscn" id="4_r3fl7"]
-[ext_resource type="PackedScene" uid="uid://cgrg3yos8ayfj" path="res://scenes/stairs.tscn" id="5_jka67"]
+[ext_resource type="PackedScene" uid="uid://besjiqf4252ev" path="res://Assets/Scenes/World/Building_1/1_stock_mit_collison.tscn" id="2_noarx"]
+[ext_resource type="PackedScene" uid="uid://drspg6clip85y" path="res://Assets/Scenes/World/Building_1/2_stock.tscn" id="3_jka67"]
+[ext_resource type="PackedScene" uid="uid://bcbkrte5400m6" path="res://Assets/Scenes/World/Building_1/exterior_wood_ecken.tscn" id="4_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://cgrg3yos8ayfj" path="res://Assets/Scenes/World/Building_1/stairs.tscn" id="5_jka67"]
 
 [node name="gebeude_1" type="Node3D"]
 
