@@ -37,7 +37,7 @@ group_uniforms filtering;
 uniform float condition_dither_range : hint_range(0.0, 1.0, 0.01) = 0.15;
 uniform float surface_slope_min : hint_range(0.0, 1.0, 0.01) = 0.87;
 uniform float distance_fade_ammount : hint_range(0.0, 1.0, 0.01) = 0.5;
-uniform int grass_id = 0;
+uniform int grass_id = 3;
 uniform float grass_min_blend = 0.6;
 
 
