@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtrmf48jrse3q"]
+
+[ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="1_56dfw"]
+
+[node name="gebaude_2" type="Node3D"]
+
+[node name="Wand" type="Node3D" parent="."]
+transform = Transform3D(-0.9999907, 0, 0.004310984, 0, 1, 0, -0.004310984, 0, -0.9999907, 6.041837, -0.1, -9.929144)
+
+[node name="Wall_Plaster_Straight_Base2" parent="Wand" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base3" parent="Wand" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base4" parent="Wand" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base5" parent="Wand" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base6" parent="Wand" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="Wand4" type="Node3D" parent="."]
+transform = Transform3D(0.9999907, 0, -0.0043108966, 0, 1, 0, 0.0043108966, 0, 0.9999907, 0.041837215, -0.1, -0.029143527)
+
+[node name="Wall_Plaster_Straight_Base2" parent="Wand4" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base3" parent="Wand4" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base4" parent="Wand4" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base5" parent="Wand4" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base6" parent="Wand4" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="Wand2" type="Node3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9000001, -0.1, -8)
+
+[node name="Wall_Plaster_Straight_Base2" parent="Wand2" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base3" parent="Wand2" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base4" parent="Wand2" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base5" parent="Wand2" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base6" parent="Wand2" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="Wand3" type="Node3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.000001, -0.1, -1.9)
+
+[node name="Wall_Plaster_Straight_Base2" parent="Wand3" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base3" parent="Wand3" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base4" parent="Wand3" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base5" parent="Wand3" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base6" parent="Wand3" instance=ExtResource("1_56dfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)

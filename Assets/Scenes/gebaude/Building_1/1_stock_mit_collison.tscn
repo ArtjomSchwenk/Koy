@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://besjiqf4252ev"]
+[gd_scene load_steps=5 format=3 uid="uid://besjiqf4252ev"]
 
 [ext_resource type="PackedScene" uid="uid://m7wknn55jhig" path="res://Assets/Medieval buildings/glTF/Wall_UnevenBrick_Straight.gltf" id="1_lis1c"]
+[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Medieval buildings/glTF/Floor_RedBrick.gltf" id="2_a1dra"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ern3b"]
 size = Vector3(10, 10.2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1dra"]
+size = Vector3(1.13, 1, 2.45)
 
 [node name="1_stock_mit_Collison" type="StaticBody3D"]
 
@@ -89,3 +93,96 @@ shape = SubResource("BoxShape3D_ern3b")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75, 3.95, -5.000001)
 shape = SubResource("BoxShape3D_ern3b")
+
+[node name="Floor_1" type="Node3D" parent="."]
+
+[node name="Floor_RedBrick2" parent="Floor_1" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 3.2, -1.1)
+
+[node name="Floor_RedBrick3" parent="Floor_1" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick4" parent="Floor_1" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick5" parent="Floor_1" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick6" parent="Floor_1" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999995, 3.2, -1.1)
+
+[node name="Floor_2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Floor_RedBrick2" parent="Floor_2" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 3.2, -1.1)
+
+[node name="Floor_RedBrick3" parent="Floor_2" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick4" parent="Floor_2" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick5" parent="Floor_2" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick6" parent="Floor_2" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999995, 3.2, -1.1)
+
+[node name="Floor_3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Floor_RedBrick2" parent="Floor_3" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 3.2, -1.1)
+
+[node name="Floor_RedBrick3" parent="Floor_3" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick4" parent="Floor_3" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick5" parent="Floor_3" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick6" parent="Floor_3" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999995, 3.2, -1.1)
+
+[node name="Floor_4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Floor_RedBrick2" parent="Floor_4" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 3.2, -1.1)
+
+[node name="Floor_RedBrick3" parent="Floor_4" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick4" parent="Floor_4" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick5" parent="Floor_4" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick6" parent="Floor_4" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999995, 3.2, -1.1)
+
+[node name="Floor_5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Floor_RedBrick2" parent="Floor_5" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999999, 3.2, -1.1)
+
+[node name="Floor_RedBrick3" parent="Floor_5" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick4" parent="Floor_5" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick5" parent="Floor_5" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, 3.2, -1.1)
+
+[node name="Floor_RedBrick6" parent="Floor_5" instance=ExtResource("2_a1dra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999995, 3.2, -1.1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(8.8, 0, 0, 0, 0.099999964, 0, 0, 0, 4.1000004, 4.043999, 3.2, -5.0425)
+shape = SubResource("BoxShape3D_a1dra")
