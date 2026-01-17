@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://benyigoxlnchr"
+path="res://.godot/imported/cucumber03.obj-fc81dd9e5eb6e7a61b1c08180e927652.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cucumber03.obj-fc81dd9e5eb6e7a61b1c08180e927652.mesh"]
+
+source_file="res://Assets/Furniture/fruitsandvegetables/obj/cucumber03.obj"
+dest_files=["res://.godot/imported/cucumber03.obj-fc81dd9e5eb6e7a61b1c08180e927652.mesh", "res://.godot/imported/cucumber03.obj-fc81dd9e5eb6e7a61b1c08180e927652.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

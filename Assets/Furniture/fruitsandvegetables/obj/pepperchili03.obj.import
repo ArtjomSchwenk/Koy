@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfcq5q6sfiwfq"
+path="res://.godot/imported/pepperchili03.obj-12b3629ff105eb47e6ba4f9f3ac7e966.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pepperchili03.obj-12b3629ff105eb47e6ba4f9f3ac7e966.mesh"]
+
+source_file="res://Assets/Furniture/fruitsandvegetables/obj/pepperchili03.obj"
+dest_files=["res://.godot/imported/pepperchili03.obj-12b3629ff105eb47e6ba4f9f3ac7e966.mesh", "res://.godot/imported/pepperchili03.obj-12b3629ff105eb47e6ba4f9f3ac7e966.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
