@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b63pfjdfbc2cr"]
+[gd_scene load_steps=25 format=3 uid="uid://b63pfjdfbc2cr"]
 
 [ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="1_pirwl"]
 [ext_resource type="PackedScene" uid="uid://ccvn62wrpttv2" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Door_Round.gltf" id="2_o4hda"]
@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://cbxdgyolx7uof" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Straight.gltf" id="11_3k8b5"]
 [ext_resource type="PackedScene" uid="uid://dufgy8j6qw0n4" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/banner_triple_red.fbx" id="12_i26js"]
 [ext_resource type="PackedScene" uid="uid://dhs0xn00xewme" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/banner_thin_red.fbx" id="13_ox8bs"]
+[ext_resource type="PackedScene" uid="uid://cvn00xl5w5dad" path="res://Assets/Scenes/Furniture mit Collisions/Barrel_Colliusion_Rigit.tscn" id="14_12rnt"]
+[ext_resource type="PackedScene" uid="uid://dvuso77tbtrux" path="res://Assets/Scenes/Furniture mit Collisions/bed_mit_collision.tscn" id="15_awsfa"]
+[ext_resource type="PackedScene" uid="uid://br7e8vux3d47k" path="res://Assets/Scenes/Furniture mit Collisions/table_2_Ohne etwas.tscn" id="16_unr8a"]
+[ext_resource type="PackedScene" uid="uid://dwwuq1pln0hm6" path="res://Assets/Scenes/Furniture mit Collisions/table_barrel_collision.tscn" id="17_ay4av"]
+[ext_resource type="PackedScene" uid="uid://druywn8deer6s" path="res://Assets/Scenes/Furniture mit Collisions/table_Collision.tscn" id="18_3yyvx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_08ink"]
 size = Vector3(0.81, 10.809999, 1)
@@ -336,3 +341,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 3.4, 0)
 
 [node name="banner_thin_red2" parent="." instance=ExtResource("13_ox8bs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3999996, 3.4, 0)
+
+[node name="RigidBody3D" parent="." instance=ExtResource("14_12rnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7000003, -0.1, -1.6)
+
+[node name="bed mit collision" parent="." instance=ExtResource("15_awsfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5000005, -0.1, -14.400001)
+
+[node name="Table_Leer" parent="." instance=ExtResource("16_unr8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1, -0.1, -14.3)
+
+[node name="Table_Leer2" parent="." instance=ExtResource("16_unr8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1, -0.1, -10.3)
+
+[node name="Table_Leer3" parent="." instance=ExtResource("16_unr8a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1, -0.1, -6.3)
+
+[node name="Table_Leer4" parent="." instance=ExtResource("16_unr8a")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.2, -0.1, -14.2)
+
+[node name="Table_Leer5" parent="." instance=ExtResource("16_unr8a")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.1999998, -0.1, -14.2)
+
+[node name="Table_Barrel_Collision" parent="." instance=ExtResource("17_ay4av")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8, -0.1, -4.2000003)
+
+[node name="Table" parent="." instance=ExtResource("18_3yyvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, -0.1, -8.3)

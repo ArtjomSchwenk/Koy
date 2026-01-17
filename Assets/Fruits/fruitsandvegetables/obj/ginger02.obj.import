@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://miq2cp7r1g5q"
+path="res://.godot/imported/ginger02.obj-e7d8143b22fc8d87fd4306cfc5482b38.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ginger02.obj-e7d8143b22fc8d87fd4306cfc5482b38.mesh"]
+
+source_file="res://Assets/Fruits/fruitsandvegetables/obj/ginger02.obj"
+dest_files=["res://.godot/imported/ginger02.obj-e7d8143b22fc8d87fd4306cfc5482b38.mesh", "res://.godot/imported/ginger02.obj-e7d8143b22fc8d87fd4306cfc5482b38.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
