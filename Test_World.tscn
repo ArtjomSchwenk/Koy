@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="2_jka67"]
 [ext_resource type="PackedScene" uid="uid://bjgcoitwihxeq" path="res://Assets/Medieval buildings/glTF/DoorFrame_Round_WoodDark.gltf" id="3_i5arm"]
 [ext_resource type="PackedScene" uid="uid://ccvn62wrpttv2" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Door_Round.gltf" id="4_wc5p8"]
-[ext_resource type="PackedScene" uid="uid://b3h1di4tn44d5" path="res://Assets/Player/Player.tscn" id="5_jka67"]
+[ext_resource type="PackedScene" uid="uid://b3u36ff3xf5pi" path="res://Assets/Scenes/Player/Player.tscn" id="5_yrlsu"]
 
 [node name="Test_World" type="Node3D"]
 
@@ -95,9 +95,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 use_collision = true
 size = Vector3(80, 1, 80)
 
-[node name="Player" parent="." instance=ExtResource("5_jka67")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.5999997, -8)
-speed = 7.5
-runModif = 15.0
-jump_Velocity = 5.0
-camera_sensitivity = 0.4
+[node name="Player" parent="." instance=ExtResource("5_yrlsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.4, -10.400001)
+runModif = 3.0
+dash_Force = 15.0

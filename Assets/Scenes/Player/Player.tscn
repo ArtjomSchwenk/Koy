@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3u36ff3xf5pi"]
+[gd_scene load_steps=7 format=3 uid="uid://b3u36ff3xf5pi"]
 
-[ext_resource type="Script" uid="uid://cvjrh212ygid0" path="res://addons/proto_controller/proto_controller.gd" id="1_3e2tf"]
+[ext_resource type="Script" uid="uid://c8j710jwxvccd" path="res://Assets/Scripts/Player_Controller.gd" id="1_0ljjw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ljjw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -17,7 +19,12 @@ height = 1.8
 length = 0.5
 
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_3e2tf")
+script = ExtResource("1_0ljjw")
+camera_sensitivity = 0.4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 1.4000001, 0.8)
+mesh = SubResource("BoxMesh_0ljjw")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
@@ -38,3 +45,14 @@ transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.984
 [node name="stairsCollider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.7000001, -0.5)
 shape = SubResource("SeparationRayShape3D_g2uji")
+
+[node name="dashCooldown" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="dashDuration" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="dashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="dashDuration" to="." method="_on_dash_duration_timeout"]
