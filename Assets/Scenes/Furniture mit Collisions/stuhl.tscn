@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://i2gl1ficb0rx"]
+
+[ext_resource type="PackedScene" uid="uid://bujxxqfrpro3n" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/stool.gltf" id="1_0jeub"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3d33a"]
+size = Vector3(0.72998047, 0.5048828, 0.69555664)
+
+[node name="stuhl" type="StaticBody3D"]
+
+[node name="stool2" parent="." instance=ExtResource("1_0jeub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085146785, 0, 0.09971595)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08734405, 0.2475586, 0.10008216)
+shape = SubResource("BoxShape3D_3d33a")

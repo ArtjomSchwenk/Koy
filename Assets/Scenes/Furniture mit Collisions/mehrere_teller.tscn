@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs7rlhenn6tn0"]
+
+[ext_resource type="PackedScene" uid="uid://c5tftct63l3y1" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/plate_stack.gltf" id="1_ap17p"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lw23o"]
+height = 0.35357666
+
+[node name="mehrere Teller" type="StaticBody3D"]
+
+[node name="plate_stack2" parent="." instance=ExtResource("1_ap17p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0.2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.28555298, 0.2)
+shape = SubResource("CylinderShape3D_lw23o")
