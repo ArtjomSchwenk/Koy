@@ -24,8 +24,10 @@ handle_input_locally = false
 size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.9063077, 0.036833607, -0.42101005, 0, 0.9961947, 0.08715573, 0.42261824, -0.07898992, 0.902859, -5.4, 8.4, 11)
+[node name="CameraGimbal" type="Node3D" parent="Background/SubViewportContainer/SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport/CameraGimbal"]
+transform = Transform3D(0.90630776, 0.036833607, -0.4210101, 0, 0.9961947, 0.087155744, 0.42261827, -0.07898992, 0.90285903, -5.4, 8.4, 11)
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
