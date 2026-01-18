@@ -3,13 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://d1eurbrs1q0lc" path="res://Assets/More Nature/glTF/MapleTree_1.gltf" id="1_7tl3v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tq75s"]
-size = Vector3(0.40270996, 5.4541016, 0.37786865)
+size = Vector3(0.7011566, 7.2457275, 0.5380554)
 
 [node name="maple_Tree" type="StaticBody3D"]
 
 [node name="MapleTree_12" parent="." instance=ExtResource("1_7tl3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025831223, 0, 0.03811717)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.025831223, 0, 0.03811717)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04310417, 2.2270508, 0.07074046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13635826, 3.1228638, -0.009352922)
 shape = SubResource("BoxShape3D_tq75s")
