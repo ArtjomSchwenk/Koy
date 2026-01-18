@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://db20u4owrygdr"]
+[gd_scene load_steps=5 format=3 uid="uid://db20u4owrygdr"]
 
 [ext_resource type="PackedScene" uid="uid://couh7uhw2rnod" path="res://Assets/Scenes/Menus/MainMenuBG_Test.tscn" id="1_4fq6n"]
+[ext_resource type="Script" uid="uid://cq6aydqejncbx" path="res://Assets/Scripts/Menu/MainMenu.gd" id="1_dvmkf"]
 [ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="1_q0tfb"]
 [ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="2_dvmkf"]
 
 [node name="MainMenuGUI" type="CanvasLayer"]
+script = ExtResource("1_dvmkf")
 
 [node name="Background" type="Node3D" parent="."]
 
