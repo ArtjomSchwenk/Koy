@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://p8pcnhlpfx7x"]
+
+[ext_resource type="PackedScene" uid="uid://b4ugayakbgr42" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/plate_small.gltf" id="1_j5o0o"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ceryf"]
+radius = 0.23242188
+
+[node name="teller" type="StaticBody3D"]
+
+[node name="plate_small2" parent="." instance=ExtResource("1_j5o0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10874677, 0, 0.19120526)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.020591915, 0, 0, 0, 1, 0.11812824, 0.10630643, 0.18279648)
+shape = SubResource("CylinderShape3D_ceryf")

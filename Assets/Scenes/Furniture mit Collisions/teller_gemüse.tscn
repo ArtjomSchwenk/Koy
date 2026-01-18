@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://2xk4uwcacb5b"]
+
+[ext_resource type="PackedScene" uid="uid://d1mkl4sp82fo1" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/plate_food_B.gltf" id="1_dlr4m"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ifxy7"]
+height = 0.07824707
+
+[node name="teller_Gemüse" type="StaticBody3D"]
+
+[node name="plate_food_B2" parent="." instance=ExtResource("1_dlr4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31881106, 0, 0.98386097)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31881106, 0.117614746, 0.98386097)
+shape = SubResource("CylinderShape3D_ifxy7")

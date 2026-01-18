@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://oq5rehdv2jew"]
+
+[ext_resource type="PackedScene" uid="uid://besjiqf4252ev" path="res://Assets/Scenes/gebaude/Building_1/1_stock_mit_collison.tscn" id="1_oq5w7"]
+[ext_resource type="PackedScene" uid="uid://drspg6clip85y" path="res://Assets/Scenes/gebaude/Building_1/2_stock.tscn" id="2_lwgsu"]
+[ext_resource type="PackedScene" uid="uid://bcbkrte5400m6" path="res://Assets/Scenes/gebaude/Building_1/exterior_wood_ecken.tscn" id="3_r2beu"]
+[ext_resource type="PackedScene" uid="uid://cgrg3yos8ayfj" path="res://Assets/Scenes/gebaude/Building_1/stairs.tscn" id="4_w8tbm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xiqg"]
+
+[node name="gebaude_1_Test" type="StaticBody3D"]
+
+[node name="1_stock_mit_Collison" parent="." instance=ExtResource("1_oq5w7")]
+
+[node name="2_Stock" parent="." instance=ExtResource("2_lwgsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0000005, 3.1000001, 0)
+
+[node name="Exterior_Wood_Ecken" parent="." instance=ExtResource("3_r2beu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="stairs" parent="." instance=ExtResource("4_w8tbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4703484e-08, -0.100000024, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 8.888362, 3.512755, 2.549457, -5.8425207)
+shape = SubResource("BoxShape3D_7xiqg")

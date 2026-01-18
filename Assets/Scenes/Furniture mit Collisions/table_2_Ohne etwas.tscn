@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://br7e8vux3d47k"]
+
+[ext_resource type="PackedScene" uid="uid://bxs2dleugnk4y" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/table_long.fbx" id="1_h8bgj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_102be"]
+size = Vector3(0.83444214, 1.2207336, 1.0604248)
+
+[node name="Table_Leer" type="StaticBody3D"]
+
+[node name="table_long" parent="." instance=ExtResource("1_h8bgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54146874, 0, 0.40625715)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.3254483, 0, 0, 0, 1, 0, 0, 0, 3.7486715, -0.552069, 0.42781067, 0.40703657)
+shape = SubResource("BoxShape3D_102be")

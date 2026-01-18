@@ -1,0 +1,253 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvkybpkua8wcy"]
+
+[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Medieval buildings/glTF/Floor_RedBrick.gltf" id="1_wqko5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_slllq"]
+size = Vector3(1.86, 1, 1.3)
+
+[node name="Floor_Brick" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(9.632001, 0, 0, 0, 0.019999992, 0, 0, 0, 12.155001, 7.019041, 0, -7.9663506)
+shape = SubResource("BoxShape3D_slllq")
+
+[node name="Floor_gesamt_Brick" type="Node3D" parent="."]
+
+[node name="Floor_1" type="Node3D" parent="Floor_gesamt_Brick"]
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_1" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_2" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_2" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_3" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_3" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_4" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_4" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_5" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_5" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_6" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_6" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_7" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.900001)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_7" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Floor_8" type="Node3D" parent="Floor_gesamt_Brick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.900001)
+
+[node name="Floor_RedBrick2" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Floor_RedBrick10" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Floor_RedBrick3" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Floor_RedBrick4" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Floor_RedBrick5" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Floor_RedBrick6" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Floor_RedBrick7" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Floor_RedBrick8" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Floor_RedBrick9" parent="Floor_gesamt_Brick/Floor_8" instance=ExtResource("1_wqko5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)

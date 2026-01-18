@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cp2ij3ojimoab"
+path="res://.godot/imported/aubergine01.obj-162a176b0e283bb8fef2bd70322492cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/aubergine01.obj-162a176b0e283bb8fef2bd70322492cb.mesh"]
+
+source_file="res://Assets/Fruits/fruitsandvegetables/obj/aubergine01.obj"
+dest_files=["res://.godot/imported/aubergine01.obj-162a176b0e283bb8fef2bd70322492cb.mesh", "res://.godot/imported/aubergine01.obj-162a176b0e283bb8fef2bd70322492cb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
