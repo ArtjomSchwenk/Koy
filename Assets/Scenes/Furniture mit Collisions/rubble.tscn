@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpalfjhf72lph"]
+
+[ext_resource type="PackedScene" uid="uid://cbxm2h3cnjjk7" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/rubble_half.gltf" id="1_eymk7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2x1a"]
+size = Vector3(3.3165283, 3.9871826, 1.6005859)
+
+[node name="rubble" type="StaticBody3D"]
+
+[node name="rubble_half2" parent="." instance=ExtResource("1_eymk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16802979, 1.4935913, -0.100292966)
+shape = SubResource("BoxShape3D_e2x1a")

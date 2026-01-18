@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://deyccgu8yms1i"]
+
+[ext_resource type="PackedScene" uid="uid://b8otpsvxessg5" path="res://Assets/Nature/glTF/RockPath_Square_Wide.gltf" id="1_7e6g6"]
+
+[node name="weg" type="Node3D"]
+
+[node name="RockPath_Square_Wide2" parent="." instance=ExtResource("1_7e6g6")]
+transform = Transform3D(2.2841053, 0, 0, 0, 1, 0, 0, 0, 2.2198262, -9.669672, 0, 13.928516)

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcnmhlters634"
+path="res://.godot/imported/walnut02.obj-0efc466484337aa843dc3b2d4516e5bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/walnut02.obj-0efc466484337aa843dc3b2d4516e5bb.mesh"]
+
+source_file="res://Assets/Fruits/fruitsandvegetables/obj/walnut02.obj"
+dest_files=["res://.godot/imported/walnut02.obj-0efc466484337aa843dc3b2d4516e5bb.mesh", "res://.godot/imported/walnut02.obj-0efc466484337aa843dc3b2d4516e5bb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
