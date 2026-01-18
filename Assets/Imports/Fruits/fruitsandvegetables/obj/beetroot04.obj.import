@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlg7ywgk1fa0v"
+path="res://.godot/imported/beetroot04.obj-8ab5d8c0d607a9d5b19e258a8f048004.mesh"
+
+[deps]
+
+files=["res://.godot/imported/beetroot04.obj-8ab5d8c0d607a9d5b19e258a8f048004.mesh"]
+
+source_file="res://Assets/Imports/Fruits/fruitsandvegetables/obj/beetroot04.obj"
+dest_files=["res://.godot/imported/beetroot04.obj-8ab5d8c0d607a9d5b19e258a8f048004.mesh", "res://.godot/imported/beetroot04.obj-8ab5d8c0d607a9d5b19e258a8f048004.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

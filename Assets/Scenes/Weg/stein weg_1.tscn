@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://deyccgu8yms1i"]
 
-[ext_resource type="PackedScene" uid="uid://b8otpsvxessg5" path="res://Assets/Nature/glTF/RockPath_Square_Wide.gltf" id="1_7e6g6"]
+[ext_resource type="PackedScene" uid="uid://b8otpsvxessg5" path="res://Assets/Imports/Nature/glTF/RockPath_Square_Wide.gltf" id="1_7e6g6"]
 
 [node name="weg" type="Node3D"]
 

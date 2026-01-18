@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2xk4uwcacb5b"]
 
-[ext_resource type="PackedScene" uid="uid://d1mkl4sp82fo1" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/plate_food_B.gltf" id="1_dlr4m"]
+[ext_resource type="PackedScene" uid="uid://d1mkl4sp82fo1" path="res://Assets/Imports/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/plate_food_B.gltf" id="1_dlr4m"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ifxy7"]
 height = 0.07824707

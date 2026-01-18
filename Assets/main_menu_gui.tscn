@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://5nrssr41aw8u"]
+[gd_scene load_steps=5 format=3 uid="uid://5nrssr41aw8u"]
 
 [ext_resource type="PackedScene" uid="uid://couh7uhw2rnod" path="res://Assets/Scenes/Menus/MainMenuBG_Test.tscn" id="1_8ovj0"]
+[ext_resource type="Script" uid="uid://cq6aydqejncbx" path="res://Assets/Scripts/Menu/MainMenu.gd" id="1_xt8cc"]
 [ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="2_xt8cc"]
 [ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="3_yhq4r"]
 
 [node name="MainMenuGUI" type="CanvasLayer"]
+script = ExtResource("1_xt8cc")
+radius = 0.8
+speed = 0.002
 
 [node name="Background" type="Node3D" parent="."]
 
@@ -25,9 +29,10 @@ size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
 [node name="CameraGimbal" type="Node3D" parent="Background/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.98480767, 0.015134435, -0.17298739, 0, 0.9961947, 0.08715573, 0.17364816, -0.08583164, 0.9810602, -4.6, 11, 13.2)
 
 [node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport/CameraGimbal"]
-transform = Transform3D(0.90630776, 0.036833607, -0.4210101, 0, 0.9961947, 0.087155744, 0.42261827, -0.07898992, 0.90285903, -5.4, 8.4, 11)
+transform = Transform3D(0.90630776, 0.036833607, -0.4210101, 0, 0.9961947, 0.087155744, 0.42261827, -0.07898992, 0.90285903, 0, 0, 0)
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3

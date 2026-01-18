@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://besjiqf4252ev"]
 
-[ext_resource type="PackedScene" uid="uid://m7wknn55jhig" path="res://Assets/Medieval buildings/glTF/Wall_UnevenBrick_Straight.gltf" id="1_lis1c"]
-[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Medieval buildings/glTF/Floor_RedBrick.gltf" id="2_a1dra"]
+[ext_resource type="PackedScene" uid="uid://m7wknn55jhig" path="res://Assets/Imports/Medieval buildings/glTF/Wall_UnevenBrick_Straight.gltf" id="1_lis1c"]
+[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Imports/Medieval buildings/glTF/Floor_RedBrick.gltf" id="2_a1dra"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ern3b"]
 size = Vector3(10, 10.2, 0.5)

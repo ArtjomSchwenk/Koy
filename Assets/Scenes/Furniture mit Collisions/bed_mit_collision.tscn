@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvuso77tbtrux"]
 
-[ext_resource type="PackedScene" uid="uid://dqixfcsr6nb07" path="res://Assets/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/bed_decorated.gltf" id="1_7duak"]
+[ext_resource type="PackedScene" uid="uid://dqixfcsr6nb07" path="res://Assets/Imports/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/bed_decorated.gltf" id="1_7duak"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yx1oa"]
 size = Vector3(1.5, 1, 3)
