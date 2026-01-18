@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://db20u4owrygdr"]
+
+[ext_resource type="PackedScene" uid="uid://couh7uhw2rnod" path="res://Assets/Scenes/Menus/MainMenuBG_Test.tscn" id="1_4fq6n"]
+[ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="1_q0tfb"]
+[ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="2_dvmkf"]
+
+[node name="MainMenuGUI" type="CanvasLayer"]
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="gebeude_1" parent="Background" instance=ExtResource("1_4fq6n")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.9063077, 0.036833607, -0.42101005, 0, 0.9961947, 0.08715573, 0.42261824, -0.07898992, 0.902859, -5.4, 8.4, 11)
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_dvmkf")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+offset_right = 676.0
+offset_bottom = 288.0
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_dvmkf")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.19607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 18
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_q0tfb")
+theme_override_font_sizes/font_size = 80
+text = "Village The Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 36
+
+[node name="PlayButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_dvmkf")
+action_mode = 0
+text = "Play"
+icon_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Quit
+"

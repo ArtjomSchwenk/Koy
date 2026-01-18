@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://couh7uhw2rnod"]
+
+[ext_resource type="PackedScene" uid="uid://besjiqf4252ev" path="res://Assets/Scenes/World/Building_1/1_stock_mit_collison.tscn" id="1_um2hd"]
+[ext_resource type="PackedScene" uid="uid://drspg6clip85y" path="res://Assets/Scenes/World/Building_1/2_stock.tscn" id="2_ibtg0"]
+[ext_resource type="PackedScene" uid="uid://bcbkrte5400m6" path="res://Assets/Scenes/World/Building_1/exterior_wood_ecken.tscn" id="3_pm7c5"]
+[ext_resource type="PackedScene" uid="uid://cgrg3yos8ayfj" path="res://Assets/Scenes/World/Building_1/stairs.tscn" id="4_ad520"]
+
+[node name="gebeude_1" type="Node3D"]
+
+[node name="1_stock_mit_Collison" parent="." instance=ExtResource("1_um2hd")]
+
+[node name="2_Stock" parent="." instance=ExtResource("2_ibtg0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0000005, 3.1000001, 0)
+
+[node name="Exterior_Wood_Ecken" parent="." instance=ExtResource("3_pm7c5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+
+[node name="stairs" parent="." instance=ExtResource("4_ad520")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4703484e-08, -0.100000024, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(34.600002, 1, 41.4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8254299, -0.43301266, -0.36216766, -0.49240384, 0.8660254, 0.08682411, 0.2760505, 0.24999997, -0.92806053, 0, 0, 0)
+light_color = Color(0.9194365, 0.8313655, 0.68686086, 1)
