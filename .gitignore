@@ -4,3 +4,4 @@
 /addons/*
 project.godot
 *.godot
+*.dll
