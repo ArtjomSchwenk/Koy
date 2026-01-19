@@ -6,9 +6,9 @@ extends CanvasLayer
 @onready var quit_Button: Button= $Menu/MarginContainer/VBoxContainer/QuitButton;
 @onready var cameraGimbal_Node: Node3D = $Background/SubViewportContainer/SubViewport/CameraGimbal;
 
-@export var radius: float = 5.0;
+@export var radius: float = 1.0;
 @export var angle: float = 0.0;
-@export var speed: float = 5.0;
+@export var speed: float = 0.0001;
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	cameraCircularMotion()
@@ -19,8 +19,7 @@ func cameraCircularMotion():
 	var y_pos: float = sin(angle);
 	cameraGimbal_Node.position.y += speed * (radius * y_pos);
 	cameraGimbal_Node.position.x += speed * (radius * x_pos);
+	
 	angle += 1 * speed;
 	
-func _unhandled_input(event: InputEvent) -> void:
-	pass;
 	
