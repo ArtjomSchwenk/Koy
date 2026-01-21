@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvu5heb6bvywx"]
 
-[ext_resource type="PackedScene" uid="uid://c50l12pm10xm4" path="res://Assets/Medieval buildings/glTF/Corner_Interior_Big.gltf" id="1_r3fl7"]
-[ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="2_jka67"]
-[ext_resource type="PackedScene" uid="uid://bjgcoitwihxeq" path="res://Assets/Medieval buildings/glTF/DoorFrame_Round_WoodDark.gltf" id="3_i5arm"]
-[ext_resource type="PackedScene" uid="uid://ccvn62wrpttv2" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Door_Round.gltf" id="4_wc5p8"]
+[ext_resource type="PackedScene" uid="uid://c50l12pm10xm4" path="res://Assets/Imports/Medieval buildings/glTF/Corner_Interior_Big.gltf" id="1_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Imports/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="2_jka67"]
+[ext_resource type="PackedScene" uid="uid://bjgcoitwihxeq" path="res://Assets/Imports/Medieval buildings/glTF/DoorFrame_Round_WoodDark.gltf" id="3_i5arm"]
+[ext_resource type="PackedScene" uid="uid://ccvn62wrpttv2" path="res://Assets/Imports/Medieval buildings/glTF/Wall_Plaster_Door_Round.gltf" id="4_wc5p8"]
 [ext_resource type="PackedScene" uid="uid://b3u36ff3xf5pi" path="res://Assets/Scenes/Player/Player.tscn" id="5_yrlsu"]
-[ext_resource type="PackedScene" uid="uid://hdsxxwi28ao7" path="res://addons/proto_controller/Player_New.tscn" id="5_yrlsu"]
+[ext_resource type="PackedScene" path="res://addons/proto_controller/Player_New.tscn" id="5_yrlsu"]
 
 [node name="Test_World" type="Node3D"]
 

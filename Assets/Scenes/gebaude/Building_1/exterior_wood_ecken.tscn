@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bcbkrte5400m6"]
 
-[ext_resource type="PackedScene" uid="uid://djwjb8m3u21gh" path="res://Assets/Medieval buildings/glTF/Corner_Exterior_Wood.gltf" id="1_jmkn1"]
-[ext_resource type="PackedScene" uid="uid://wmh8fj2ru4v7" path="res://Assets/Medieval buildings/glTF/Corner_ExteriorWide_Wood.gltf" id="2_jrxjg"]
+[ext_resource type="PackedScene" uid="uid://djwjb8m3u21gh" path="res://Assets/Imports/Medieval buildings/glTF/Corner_Exterior_Wood.gltf" id="1_jmkn1"]
+[ext_resource type="PackedScene" uid="uid://wmh8fj2ru4v7" path="res://Assets/Imports/Medieval buildings/glTF/Corner_ExteriorWide_Wood.gltf" id="2_jrxjg"]
 
 [node name="Exterior_Wood_Ecken" type="Node3D"]
 

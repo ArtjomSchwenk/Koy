@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dtrmf48jrse3q"]
 
-[ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="1_56dfw"]
-[ext_resource type="PackedScene" uid="uid://ccvn62wrpttv2" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Door_Round.gltf" id="2_kqfej"]
-[ext_resource type="PackedScene" uid="uid://cqrrik1lpk5oi" path="res://Assets/Medieval buildings/glTF/DoorFrame_Round_Brick.gltf" id="3_vtiso"]
-[ext_resource type="PackedScene" uid="uid://bil65tnwoqgta" path="res://Assets/Medieval buildings/glTF/Wall_Plaster_Window_Thin_Round.gltf" id="5_jhb6x"]
-[ext_resource type="PackedScene" uid="uid://cvbxyxsj8a8tr" path="res://Assets/Medieval buildings/glTF/Window_Thin_Round1.gltf" id="6_fvm87"]
+[ext_resource type="PackedScene" uid="uid://mskq02syqbts" path="res://Assets/Imports/Medieval buildings/glTF/Wall_Plaster_Straight_Base.gltf" id="1_56dfw"]
+[ext_resource type="PackedScene" uid="uid://ccvn62wrpttv2" path="res://Assets/Imports/Medieval buildings/glTF/Wall_Plaster_Door_Round.gltf" id="2_kqfej"]
+[ext_resource type="PackedScene" uid="uid://cqrrik1lpk5oi" path="res://Assets/Imports/Medieval buildings/glTF/DoorFrame_Round_Brick.gltf" id="3_vtiso"]
+[ext_resource type="PackedScene" uid="uid://bil65tnwoqgta" path="res://Assets/Imports/Medieval buildings/glTF/Wall_Plaster_Window_Thin_Round.gltf" id="5_jhb6x"]
+[ext_resource type="PackedScene" uid="uid://cvbxyxsj8a8tr" path="res://Assets/Imports/Medieval buildings/glTF/Window_Thin_Round1.gltf" id="6_fvm87"]
 [ext_resource type="PackedScene" uid="uid://bvkybpkua8wcy" path="res://Assets/Scenes/Assets with Collision/floor_brick_1.tscn" id="7_fvm87"]
 [ext_resource type="PackedScene" uid="uid://do12r7nukf8fj" path="res://Assets/Scenes/Assets with Collision/door_round.tscn" id="7_r10i6"]
 

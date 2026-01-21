@@ -11,13 +11,24 @@ config_version=5
 [application]
 
 config/name="Village-The-Game"
-run/main_scene="uid://b5cegrprrijg3"
+run/main_scene="uid://b83wsl001wor6"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://Assets/Scripts/Game/game_manager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1280
+window/size/mode=3
+window/size/borderless=true
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/proton_scatter/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [filesystem]
 
@@ -76,3 +87,7 @@ dash={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=2

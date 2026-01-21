@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvkybpkua8wcy"]
 
-[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Medieval buildings/glTF/Floor_RedBrick.gltf" id="1_wqko5"]
+[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Imports/Medieval buildings/glTF/Floor_RedBrick.gltf" id="1_wqko5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_slllq"]
 size = Vector3(1.86, 1, 1.3)

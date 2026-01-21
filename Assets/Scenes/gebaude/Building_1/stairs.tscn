@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://cgrg3yos8ayfj"]
 
-[ext_resource type="PackedScene" uid="uid://ifsiepqafrfp" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Platform.gltf" id="1_frutw"]
-[ext_resource type="PackedScene" uid="uid://tns1rgtey5u7" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_NoFirstStep.gltf" id="2_h1w5o"]
-[ext_resource type="PackedScene" uid="uid://b4lhacuamk0gh" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Sides.gltf" id="3_l6j1o"]
-[ext_resource type="PackedScene" uid="uid://c6v50haab2yl4" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Platform45Clean.gltf" id="4_4b0vu"]
-[ext_resource type="PackedScene" uid="uid://dt7b608pqnd4f" path="res://Assets/Medieval buildings/glTF/Stairs_Exterior_Straight_Center.gltf" id="5_natfc"]
-[ext_resource type="PackedScene" uid="uid://coov5xogdtw3u" path="res://Assets/Medieval buildings/glTF/Wall_BottomCover.gltf" id="6_h1w5o"]
+[ext_resource type="PackedScene" uid="uid://ifsiepqafrfp" path="res://Assets/Imports/Medieval buildings/glTF/Stairs_Exterior_Platform.gltf" id="1_frutw"]
+[ext_resource type="PackedScene" uid="uid://tns1rgtey5u7" path="res://Assets/Imports/Medieval buildings/glTF/Stairs_Exterior_NoFirstStep.gltf" id="2_h1w5o"]
+[ext_resource type="PackedScene" uid="uid://b4lhacuamk0gh" path="res://Assets/Imports/Medieval buildings/glTF/Stairs_Exterior_Sides.gltf" id="3_l6j1o"]
+[ext_resource type="PackedScene" uid="uid://c6v50haab2yl4" path="res://Assets/Imports/Medieval buildings/glTF/Stairs_Exterior_Platform45Clean.gltf" id="4_4b0vu"]
+[ext_resource type="PackedScene" uid="uid://dt7b608pqnd4f" path="res://Assets/Imports/Medieval buildings/glTF/Stairs_Exterior_Straight_Center.gltf" id="5_natfc"]
+[ext_resource type="PackedScene" uid="uid://coov5xogdtw3u" path="res://Assets/Imports/Medieval buildings/glTF/Wall_BottomCover.gltf" id="6_h1w5o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l6j1o"]
 size = Vector3(2.0019531, 1, 1.6)
