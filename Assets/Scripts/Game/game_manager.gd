@@ -1,20 +1,25 @@
 extends Node
 
-const MAIN_MENU = preload("res://Assets/Scenes/Menus/MainMenu.tscn")
+const MAIN_MENU: PackedScene = preload("res://Assets/Scenes/Menus/MainMenu.tscn")
 ##const LOAD_SCREEN = preload("res://Assets/Scenes/Game/loading_screen.tscn") ## Not Needed for current scope of game :D
 const GAME_WORLD: NodePath = "res://Assets/Scenes/terrain_data/welt.tscn"
+const PAUSE_SCREEN: PackedScene = null
 
+var pauseScreen: Node = null;
 var isLoading: bool;
 var load_progress = [];
 var load_Status: int = 0;
 signal loadingDone
 
 enum GAME_STATE {QUIT = -1, START = 0, PLAY = 1, LOAD = 2, PAUSE = 3, CONTINUE = 4};
-static var currentGameState;
-static var current_Scene = null
+static var currentGameState: int;
+static var current_Scene: Node = null;
 
 func _ready() -> void:
+	pauseScreen = PAUSE_SCREEN.instantiate();
+	pauseScreen.hide();
 	setGameState(GAME_STATE.START);
+	
 	ResourceLoader.load_threaded_request(GAME_WORLD)
 	
 
@@ -42,22 +47,22 @@ func setGameState(State: GAME_STATE):
 	
 func changeGameState():
 	match currentGameState: 
-		0: ##Main Menu at start of Game
+		##Main Menu at start of Game
+		GAME_STATE.START: 
 			loadMainMenu();
-		1: 
+		GAME_STATE.PLAY: 
 			loadGame();
-		2: 
+		GAME_STATE.LOAD: 
 			loadLoadingScreen();
-		3: 
+		GAME_STATE.PAUSE: 
 			pauseGame();
-		4: 
+		GAME_STATE.CONTINUE: 
 			unpauseGame();
-		5: 
+		GAME_STATE.QUIT: 
 			quitGame();
 			
 func loadMainMenu():
 	isLoading = true;
-
 	goto_scene(MAIN_MENU)
 	
 func loadGame():
@@ -71,10 +76,10 @@ func loadLoadingScreen(): ##Not necessary for current scope tbh
 	pass
 
 func pauseGame():
-	pass
+	current_Scene.get_tree().paused = true;
 
 func unpauseGame():
-	pass
+	current_Scene.get_tree().paused = false;
 
 func quitGame():
 	get_tree().quit();

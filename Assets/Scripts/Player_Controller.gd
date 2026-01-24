@@ -87,6 +87,7 @@ func _unhandled_input(event):
 func pauseGame():
 	isPaused = true;
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+	GameManager.setGameState(GameManager.GAME_STATE.PAUSE);
 	
 func unpauseGame():
 	isPaused = false;
