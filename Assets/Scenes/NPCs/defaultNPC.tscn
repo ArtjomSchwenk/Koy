@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsrj0qjofm1et"]
+
+[ext_resource type="Script" uid="uid://c7byrw72bil0r" path="res://Assets/Scenes/NPCs/default_npc.gd" id="1_pv171"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ovayk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovayk"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pv171"]
+material = SubResource("StandardMaterial3D_ovayk")
+
+[node name="defaultNPC" type="RigidBody3D"]
+script = ExtResource("1_pv171")
+prompt_message = "Talk"
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ovayk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hitbox"]
+mesh = SubResource("CapsuleMesh_pv171")
+
+[connection signal="triggerInteraction" from="." to="." method="_on_trigger_interaction"]

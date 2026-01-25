@@ -18,17 +18,29 @@ var direction: Vector3 = Vector3(0,0,0);
 @export_group("Settings")
 @export var camera_sensitivity: float = 0.8;
 @export var isPaused: bool = false;
-@export var dash_Keybind: int = KEY_E;
+@export var interact_Keybind: int = KEY_E;
+@export var dash_Keybind: int = KEY_CTRL;
 @export var run_Keybind: int = KEY_SHIFT;
 @export var jump_Keybind: int = KEY_SPACE;
 
 @onready var cameraGimbal: Node3D = get_node("cameraGimbal");
+@onready var raycast: RayCast3D = get_node("cameraGimbal/head/RayCast3D");
+var canInteract: bool = false;
 
 
-##func _ready() -> void:
-
+func _ready() -> void:
+	raycast.add_exception(self);
 	
 func _physics_process(delta: float) -> void:
+	
+	if raycast.is_colliding():
+		var target = raycast.get_collider();
+		if target is Interactable:
+			canInteract = true;
+			gm.interactionAvailable.emit(target.prompt_message);
+	else:
+		canInteract = false;
+		gm.interactionAvailable.emit("");
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta;
@@ -51,7 +63,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = 0.0;
 		
 	move_and_slide()
-
+	
 func _unhandled_input(event):
 	##Mouse movement
 	if event is InputEventMouseMotion:
@@ -60,6 +72,7 @@ func _unhandled_input(event):
 		##vertical; turns only camera
 		cameraGimbal.rotation_degrees.x -= event.screen_relative.y * camera_sensitivity;
 		cameraGimbal.rotation_degrees.x = clamp(cameraGimbal.rotation_degrees.x, -30.0, 20.0);
+		
 	
 	if event is InputEventKey:
 		## Running
@@ -80,6 +93,10 @@ func _unhandled_input(event):
 		## Escape Button	
 		if event.keycode == KEY_ESCAPE:
 			pauseGame();
+			
+		## Interact Button
+		if event.is_action_pressed("interact"):
+			gm.interactionTrigger.emit(raycast.get_collider())
 		
 func pauseGame():
 	isPaused = true;
@@ -90,5 +107,4 @@ func _on_dash_cooldown_timeout() -> void:
 	
 func _on_dash_duration_timeout() -> void:
 	isDashing = false;
-
 	

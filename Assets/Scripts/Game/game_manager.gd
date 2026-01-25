@@ -5,13 +5,14 @@ const MAIN_MENU: PackedScene = preload("res://Assets/Scenes/Menus/MainMenu.tscn"
 const GAME_WORLD: NodePath = "res://Assets/Scenes/terrain_data/welt.tscn"
 const PAUSE_SCREEN: PackedScene = preload("res://Assets/Scenes/Menus/pauseScreen.tscn")
 const SETTINGS_SCREEN: PackedScene = preload("res://Assets/Scenes/Menus/settingsMenu.tscn")
-
+const GAME_OVERLAY: PackedScene = preload("uid://d30pp2svsgjo7");
 
 var pauseScreen: Node = null;
 var settingsScreen: Node = null;
 var settingsScreenBool: bool = false;
 var fullscreenBool: bool = true;
 var isLoading: bool;
+var gameOverlay: Control = null;
 var load_progress = [];
 var load_Status: int = 0;
 
@@ -19,6 +20,8 @@ signal loadingDone
 signal settingsTrigger
 signal resolutionChange
 signal fullscreenTrigger
+signal interactionTrigger
+signal interactionAvailable
 
 enum GAME_STATE {QUIT = -1, START = 0, PLAY = 1, LOAD = 2, PAUSE = 3, CONTINUE = 4};
 static var currentGameState: int;
@@ -49,9 +52,15 @@ func _setup():
 	settingsScreen.hide();
 	setGameState(GAME_STATE.START);
 	
+	gameOverlay = GAME_OVERLAY.instantiate();
+	add_child(gameOverlay);
+	gameOverlay.hide();
+	
 	settingsTrigger.connect(_on_settings_trigger);
 	resolutionChange.connect(_on_resolution_change);
 	fullscreenTrigger.connect(_on_fullscreen_trigger);
+	interactionAvailable.connect(_on_interaction_available);
+	interactionTrigger.connect(_on_interaction_trigger);
 
 func _on_settings_trigger():
 	if !settingsScreenBool:
@@ -69,6 +78,13 @@ func _on_fullscreen_trigger():
 	fullscreenBool = !fullscreenBool;
 	changeDisplayMode();
 		
+func _on_interaction_available(args: String) -> void:
+	showAvailableInteraction(args);
+
+func _on_interaction_trigger(args: Interactable) -> void:
+	if args:
+		args.triggerInteraction.emit()
+
 func goto_scene(scene_Resource):
 	call_deferred("_deferred_goto_scene", scene_Resource)
 
@@ -148,3 +164,11 @@ func changeDisplayMode():
 	else:
 		window.mode = window.MODE_WINDOWED;
 		print("window mode windowed");
+
+func showAvailableInteraction(args: String):
+	var promptLabel: Label = $Prompt
+	if args == "":
+		gameOverlay.hide();
+	else:
+		promptLabel.text = "'E' to " + args;
+		gameOverlay.show()

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d30pp2svsgjo7"]
+
+[node name="Prompt" type="Label"]
+anchors_preset = -1
+anchor_top = 0.703125
+anchor_right = 1.0
+anchor_bottom = 0.7210938
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Hihi"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

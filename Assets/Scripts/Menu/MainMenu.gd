@@ -3,7 +3,6 @@ extends CanvasLayer
 
 
 @onready var play_Button: Button =  $Menu/MarginContainer/VBoxContainer/PlayButton;
-@onready var settings_Button: Button = $Menu/MarginContainer/VBoxContainer/SettingsButton;
 @onready var quit_Button: Button= $Menu/MarginContainer/VBoxContainer/QuitButton;
 @onready var cameraGimbal_Node: Node3D = $Background/SubViewportContainer/SubViewport/CameraGimbal;
 @onready var gm: GameManager = GameManager;
