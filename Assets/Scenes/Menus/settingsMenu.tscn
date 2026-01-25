@@ -1,0 +1,119 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2qlvjtyg1yp6"]
+
+[ext_resource type="Script" uid="uid://csgb7wx20l46h" path="res://Assets/Scenes/Menus/pause_screen.gd" id="1_t8ib5"]
+[ext_resource type="Theme" uid="uid://5btsi18h7ll6" path="res://Assets/Themes/settingsMenuTheme.tres" id="2_h4ka2"]
+[ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="3_nqeup"]
+[ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="4_jnh3q"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_h4ka2")
+script = ExtResource("1_t8ib5")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+visibility_layer = 512
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.6
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="pauseLabel" type="Label" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("3_nqeup")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.19607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 18
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_jnh3q")
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 36
+
+[node name="volumeLabel" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Volume"
+
+[node name="volume" type="HSlider" parent="BoxContainer"]
+layout_mode = 2
+rounded = true
+tick_count = 100
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="MuteButton" type="CheckBox" parent="BoxContainer/volume"]
+layout_mode = 0
+offset_left = 167.0
+offset_top = -56.0
+offset_right = 2087.0
+theme = ExtResource("2_h4ka2")
+theme_override_font_sizes/font_size = 40
+text = "Mute"
+
+[node name="resolutionLabel" type="Label" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "Resolution
+"
+
+[node name="OptionButton" type="OptionButton" parent="BoxContainer/resolutionLabel"]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 500.0
+offset_bottom = 79.0
+item_count = 2
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1280x800"
+popup/item_1/id = 1
+
+[node name="FullscreenToggle" type="CheckBox" parent="BoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_h4ka2")
+theme_override_font_sizes/font_size = 40
+button_pressed = true
+action_mode = 0
+text = "Fullscreen"
+
+[node name="MarginContainer2" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="backButton" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("2_h4ka2")
+text = "Back"
+
+[connection signal="value_changed" from="BoxContainer/volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="BoxContainer/volume/MuteButton" to="." method="_on_mute_button_toggled"]
+[connection signal="item_selected" from="BoxContainer/resolutionLabel/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="toggled" from="BoxContainer/FullscreenToggle" to="." method="_on_fullscreen_toggle_toggled"]
+[connection signal="pressed" from="BoxContainer/backButton" to="." method="_on_back_button_pressed"]

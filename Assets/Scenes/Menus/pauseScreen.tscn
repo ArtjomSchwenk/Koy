@@ -1,13 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs4ei7k4cgooc"]
+[gd_scene load_steps=5 format=3 uid="uid://bs4ei7k4cgooc"]
 
+[ext_resource type="Script" uid="uid://d2dqbx3qwc44c" path="res://Assets/Scenes/Menus/settingsMenu.gd" id="1_hy4pc"]
+[ext_resource type="Theme" uid="uid://nrk1all2j1ku" path="res://Assets/Themes/pauseMenuTheme.tres" id="1_k0bom"]
 [ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="1_w4n8r"]
 [ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="2_iuic6"]
 
-[node name="LoadingScreen" type="Control"]
+[node name="PauseScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hy4pc")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+visibility_layer = 512
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1280.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -25,9 +37,13 @@ theme_override_constants/margin_bottom = 120
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_k0bom")
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="LoadingLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="pauseLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -39,14 +55,25 @@ theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 16
 theme_override_fonts/font = ExtResource("2_iuic6")
 theme_override_font_sizes/font_size = 80
-text = "Loading"
+text = "Paused"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 36
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer"]
+[node name="continueButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 4
-step = 1.0
-rounded = true
+text = "Continue"
+
+[node name="settingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "settings"
+
+[node name="quitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "quit
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]

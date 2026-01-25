@@ -3,24 +3,31 @@ extends Node
 const MAIN_MENU: PackedScene = preload("res://Assets/Scenes/Menus/MainMenu.tscn")
 ##const LOAD_SCREEN = preload("res://Assets/Scenes/Game/loading_screen.tscn") ## Not Needed for current scope of game :D
 const GAME_WORLD: NodePath = "res://Assets/Scenes/terrain_data/welt.tscn"
-const PAUSE_SCREEN: PackedScene = null
+const PAUSE_SCREEN: PackedScene = preload("res://Assets/Scenes/Menus/pauseScreen.tscn")
+const SETTINGS_SCREEN: PackedScene = preload("res://Assets/Scenes/Menus/settingsMenu.tscn")
+
 
 var pauseScreen: Node = null;
+var settingsScreen: Node = null;
+var settingsScreenBool: bool = false;
+var fullscreenBool: bool = true;
 var isLoading: bool;
 var load_progress = [];
 var load_Status: int = 0;
+
 signal loadingDone
+signal settingsTrigger
+signal resolutionChange
+signal fullscreenTrigger
 
 enum GAME_STATE {QUIT = -1, START = 0, PLAY = 1, LOAD = 2, PAUSE = 3, CONTINUE = 4};
 static var currentGameState: int;
 static var current_Scene: Node = null;
 
 func _ready() -> void:
-	pauseScreen = PAUSE_SCREEN.instantiate();
-	pauseScreen.hide();
-	setGameState(GAME_STATE.START);
-	
-	ResourceLoader.load_threaded_request(GAME_WORLD)
+	_setup();
+	ResourceLoader.load_threaded_request(GAME_WORLD);
+
 	
 
 func _process(delta: float) -> void:
@@ -30,6 +37,38 @@ func _process(delta: float) -> void:
 			isLoading = false;
 			loadingDone.emit();
 	
+
+func _setup():
+	pauseScreen = PAUSE_SCREEN.instantiate();
+	pauseScreen.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(pauseScreen);
+	pauseScreen.hide();
+	settingsScreen = SETTINGS_SCREEN.instantiate();
+	settingsScreen.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(settingsScreen);
+	settingsScreen.hide();
+	setGameState(GAME_STATE.START);
+	
+	settingsTrigger.connect(_on_settings_trigger);
+	resolutionChange.connect(_on_resolution_change);
+	fullscreenTrigger.connect(_on_fullscreen_trigger);
+
+func _on_settings_trigger():
+	if !settingsScreenBool:
+		showSettingsMenu();
+		settingsScreenBool = true;
+	else:
+		hideSettingsMenu();
+		settingsScreenBool = false;
+func _on_resolution_change(res: Vector2i):
+	var window: Window = get_window();
+	window.size = Vector2i(res);
+	window.move_to_center();
+	
+func _on_fullscreen_trigger():
+	fullscreenBool = !fullscreenBool;
+	changeDisplayMode();
+		
 func goto_scene(scene_Resource):
 	call_deferred("_deferred_goto_scene", scene_Resource)
 
@@ -65,21 +104,47 @@ func loadMainMenu():
 	isLoading = true;
 	goto_scene(MAIN_MENU)
 	
+		
 func loadGame():
 	if isLoading:
 		print("Waiting");
 		await loadingDone;
 	var game: PackedScene = ResourceLoader.load_threaded_get(GAME_WORLD);
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	goto_scene(game);
 	
 func loadLoadingScreen(): ##Not necessary for current scope tbh
 	pass
 
 func pauseGame():
+	pauseScreen.show();
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
 	current_Scene.get_tree().paused = true;
+	
 
 func unpauseGame():
+	pauseScreen.hide();
+	settingsScreen.hide();
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	current_Scene.get_tree().paused = false;
+	
 
 func quitGame():
 	get_tree().quit();
+	
+func showSettingsMenu():
+	pauseScreen.hide();
+	settingsScreen.show();
+	
+func hideSettingsMenu():
+	pauseScreen.show();
+	settingsScreen.hide();
+	
+func changeDisplayMode():
+	var window: Window = get_window();
+	if fullscreenBool:
+		window.mode = window.MODE_FULLSCREEN;
+		print("window mode fullscreen");
+	else:
+		window.mode = window.MODE_WINDOWED;
+		print("window mode windowed");

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://nrk1all2j1ku"]
+
+[ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="1_3daqy"]
+
+[resource]
+default_font = ExtResource("1_3daqy")
+default_font_size = 32

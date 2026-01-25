@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var settings_Button: Button = $Menu/MarginContainer/VBoxContainer/SettingsButton;
 @onready var quit_Button: Button= $Menu/MarginContainer/VBoxContainer/QuitButton;
 @onready var cameraGimbal_Node: Node3D = $Background/SubViewportContainer/SubViewport/CameraGimbal;
-
+@onready var gm: GameManager = GameManager;
 
 @export var radius: float = 1.0;
 @export var angle: float = 0.0;
@@ -18,7 +18,7 @@ extends CanvasLayer
 func _process(delta: float) -> void:
 	cameraCircularMotion()
 	
-	
+	## Cool effect :D
 func cameraCircularMotion():
 	var x_pos: float = cos(angle);
 	var y_pos: float = sin(angle);
@@ -28,11 +28,7 @@ func cameraCircularMotion():
 	angle += 1 * speed;
 	
 func _on_play_button_pressed() -> void:
-	GameManager.setGameState(GameManager.GAME_STATE.PLAY);
-	
-func _on_settings_button_pressed() -> void:
-	print("Settings Pressed... If only there were settings lmao");
-	pass # Replace with function body.
+	gm.setGameState(gm.GAME_STATE.PLAY);
 
 func _on_quit_button_pressed() -> void:
-	GameManager.setGameState(GameManager.GAME_STATE.QUIT);
+	gm.setGameState(gm.GAME_STATE.QUIT);

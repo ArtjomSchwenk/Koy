@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+@onready var gm: GameManager = GameManager;
 @onready var player: CharacterBody3D = $"."
 
 @export_group("Movement")
@@ -25,8 +25,8 @@ var direction: Vector3 = Vector3(0,0,0);
 @onready var cameraGimbal: Node3D = get_node("cameraGimbal");
 
 
-func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
+##func _ready() -> void:
+
 	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -50,11 +50,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0.0;
 		velocity.z = 0.0;
 		
-	if Input.is_action_just_pressed("ui_cancel"): ##Escape button btw
-		if !isPaused:
-			pauseGame();
-		elif isPaused:
-			unpauseGame();
 	move_and_slide()
 
 func _unhandled_input(event):
@@ -82,22 +77,18 @@ func _unhandled_input(event):
 				dashDuration.start();
 				print("we dashing :D");
 				
-			
+		## Escape Button	
+		if event.keycode == KEY_ESCAPE:
+			pauseGame();
 		
 func pauseGame():
 	isPaused = true;
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
-	GameManager.setGameState(GameManager.GAME_STATE.PAUSE);
-	
-func unpauseGame():
-	isPaused = false;
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
-
+	gm.setGameState(gm.GAME_STATE.PAUSE);
 
 func _on_dash_cooldown_timeout() -> void:
 	canDash = true;
+	
 func _on_dash_duration_timeout() -> void:
-	print(isDashing);
 	isDashing = false;
-	print(isDashing);
+
 	
