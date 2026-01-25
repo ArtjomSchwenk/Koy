@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkiwju1qv6nua"]
+
+[ext_resource type="PackedScene" uid="uid://dva3xdf3vxfpq" path="res://Assets/Imports/Medieval buildings/glTF/Balcony_Cross_Straight.gltf" id="1_5y370"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ih3ep"]
+size = Vector3(2.001587, 1.2723999, 0.21450806)
+
+[node name="Balcony_Straight" type="StaticBody3D"]
+
+[node name="Balcony_Cross_Straight2" parent="." instance=ExtResource("1_5y370")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0207659, -0.009465456, -1.1205621)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023254395, 0.502022, -0.117385864)
+shape = SubResource("BoxShape3D_ih3ep")

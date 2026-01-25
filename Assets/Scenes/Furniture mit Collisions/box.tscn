@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://issw50mva5tg"]
+
+[ext_resource type="PackedScene" uid="uid://ok50qic5vfsq" path="res://Assets/Imports/Medieval buildings/glTF/Prop_Crate.gltf" id="1_tf23q"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4kpqi"]
+points = PackedVector3Array(-0.54179126, 0.0033615232, -0.54179114, -0.54179126, 0.0033615232, 0.54179126, -0.54179126, 1.0628386, -0.54179114, 0.54179114, 0.0033615232, -0.54179114, -0.54179126, 1.0628386, 0.54179126, 0.54179114, 0.0033615232, 0.54168516, -0.3855543, 1.0629423, -0.3855542, 0.54168504, 1.0629423, -0.54179114, 0.54179114, 0.14037271, -0.54179114, -0.3855543, 1.0629423, 0.38544822, 0.54179114, 0.14037271, 0.54168516, 0.54168504, 1.0629423, 0.54168516)
+
+[node name="Box" type="StaticBody3D"]
+
+[node name="Prop_Crate2" parent="." instance=ExtResource("1_tf23q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14095092, 0, 0.249331)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14095092, 0, 0.249331)
+shape = SubResource("ConvexPolygonShape3D_4kpqi")

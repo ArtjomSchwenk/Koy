@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://emha2i0ogyuc"]
+
+[ext_resource type="PackedScene" uid="uid://c4a64qncn4vs6" path="res://Assets/Imports/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall.gltf" id="1_arie6"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tyj78"]
+points = PackedVector3Array(2, 4, 0.5, 2, 0, 0.5, 2, 4, -0.5, -2, 4, 0.5, 2, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, -2, 0, -0.5)
+
+[node name="Wall_Stein" type="StaticBody3D"]
+
+[node name="wall2" parent="." instance=ExtResource("1_arie6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111302495, 0, -0.08009052)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111302495, 0, -0.08009052)
+shape = SubResource("ConvexPolygonShape3D_tyj78")

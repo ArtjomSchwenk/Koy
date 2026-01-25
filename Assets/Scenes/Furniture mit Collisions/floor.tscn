@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceyyimoacf5se"]
+
+[ext_resource type="PackedScene" uid="uid://yplbsremwc86" path="res://Assets/Imports/Medieval buildings/glTF/Floor_WoodDark.gltf" id="1_r2lw0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5pewr"]
+size = Vector3(2.0479126, 0.036819458, 1.9643555)
+
+[node name="Floor" type="StaticBody3D"]
+
+[node name="Floor_WoodDark2" parent="." instance=ExtResource("1_r2lw0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.053892016, 0, 0.03997159)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07217407, 0.0049057007, 0.035888672)
+shape = SubResource("BoxShape3D_5pewr")

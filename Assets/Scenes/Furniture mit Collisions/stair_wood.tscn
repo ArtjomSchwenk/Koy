@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsi3kffco1xk8"]
+
+[ext_resource type="PackedScene" uid="uid://c7wchuij8mkcq" path="res://Assets/Imports/Medieval buildings/glTF/Stair_Interior_Solid.gltf" id="1_r2ah1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0npje"]
+points = PackedVector3Array(-0.81237304, -0.018151555, -0.027103424, 0.8026773, -0.018151555, -0.027103424, -0.8843993, -0.0038400171, 0.35737848, -0.8762617, -0.0002621319, -4.3264775, 0.8842262, -0.0038400171, 0.35737848, 0.8760886, -0.0002621319, -4.3264775, -0.8843993, 3.0278208, -3.8885183, -0.8843993, -0.0023492314, -0.076892376, -0.8843993, 2.804203, -4.351833, 0.8842262, -0.0023492314, -0.076892376, 0.8842262, 3.0278208, -3.8885183, 0.8842262, 2.804203, -4.351833, -0.8843993, 3.0278208, -4.351833, 0.8842262, 3.0278208, -4.351833)
+
+[node name="Stair_Wood" type="StaticBody3D"]
+
+[node name="Stair_Interior_Solid2" parent="." instance=ExtResource("1_r2ah1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17885065, 0, 1.8048482)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17885065, 0, 1.8048482)
+shape = SubResource("ConvexPolygonShape3D_0npje")

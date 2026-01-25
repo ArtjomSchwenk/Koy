@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://mos0ewqk1cic"]
+
+[ext_resource type="PackedScene" uid="uid://cwqy5nlceqj02" path="res://Assets/Imports/Medieval buildings/glTF/Prop_Chimney.gltf" id="1_1uq21"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5ler"]
+size = Vector3(0.8510742, 3.2264404, 0.8731079)
+
+[node name="Schornstein" type="StaticBody3D"]
+
+[node name="Prop_Chimney2" parent="." instance=ExtResource("1_1uq21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49707985, 0, 0.50856733)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47107828, 1.4931803, 0.5153626)
+shape = SubResource("BoxShape3D_g5ler")

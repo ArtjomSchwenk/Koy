@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh3nvbscdhc3y"]
+
+[ext_resource type="PackedScene" uid="uid://b28110flqgvmi" path="res://Assets/Imports/Medieval buildings/glTF/Roof_Wooden_2x1_Center.gltf" id="1_eenbc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ys05n"]
+points = PackedVector3Array(-1, 0.9261929, -6.397578e-08, -1, -0.14223239, 0.8800853, -1, 1.0621248, -6.397578e-08, 0.5998436, 0.924538, -6.397578e-08, -1, -0.14412361, 1.4529183, 0.9998045, 0.92418337, -6.397578e-08, 0.9998045, -0.14223239, 0.8800853, 0.9998045, -0.14530563, 1.4520379, 0.5998436, -0.14518744, 1.4521847, -1, -0.04105173, 1.4989915, -0.6000391, 1.059879, -6.397578e-08, 0.19988275, -0.14471462, 1.4524782, 0.9998045, -0.054290317, 1.4979644, 0.5998436, -0.05204449, 1.4982579, 0.9998045, 1.0482953, -6.397578e-08, -0.6000391, -0.043179356, 1.498698, 0.19988275, 1.0552691, -6.397578e-08, 0.19988275, -0.04767102, 1.4984046)
+
+[node name="Roof Wooden" type="StaticBody3D"]
+
+[node name="Roof_Wooden_2x1_Center2" parent="." instance=ExtResource("1_eenbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103544235, 0, -0.7336581)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103544235, 0, -0.7336581)
+shape = SubResource("ConvexPolygonShape3D_ys05n")
