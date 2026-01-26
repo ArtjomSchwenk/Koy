@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bohto42670p57"
+path="res://.godot/imported/grandma.dialogue-5ebe4878f677f895ff18be6db44e571c.tres"
+
+[deps]
+
+source_file="res://Assets/Scenes/NPCs/Dialogue/grandma.dialogue"
+dest_files=["res://.godot/imported/grandma.dialogue-5ebe4878f677f895ff18be6db44e571c.tres"]
+
+[params]
+
+defaults=true
