@@ -1,10 +1,13 @@
 ~ start
-if not GameState.has_shovel
-	=> first_meeting
-elif GameState.has_met_grandma
-	=> give_shovel
-else
-	=> repeat_meeting
+match GameState.grandma_meeting_number
+	when 0
+		=> first_meeting
+	when 1
+		if GameState.has_shovel
+			=> give_shovel
+		else
+			=> repeat_first_meeting
+		
 
 ~ first_meeting
 Grandma Sumru: Ah Sinan, my sweet little grandson. Welcome back to Grandma’s old but cozy home. You probably can’t even remember the last time you were here. You were just a tiny little potato.
@@ -29,10 +32,10 @@ Sinan:
 - Shovel
 	I’ll get you your shovel, Grandma.
 
-set GameState.has_met_grandma = true
+set GameState.grandma_meeting_number = 1
 => END
 
-~ repeat_meeting
+~ repeat_first_meeting
 % Grandma Sumru: I think Mert went up our little mountain with the old shovel.
 % Grandma Sumru: Try to find the shovel up that mountain.
 % Grandma Sumru: I can’t harvest potatoes without my potato-harvesting shovel.
@@ -54,4 +57,6 @@ Sinan:
 	I’m scared of Uncle Mehmet, but his sheep are cute.
 - Nourishing Soil
 	Please don’t phrase it that aggressively, Grandma.
+
+set GameState.grandma_meeting_number = 2
 => END
