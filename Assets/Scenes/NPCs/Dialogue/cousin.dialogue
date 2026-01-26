@@ -1,0 +1,49 @@
+~ start
+if not GameState.has_shovel
+	=> first_meeting
+elif GameState.has_met_cousin
+	=> congratulate
+else
+	=> repeat_first_meeting
+=> END
+
+~ first_meeting
+Mert: Heeeey, well, if this isn't my third favorite cousin.
+
+Sinan: Wait, why third?
+
+Mert: Well, Ela is the oldest, I was born, and then you came after me.
+
+Sinan: SO YOU JUST GO AFTER SENIORITY?
+
+Sinan: [font size=14][wave]Why are you counting yourself as your own cousin? Second favorite?[/wave]
+
+Mert: Anyway, check this sick parkour out.
+
+Sinan: Hard to miss this, but how is all of this stuff floating?
+
+Mert: Dunno. Turns out that the shovel became magical after using it for 100 years.
+
+Sinan: Oh yeah, the shovel—where is it? Grandma needs it for harvesting the potatoes.
+
+Mert: Ah, I knew I’d forgotten something.
+
+Sinan: ...
+
+Mert: ...
+
+Sinan: WELL THEN GO GET IT!
+
+Mert: Can't, I have to go and help out my dad.
+
+Sinan: Fine, I'll do it then.
+
+Mert: You got it, third Hokage.
+
+=> END
+
+~ congratulate
+=> END
+
+~ repeat_first_meeting
+=> END

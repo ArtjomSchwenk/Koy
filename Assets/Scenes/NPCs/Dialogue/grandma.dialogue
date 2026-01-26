@@ -1,13 +1,13 @@
 ~ start
-if not GameState.has_met_grandma
-	=>  first_meeting
-elif GameState.has_shovel
+if not GameState.has_shovel
+	=> first_meeting
+elif GameState.has_met_grandma
 	=> give_shovel
 else
 	=> repeat_meeting
 
 ~ first_meeting
-Grandma Sumru: Ah Sinan, my sweet little grandson. Welcome back to Grandma’s old but cozy home. You probably can’t even remember the last time you were here. You were just a tiny little potato.
+Grandma Sumru: Ah Sinan, my sweet little grandson. Welcome back to Grandma’s old but cozy home. You probably can’t even remember the last time you were here. You were just a tiny little potato.
 
 Sinan: It was only a year ago, Grandma. I’m sure I was bigger than the biggest potato in your field.
 
@@ -21,38 +21,37 @@ Grandma Sumru: Oh, I bet your cousin Mert took it to build one of his run and cl
 
 Grandma Sumru: If I recall correctly, he went up the mountain to the old shed to live out his fantasy of becoming the next Hokage. Could you go there and get the shovel for me, my sweetheart?
 
-Sinan: 
+Sinan:
 - Mert
 	Sure, I was already wondering where Mert is hiding.
 - Hokage
 	Hokage? I gotta check that out.
--  Shovel
-	I get you your shovel, Grandma
-	
+- Shovel
+	I’ll get you your shovel, Grandma.
+
 set GameState.has_met_grandma = true
 => END
 
 ~ repeat_meeting
 % Grandma Sumru: I think Mert went up our little mountain with the old shovel.
-% Grandma Sumru: Try to find the shovel up that mountain 
-% Grandma Sumru: can't harvest potato's without my potato harvesting shovel
+% Grandma Sumru: Try to find the shovel up that mountain.
+% Grandma Sumru: I can’t harvest potatoes without my potato-harvesting shovel.
 => END
 
 ~ give_shovel
-Grandma Sumru: Ah, you found it. Now I can harvest my potato's and prepare everything for my world famous Mücvers. And the zuchinies this year are scrumptious.
+Grandma Sumru: Ah, you found it. Now I can harvest my potatoes and prepare everything for my world-famous Mücvers. And the zucchinis this year are scrumptious.
 
-Sinan: [font size=14][wave]scrumptious???[/wave]
+Sinan: [font size=14][wave]Scrumptious???[/wave]
 
-Grandma Sumru: But what are Mücvers without fresh Ayran do flush it down...
+Grandma Sumru: But what are Mücvers without fresh Ayran to flush it down...
 
-Grandma Sumru: How about this Sinan, you get us some sheep milk from Uncle Mehmet, while I rip those potato's out of their nurishing soil
+Grandma Sumru: How about this, Sinan—you get us some sheep milk from Uncle Mehmet, while I rip those potatoes out of their nourishing soil.
 
-Sinan: 
+Sinan:
 - Hungry
-	I better get going then, I'm starving after all that jumping.
+	I better get going then, I’m starving after all that jumping.
 - Uncle Mehmet
-	I'm scared of Uncle Mehmet, but his sheeps are cute.
-- Nurishing Soil
-	Please don't phrase it that agressivly, Grandma
-	
+	I’m scared of Uncle Mehmet, but his sheep are cute.
+- Nourishing Soil
+	Please don’t phrase it that aggressively, Grandma.
 => END
