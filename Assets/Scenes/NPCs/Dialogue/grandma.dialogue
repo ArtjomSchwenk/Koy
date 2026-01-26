@@ -1,6 +1,8 @@
 ~ start
 if not GameState.has_met_grandma
 	=>  first_meeting
+elif GameState.has_shovel
+	=> give_shovel
 else
 	=> repeat_meeting
 
@@ -40,3 +42,17 @@ set GameState.has_met_grandma = true
 Grandma Sumru: Ah, you found it. Now I can harvest my potato's and prepare everything for my world famous Mücvers. And the zuchinies this year are scrumptious.
 
 Sinan: [font size=14][wave]scrumptious???[/wave]
+
+Grandma Sumru: But what are Mücvers without fresh Ayran do flush it down...
+
+Grandma Sumru: How about this Sinan, you get us some sheep milk from Uncle Mehmet, while I rip those potato's out of their nurishing soil
+
+Sinan: 
+- Hungry
+	I better get going then, I'm starving after all that jumping.
+- Uncle Mehmet
+	I'm scared of Uncle Mehmet, but his sheeps are cute.
+- Nurishing Soil
+	Please don't phrase it that agressivly, Grandma
+	
+=> END
