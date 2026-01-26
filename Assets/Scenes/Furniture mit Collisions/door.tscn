@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kvh3goq8m3h"]
+
+[ext_resource type="PackedScene" uid="uid://4yefbqpmfa6y" path="res://Assets/Imports/Medieval buildings/glTF/Door_1_Flat.gltf" id="1_8ymia"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sopdi"]
+size = Vector3(1.1212158, 2.0994873, 0.123291016)
+
+[node name="Door" type="StaticBody3D"]
+
+[node name="Door_1_Flat2" parent="." instance=ExtResource("1_8ymia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36477578, -1.1920929e-07, 0.08055401)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14512515, 1.0897826, 0.08065498)
+shape = SubResource("BoxShape3D_sopdi")

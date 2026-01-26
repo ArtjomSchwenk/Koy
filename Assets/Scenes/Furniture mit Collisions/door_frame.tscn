@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://gv7oo67dmrv5"]
+
+[ext_resource type="PackedScene" uid="uid://bjgcoitwihxeq" path="res://Assets/Imports/Medieval buildings/glTF/DoorFrame_Round_WoodDark.gltf" id="1_87rpq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0vej"]
+size = Vector3(1.4393921, 2.1958618, 0.37060547)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uw0i4"]
+height = 0.52192384
+radius = 0.65625
+
+[node name="Door_Frame" type="StaticBody3D"]
+
+[node name="DoorFrame_Round_WoodDark2" parent="." instance=ExtResource("1_87rpq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0048033, 0, 0.09063721)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013910294, 1.118249, 0.029690444)
+shape = SubResource("BoxShape3D_y0vej")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.045441788, -0.48047027, 0, 1.0026374, 0.021775998, 0, 2.1644552, 0.1214992)
+shape = SubResource("CylinderShape3D_uw0i4")
