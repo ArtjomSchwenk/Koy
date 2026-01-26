@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://i1yhstjtu3m8"]
+
+[ext_resource type="PackedScene" uid="uid://chssupyjlo0ay" path="res://Assets/Imports/Medieval buildings/glTF/Door_2_Round.gltf" id="1_6abpu"]
+[ext_resource type="Script" uid="uid://b4igu4ypfr7sd" path="res://Assets/Scenes/Assets with Collision/doorController.gd" id="1_f1ohl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1ohl"]
+size = Vector3(1.4, 2.2, 0.6)
+
+[node name="Door" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+script = ExtResource("1_f1ohl")
+
+[node name="Door_2_Round2" parent="." instance=ExtResource("1_6abpu")]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1, 0.28, 0, 0)
+
+[node name="hitBox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 1.1, 0)
+shape = SubResource("BoxShape3D_f1ohl")
+
+[connection signal="triggerInteraction" from="." to="." method="_on_trigger_interaction"]

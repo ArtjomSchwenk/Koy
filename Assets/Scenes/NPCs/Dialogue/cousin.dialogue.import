@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6xqimmxfc0ey"
+path="res://.godot/imported/cousin.dialogue-d3fba14d1638e577fae8e022f0f6bea4.tres"
+
+[deps]
+
+source_file="res://Assets/Scenes/NPCs/Dialogue/cousin.dialogue"
+dest_files=["res://.godot/imported/cousin.dialogue-d3fba14d1638e577fae8e022f0f6bea4.tres"]
+
+[params]
+
+defaults=true

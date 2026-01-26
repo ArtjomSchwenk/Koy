@@ -1,0 +1,72 @@
+~ start
+
+match GameState.cousin_meeting_number
+	when 0
+		=> first_meeting
+	when 1
+		if GameState.has_shovel
+			=> congratulate
+		else
+			=> repeat_first_meeting
+		
+=> END
+
+~ first_meeting
+Mert: Heeeey, well, if this isn't my third favorite cousin.
+
+Sinan: Wait, why third?
+
+Mert: Well, Ela is the oldest, I was born, and then you came after me.
+
+Sinan: SO YOU JUST GO AFTER SENIORITY?
+
+Sinan: [font size=14][wave]Why are you counting yourself as your own cousin? Second favorite?[/wave]
+
+Mert: Anyway, check this sick parkour out.
+
+Sinan: Hard to miss this, but how is all of this stuff floating?
+
+Mert: Dunno. Turns out that the shovel became magical after using it for 100 years.
+
+Sinan: Oh yeah, the shovel—where is it? Grandma needs it for harvesting the potatoes.
+
+Mert: Ah, I knew I’d forgotten something.
+
+Sinan: ...
+
+Mert: ...
+
+Sinan: WELL THEN GO GET IT!
+
+Mert: Can't, I have to go and help out my dad.
+
+Sinan: Fine, I'll do it then.
+
+Mert: You got it, third Hokage.
+
+set GameState.cousin_meeting_number = 1
+=> END
+
+~ congratulate
+Mert: You've made it! LET'S GOOOOOOO!!!
+
+Sinan: HUH? What about helping out your dad?
+
+Mert: Oh, I finished helping him.
+
+Sinan: [font size=14][wave]So fast[/wave]
+
+Sinan: And how did you even get here? I didn't see you overtake me. Was it some magic ninja crap?
+
+Mert: No, lol. Skill issue?
+
+Mert: Anyway, here's the shovel.
+=> END
+
+~ repeat_first_meeting
+% Mert: The Shovel is at the end of my parkour.
+% Mert: Don't worry, you can't get hurt.
+%3 Mert: このオレはいずれ火影の名を受け継いで、先代のどの火影をも超えてやるんだ！
+=> END
+
+~ second_meeting

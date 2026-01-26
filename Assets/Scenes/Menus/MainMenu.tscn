@@ -8,7 +8,6 @@
 [node name="MainMenuGUI" type="CanvasLayer"]
 script = ExtResource("1_dvmkf")
 radius = 2.5
-angle = null
 speed = 0.001
 
 [node name="Background" type="Node3D" parent="."]
@@ -85,11 +84,6 @@ action_mode = 0
 text = "Play"
 icon_alignment = 1
 
-[node name="SettingsButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Settings"
-
 [node name="QuitButton" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -97,5 +91,4 @@ text = "Quit
 "
 
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
