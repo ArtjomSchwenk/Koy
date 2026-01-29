@@ -54,7 +54,7 @@ var pullup_stage: int = 0; # 0 = zum Snap Punkt 1 = hoch und vor
 var direction: Vector3 = Vector3(0,0,0);
 
 @export_group("Settings")
-@export var camera_sensitivity: float = 0.8;
+@export var camera_sensitivity: float = 0.35;
 @export var isPaused: bool = false;
 @export var interact_Keybind: int = KEY_E;
 @export var dash_Keybind: int = KEY_CTRL;

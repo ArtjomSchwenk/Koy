@@ -19,7 +19,7 @@ script = ExtResource("1_n55er")
 transform = Transform3D(-0.9996491, 0, 0.026491087, 0, 1, 0, -0.026491087, 0, -0.9996491, 0.02872765, 0, 0.015769482)
 
 [node name="forward" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 1.4000001, 0.92738336)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 1.4000001, -0.8859959)
 visible = false
 mesh = SubResource("BoxMesh_n55er")
 
@@ -40,7 +40,7 @@ target_position = Vector3(0, 0, -1)
 debug_shape_thickness = 5
 
 [node name="Camera3D" type="Camera3D" parent="cameraGimbal"]
-transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0.9000001, 2.6000001)
+transform = Transform3D(1, 0, 0, 0, 0.9848079, 0.17364818, 0, -0.17364818, 0.9848079, 0, 1.289229, 3.2650664)
 
 [node name="stairsCollider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.7000001, -0.5)
