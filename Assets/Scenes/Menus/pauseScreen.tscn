@@ -82,6 +82,7 @@ volume_db = 14.136
 
 [node name="UIHoverPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_c25yr")
+volume_db = 4.0
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
