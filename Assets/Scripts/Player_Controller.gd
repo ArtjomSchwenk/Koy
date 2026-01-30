@@ -3,30 +3,33 @@ extends CharacterBody3D
 @onready var gm: GameManager = GameManager
 @onready var player: CharacterBody3D = $"."
 
-# Pfad passt nur wenn dein Node "Model" heißt und darunter AnimationPlayer liegt
 @onready var anim: AnimationPlayer = $Model/AnimationPlayer
 
 @export_group("Movement")
 @export var speed: float = 4.0
 @export var runModif: float = 5.0
 @export var isRunning: bool = false
-
 @export var jump_Velocity: float = 15.0
 
 @export var gravity_force: float = 30.0
 @export var fall_multiplier: float = 1.8
 @export var low_jump_multiplier: float = 2.2
 
-# Pullup
+@export_group("Climb Pullup")
 @export var isClimbing: bool = false
 @export var snap_back_offset: float = 0.45
 @export var snap_down_offset: float = 0.65
 
 @export var pullup_time: float = 1.0
-@export var pullup_up: float = 0.5
-@export var pullup_forward: float = 0.5
+@export var pullup_up: float = 0.6
+@export var pullup_forward: float = 0.6
+
+# Das ist dein halber Kopf Bonus
+@export var pullup_extra_up: float = 0.25
 
 @export var snap_time: float = 0.08
+@export var pullup_end_down_push: float = 2.0
+@export var pullup_lock_input: bool = true
 
 var isPullingUp: bool = false
 var pullup_t: float = 0.0
@@ -34,8 +37,8 @@ var pullup_from: Vector3 = Vector3.ZERO
 var pullup_mid: Vector3 = Vector3.ZERO
 var pullup_to: Vector3 = Vector3.ZERO
 var pullup_stage: int = 0
+var pullup_wall_normal: Vector3 = Vector3.ZERO
 
-# Multi Ray Setup
 @onready var ray_chest_mid: RayCast3D = $climbChecksChest/ray_chest_mid
 @onready var ray_chest_left: RayCast3D = $climbChecksChest/ray_chest_left
 @onready var ray_chest_right: RayCast3D = $climbChecksChest/ray_chest_right
@@ -59,12 +62,9 @@ var canInteract: bool = false
 
 var jumpTapped: bool = false
 
-# Animations Mapping
 const ANIM_PULLUP: String = "general/pullup"
 const ANIM_IDLE_GROUND: String = "general/idle"
 const ANIM_WALK: String = "walking"
-
-const ANIM_JUMP_START: String = "Jump_Start"
 const ANIM_JUMP_IDLE: String = "Jump_Idle"
 const ANIM_RUN: String = "Running_A"
 
@@ -104,17 +104,31 @@ func _start_pullup(grab_point: Vector3, grab_normal: Vector3) -> void:
 	pullup_stage = 0
 	pullup_t = 0.0
 
+	pullup_wall_normal = grab_normal.normalized()
+
 	velocity = Vector3.ZERO
 
 	pullup_from = global_position
-	pullup_mid = grab_point + grab_normal * snap_back_offset + Vector3(0, -snap_down_offset, 0)
-	pullup_to = pullup_mid + Vector3(0, pullup_up, 0) + (-global_transform.basis.z.normalized() * pullup_forward)
 
-	# direkt Pullup Animation starten
+	pullup_mid = grab_point + pullup_wall_normal * snap_back_offset + Vector3(0.0, -snap_down_offset, 0.0)
+
+	# Hier ist der Fix
+	# pullup_up + pullup_extra_up sorgt fuer den halben Kopf mehr
+	var up_amount := pullup_up + pullup_extra_up
+	pullup_to = pullup_mid + Vector3.UP * up_amount + (-pullup_wall_normal) * pullup_forward
+
 	play_anim(ANIM_PULLUP)
 
+func _ease(a: float) -> float:
+	return a * a * (3.0 - 2.0 * a)
+
+func _move_towards(target: Vector3, delta: float) -> void:
+	var step: Vector3 = target - global_position
+	velocity = step / max(delta, 0.001)
+	move_and_slide()
+	velocity = Vector3.ZERO
+
 func _physics_process(delta: float) -> void:
-	# Interact Raycast
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
 		if target is Interactable:
@@ -124,7 +138,6 @@ func _physics_process(delta: float) -> void:
 		canInteract = false
 		gm.interactionAvailable.emit("")
 
-	# Pullup Start Check
 	var can_grab: bool = false
 	var grab_point: Vector3 = Vector3.ZERO
 	var grab_normal: Vector3 = Vector3.ZERO
@@ -141,32 +154,33 @@ func _physics_process(delta: float) -> void:
 	if can_grab and jumpPressedNow and velocity.y <= 0.5:
 		_start_pullup(grab_point, grab_normal)
 
-	# Pullup Ablauf
-	if isClimbing:
-		if isPullingUp:
-			pullup_t += delta
+	if isClimbing and isPullingUp:
+		pullup_t += delta
 
-			if pullup_stage == 0:
-				var a0: float = clampf(pullup_t / max(snap_time, 0.01), 0.0, 1.0)
-				a0 = a0 * a0 * (3.0 - 2.0 * a0)
-				global_position = pullup_from.lerp(pullup_mid, a0)
+		if pullup_stage == 0:
+			var a0: float = clampf(pullup_t / max(snap_time, 0.01), 0.0, 1.0)
+			a0 = _ease(a0)
+			var target0: Vector3 = pullup_from.lerp(pullup_mid, a0)
+			_move_towards(target0, delta)
+
+			if pullup_t >= snap_time:
+				pullup_stage = 1
+				pullup_t = 0.0
+		else:
+			var a1: float = clampf(pullup_t / max(pullup_time, 0.01), 0.0, 1.0)
+			a1 = _ease(a1)
+			var target1: Vector3 = pullup_mid.lerp(pullup_to, a1)
+			_move_towards(target1, delta)
+
+			if pullup_t >= pullup_time:
+				isPullingUp = false
+				isClimbing = false
+
+				velocity = Vector3.DOWN * pullup_end_down_push
+				move_and_slide()
 				velocity = Vector3.ZERO
 
-				if pullup_t >= snap_time:
-					pullup_stage = 1
-					pullup_t = 0.0
-			else:
-				var a1: float = clampf(pullup_t / max(pullup_time, 0.01), 0.0, 1.0)
-				a1 = a1 * a1 * (3.0 - 2.0 * a1)
-				global_position = pullup_mid.lerp(pullup_to, a1)
-				velocity = Vector3.ZERO
-
-				if pullup_t >= pullup_time:
-					isPullingUp = false
-					isClimbing = false
-					velocity.y = 2.0
 	else:
-		# Gravity
 		if not is_on_floor():
 			velocity.y -= gravity_force * delta
 
@@ -178,30 +192,35 @@ func _physics_process(delta: float) -> void:
 			if velocity.y < 0.0:
 				velocity.y = 0.0
 
-		# Jump
 		if jumpTapped and is_on_floor():
 			velocity.y = jump_Velocity
 
-	# Move
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-	if isClimbing:
-		pass
-	elif direction:
-		velocity.x = direction.x * (speed + int(isRunning) * runModif)
-		velocity.z = direction.z * (speed + int(isRunning) * runModif)
-	else:
+	var allow_move: bool = true
+	if pullup_lock_input and (isClimbing or isPullingUp):
+		allow_move = false
+
+	if not allow_move:
 		velocity.x = 0.0
 		velocity.z = 0.0
+	else:
+		if isClimbing:
+			velocity.x = 0.0
+			velocity.z = 0.0
+		elif direction:
+			velocity.x = direction.x * (speed + int(isRunning) * runModif)
+			velocity.z = direction.z * (speed + int(isRunning) * runModif)
+		else:
+			velocity.x = 0.0
+			velocity.z = 0.0
 
-	move_and_slide()
+		move_and_slide()
 
-	# Animation State
 	if isPullingUp or isClimbing:
 		play_anim(ANIM_PULLUP)
 	elif not is_on_floor():
-		# wenn du später eine echte Jump Animation hast dann hier ersetzen
 		play_anim(ANIM_JUMP_IDLE)
 	else:
 		var moving: bool = (absf(velocity.x) > 0.1) or (absf(velocity.z) > 0.1)
@@ -226,10 +245,7 @@ func _unhandled_input(event):
 			jumpTapped = true
 
 		if event.keycode == run_Keybind:
-			if event.pressed:
-				isRunning = true
-			else:
-				isRunning = false
+			isRunning = event.pressed
 
 		if event.keycode == KEY_ESCAPE:
 			pauseGame()
