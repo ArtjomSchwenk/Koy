@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci6jyy7c5p1wj"]
+
+[ext_resource type="PackedScene" uid="uid://bmswg18e6uajd" path="res://Assets/Character/KayKit_Adventurers_2.0_FREE/Characters/gltf/Knight.glb" id="1_p1f5h"]
+
+[node name="Knight" instance=ExtResource("1_p1f5h")]

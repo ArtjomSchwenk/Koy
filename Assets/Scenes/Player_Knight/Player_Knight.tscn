@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd2c3onakydqc"]
+[gd_scene load_steps=7 format=3 uid="uid://dd2c3onakydqc"]
 
 [ext_resource type="PackedScene" uid="uid://bmswg18e6uajd" path="res://Assets/Character/KayKit_Adventurers_2.0_FREE/Characters/gltf/Knight.glb" id="1_hayg0"]
 [ext_resource type="Script" uid="uid://c8j710jwxvccd" path="res://Assets/Scripts/Player_Controller.gd" id="1_n55er"]
+[ext_resource type="PackedScene" uid="uid://dnhls7cjxb5qp" path="res://Assets/Scenes/Player_Knight/PlayerModel.tscn" id="3_oal63"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_n55er"]
 
@@ -17,6 +18,7 @@ script = ExtResource("1_n55er")
 
 [node name="Knight" parent="." instance=ExtResource("1_hayg0")]
 transform = Transform3D(-0.9996491, 0, 0.026491087, 0, 1, 0, -0.026491087, 0, -0.9996491, 0.02872765, 0, 0.015769482)
+visible = false
 
 [node name="forward" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 1.4000001, -0.8859959)
@@ -81,3 +83,6 @@ target_position = Vector3(0, 1.85, 0)
 [node name="ray_head_left" type="RayCast3D" parent="climbCheckHead"]
 transform = Transform3D(1.156, 8.742278e-08, 0, -6.561356e-08, 0.64924884, -0.19242574, 7.6864374e-08, -0.76057607, -0.16425996, -0.2216369, 1.719, 0.014)
 target_position = Vector3(0, 1.85, 0)
+
+[node name="Model" parent="." instance=ExtResource("3_oal63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)

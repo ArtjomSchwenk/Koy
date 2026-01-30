@@ -37,6 +37,90 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Knight_Knight_ArmLeft": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/ArmLeft.res",
+"save_to_file/path": "uid://jvaddfttg728"
+},
+"Knight_Knight_ArmRight": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/ArmRight.res",
+"save_to_file/path": "uid://kq0e4qaja2hv"
+},
+"Knight_Knight_Body": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/Body.res",
+"save_to_file/path": "uid://cmssb6wdn5r4a"
+},
+"Knight_Knight_Cape": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/Cape.res",
+"save_to_file/path": "uid://ulutsig03kor"
+},
+"Knight_Knight_Head": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/Head.res",
+"save_to_file/path": "uid://dc0ihelbo2lbh"
+},
+"Knight_Knight_Helmet": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/Helmet.res",
+"save_to_file/path": "uid://yehftxbgeyv6"
+},
+"Knight_Knight_HelmetVisor": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/MouthCover.res",
+"save_to_file/path": "uid://dtn0wn3pcp4wc"
+},
+"Knight_Knight_LegLeft": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/LegLeft.res",
+"save_to_file/path": "uid://dhmuab1lnpqg0"
+},
+"Knight_Knight_LegRight": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Scenes/Knight_Mash/LegRight.res",
+"save_to_file/path": "uid://bx48u5mpt3p0k"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
