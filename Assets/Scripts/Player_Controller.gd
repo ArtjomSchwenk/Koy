@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var gm: GameManager = GameManager
 @onready var player: CharacterBody3D = $"."
 
-# Pfad muss zu deinem AnimationPlayer passen
+# Pfad passt nur wenn dein Node "Model" heißt und darunter AnimationPlayer liegt
 @onready var anim: AnimationPlayer = $Model/AnimationPlayer
 
 @export_group("Movement")
@@ -22,8 +22,8 @@ extends CharacterBody3D
 @export var snap_back_offset: float = 0.45
 @export var snap_down_offset: float = 0.65
 
-@export var pullup_time: float = 1.4
-@export var pullup_up: float = 0.9
+@export var pullup_time: float = 1.0
+@export var pullup_up: float = 0.5
 @export var pullup_forward: float = 0.5
 
 @export var snap_time: float = 0.08
@@ -59,10 +59,17 @@ var canInteract: bool = false
 
 var jumpTapped: bool = false
 
+# Animations Mapping
+const ANIM_PULLUP: String = "general/pullup"
+const ANIM_IDLE_GROUND: String = "general/idle"
+const ANIM_WALK: String = "walking"
+
+const ANIM_JUMP_START: String = "Jump_Start"
+const ANIM_JUMP_IDLE: String = "Jump_Idle"
+const ANIM_RUN: String = "Running_A"
 
 func _ready() -> void:
 	raycast.add_exception(self)
-
 
 func play_anim(name: String) -> void:
 	if anim == null:
@@ -71,7 +78,6 @@ func play_anim(name: String) -> void:
 		return
 	if anim.has_animation(name):
 		anim.play(name)
-
 
 func _get_grab_data() -> Dictionary:
 	var pairs = [
@@ -92,7 +98,6 @@ func _get_grab_data() -> Dictionary:
 
 	return {"ok": false}
 
-
 func _start_pullup(grab_point: Vector3, grab_normal: Vector3) -> void:
 	isClimbing = true
 	isPullingUp = true
@@ -105,6 +110,8 @@ func _start_pullup(grab_point: Vector3, grab_normal: Vector3) -> void:
 	pullup_mid = grab_point + grab_normal * snap_back_offset + Vector3(0, -snap_down_offset, 0)
 	pullup_to = pullup_mid + Vector3(0, pullup_up, 0) + (-global_transform.basis.z.normalized() * pullup_forward)
 
+	# direkt Pullup Animation starten
+	play_anim(ANIM_PULLUP)
 
 func _physics_process(delta: float) -> void:
 	# Interact Raycast
@@ -158,7 +165,6 @@ func _physics_process(delta: float) -> void:
 					isPullingUp = false
 					isClimbing = false
 					velocity.y = 2.0
-
 	else:
 		# Gravity
 		if not is_on_floor():
@@ -176,7 +182,7 @@ func _physics_process(delta: float) -> void:
 		if jumpTapped and is_on_floor():
 			velocity.y = jump_Velocity
 
-	# Movement
+	# Move
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
@@ -193,22 +199,21 @@ func _physics_process(delta: float) -> void:
 
 	# Animation State
 	if isPullingUp or isClimbing:
-		play_anim("Jump_Start")
+		play_anim(ANIM_PULLUP)
 	elif not is_on_floor():
-		play_anim("Jump_Idle")
+		# wenn du später eine echte Jump Animation hast dann hier ersetzen
+		play_anim(ANIM_JUMP_IDLE)
 	else:
 		var moving: bool = (absf(velocity.x) > 0.1) or (absf(velocity.z) > 0.1)
 		if moving:
 			if isRunning:
-				play_anim("Running_A")
+				play_anim(ANIM_RUN)
 			else:
-				play_anim("Walking_A")
+				play_anim(ANIM_WALK)
 		else:
-			# Idle aus deiner general Library
-			play_anim("general/Idle_A")
+			play_anim(ANIM_IDLE_GROUND)
 
 	jumpTapped = false
-
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -231,7 +236,6 @@ func _unhandled_input(event):
 
 		if event.is_action_pressed("interact"):
 			gm.interactionTrigger.emit(raycast.get_collider())
-
 
 func pauseGame():
 	isPaused = true
