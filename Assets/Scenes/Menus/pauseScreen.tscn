@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs4ei7k4cgooc"]
+[gd_scene load_steps=7 format=3 uid="uid://bs4ei7k4cgooc"]
 
 [ext_resource type="Script" uid="uid://d2dqbx3qwc44c" path="res://Assets/Scenes/Menus/settingsMenu.gd" id="1_hy4pc"]
 [ext_resource type="Theme" uid="uid://nrk1all2j1ku" path="res://Assets/Themes/pauseMenuTheme.tres" id="1_k0bom"]
 [ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="1_w4n8r"]
 [ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="2_iuic6"]
+[ext_resource type="AudioStream" uid="uid://b2mapwkxsf07o" path="res://Assets/Scenes/Audio/ui_click.wav" id="5_vugds"]
+[ext_resource type="AudioStream" uid="uid://ihy0nx7pwnrx" path="res://Assets/Scenes/Audio/ui_Hover.wav" id="6_c25yr"]
 
 [node name="PauseScreen" type="Control"]
 layout_mode = 3
@@ -74,6 +76,16 @@ layout_mode = 2
 text = "quit
 "
 
+[node name="UIClickPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vugds")
+volume_db = 14.136
+
+[node name="UIHoverPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_c25yr")
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/quitButton" to="." method="_on_quit_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]

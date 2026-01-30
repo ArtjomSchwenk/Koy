@@ -27,7 +27,20 @@ func cameraCircularMotion():
 	angle += 1 * speed;
 	
 func _on_play_button_pressed() -> void:
+	$UIClickPlayer.play()
 	gm.setGameState(gm.GAME_STATE.PLAY);
 
 func _on_quit_button_pressed() -> void:
+	$UIClickPlayer.play()
 	gm.setGameState(gm.GAME_STATE.QUIT);
+
+func _play_hover() -> void:
+	if $UIHoverPlayer.playing:
+		return
+	$UIHoverPlayer.play()
+
+func _on_play_button_mouse_entered() -> void:
+	_play_hover()
+
+func _on_quit_button_mouse_entered() -> void:
+	_play_hover()

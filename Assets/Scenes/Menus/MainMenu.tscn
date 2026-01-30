@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://db20u4owrygdr"]
+[gd_scene load_steps=7 format=3 uid="uid://db20u4owrygdr"]
 
 [ext_resource type="PackedScene" uid="uid://couh7uhw2rnod" path="res://Assets/Scenes/Menus/MainMenuBG_Test.tscn" id="1_4fq6n"]
 [ext_resource type="Script" uid="uid://cq6aydqejncbx" path="res://Assets/Scripts/Menu/MainMenu.gd" id="1_dvmkf"]
 [ext_resource type="FontFile" uid="uid://c8s6bb0hhh008" path="res://Assets/Fonts/nexa-rust/NexaRustHandmade-Extended.otf" id="1_q0tfb"]
 [ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="2_dvmkf"]
+[ext_resource type="AudioStream" uid="uid://b2mapwkxsf07o" path="res://Assets/Scenes/Audio/ui_click.wav" id="5_u7rcv"]
+[ext_resource type="AudioStream" uid="uid://ihy0nx7pwnrx" path="res://Assets/Scenes/Audio/ui_Hover.wav" id="6_8x1ma"]
 
 [node name="MainMenuGUI" type="CanvasLayer"]
 script = ExtResource("1_dvmkf")
@@ -90,5 +92,14 @@ size_flags_horizontal = 0
 text = "Quit
 "
 
+[node name="UIClickPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_u7rcv")
+volume_db = 14.136
+
+[node name="UIHoverPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8x1ma")
+
+[connection signal="mouse_entered" from="Menu/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
