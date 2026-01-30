@@ -246,7 +246,7 @@ transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.2, 0.70000005)
 transform = Transform3D(-1.2, 0, 8.742278e-08, 0, 1, 0, -1.04907336e-07, 0, -1, 1, 3.2, -9.200001)
 
 [node name="Roof" parent="." instance=ExtResource("12_exrgq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000002, -0.8000002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000002, -0.07281852)
 
 [node name="Long table" parent="." instance=ExtResource("13_g84g1")]
 transform = Transform3D(-3.4969112e-08, 0, -0.8, 0, 1, 0, 0.8, 0, -3.4969112e-08, -1.4, 0, 1.5999999)

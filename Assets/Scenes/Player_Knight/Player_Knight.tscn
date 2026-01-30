@@ -8,7 +8,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oal63"]
 radius = 0.40283203
-height = 2.62334
+height = 2.4137206
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_wjn1u"]
 length = 0.5
@@ -26,7 +26,7 @@ visible = false
 mesh = SubResource("BoxMesh_n55er")
 
 [node name="playerCollider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1794434, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0746337, 0)
 shape = SubResource("CapsuleShape3D_oal63")
 
 [node name="cameraGimbal" type="Node3D" parent="."]

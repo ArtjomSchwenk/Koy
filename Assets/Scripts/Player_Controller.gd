@@ -22,9 +22,9 @@ extends CharacterBody3D
 @export var snap_back_offset: float = 0.45
 @export var snap_down_offset: float = 0.65
 
-@export var pullup_time: float = 2.0
-@export var pullup_up: float = 1.2
-@export var pullup_forward: float = 0.6
+@export var pullup_time: float = 1.4
+@export var pullup_up: float = 0.9
+@export var pullup_forward: float = 0.5
 
 @export var snap_time: float = 0.08
 
