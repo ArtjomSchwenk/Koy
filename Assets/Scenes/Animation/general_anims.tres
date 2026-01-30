@@ -1,4 +1,7 @@
-[gd_resource type="AnimationLibrary" load_steps=16 format=3 uid="uid://cpo4yawpj7hcv"]
+[gd_resource type="AnimationLibrary" load_steps=18 format=3 uid="uid://cpo4yawpj7hcv"]
+
+[ext_resource type="Animation" uid="uid://dsio705qx631u" path="res://Assets/Character/pullup.res" id="1_i34so"]
+[ext_resource type="Animation" uid="uid://beiddvkbg780k" path="res://Assets/Character/idle.res" id="2_rix13"]
 
 [sub_resource type="Animation" id="Animation_ah4rr"]
 resource_name = "Death_A"
@@ -5746,5 +5749,7 @@ _data = {
 &"Spawn_Ground": SubResource("Animation_kkky5"),
 &"T-Pose": SubResource("Animation_gl7b6"),
 &"Throw": SubResource("Animation_cyojq"),
-&"Use_Item": SubResource("Animation_s7voi")
+&"Use_Item": SubResource("Animation_s7voi"),
+&"idle": ExtResource("2_rix13"),
+&"pullup": ExtResource("1_i34so")
 }
