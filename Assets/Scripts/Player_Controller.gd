@@ -138,6 +138,8 @@ func _move_towards(target: Vector3, delta: float) -> void:
 	velocity = Vector3.ZERO
 
 func _physics_process(delta: float) -> void:
+	isRunning = Input.is_key_pressed(run_Keybind)
+
 	# Interact Check
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
@@ -266,26 +268,28 @@ func _unhandled_input(event):
 		rotation_degrees.y -= event.screen_relative.x * camera_sensitivity
 		cameraGimbal.rotation_degrees.x -= event.screen_relative.y * camera_sensitivity
 		cameraGimbal.rotation_degrees.x = clamp(cameraGimbal.rotation_degrees.x, -30.0, 20.0)
+		
 
-	if event is InputEventKey:
-		if event.keycode == run_Keybind:
-			isRunning = event.pressed
-
-		if event.keycode == KEY_R and event.pressed:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_R:
 			GameManager.respawn_at_checkpoint()
+
+
 
 		if event.keycode == jump_Keybind and event.pressed:
 			jumpTapped = true
 
+		if event.keycode == run_Keybind:
+			isRunning = event.pressed
+
 		if event.keycode == debug_fly_toggle_key and event.pressed:
 			debug_flying = !debug_flying
 
-		if event.keycode == KEY_ESCAPE and event.pressed:
+		if event.keycode == KEY_ESCAPE:
 			pauseGame()
 
-	if event.is_action_pressed("interact"):
-		gm.interactionTrigger.emit(raycast.get_collider())
-
+		if event.is_action_pressed("interact"):
+			gm.interactionTrigger.emit(raycast.get_collider())
 
 func pauseGame():
 	isPaused = true
