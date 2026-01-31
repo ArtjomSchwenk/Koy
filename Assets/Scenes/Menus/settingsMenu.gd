@@ -27,6 +27,7 @@ func _on_settings_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	_play_click()
+	GameManager.save_run()
 	gm.setGameState(gm.GAME_STATE.START) # zurück ins Main Menu
 
 

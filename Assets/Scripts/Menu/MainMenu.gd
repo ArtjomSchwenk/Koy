@@ -13,6 +13,7 @@ extends CanvasLayer
 
 func _ready() -> void:
 	MusicManager.play_menu()
+	GameManager.load_run()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -29,7 +30,8 @@ func cameraCircularMotion():
 	
 func _on_play_button_pressed() -> void:
 	$UIClickPlayer.play()
-	gm.setGameState(gm.GAME_STATE.PLAY);
+	GameManager.load_run()
+	gm.setGameState(gm.GAME_STATE.PLAY)
 
 func _on_quit_button_pressed() -> void:
 	$UIClickPlayer.play()
