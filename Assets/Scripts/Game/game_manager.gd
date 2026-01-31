@@ -35,6 +35,10 @@ var world_scene: PackedScene = null
 # Checkpoint Array ID
 var collected_checkpoint_ids: Array[String] = []
 
+# possition nach checkpoint
+var last_checkpoint_yaw: float = 0.0
+
+
 
 
 signal loadingDone

@@ -1,0 +1,134 @@
+[gd_scene load_steps=23 format=3 uid="uid://q2vag27cbj2t"]
+
+[ext_resource type="PackedScene" uid="uid://2sx67puyybe0" path="res://Assets/Scenes/Furniture mit Collisions/chest.tscn" id="1_voouq"]
+[ext_resource type="PackedScene" uid="uid://i2gl1ficb0rx" path="res://Assets/Scenes/Furniture mit Collisions/stuhl.tscn" id="2_3c6sm"]
+[ext_resource type="PackedScene" uid="uid://br7e8vux3d47k" path="res://Assets/Scenes/Furniture mit Collisions/table_2_Ohne etwas.tscn" id="3_x1fy0"]
+[ext_resource type="PackedScene" uid="uid://dwwuq1pln0hm6" path="res://Assets/Scenes/Furniture mit Collisions/table_barrel_collision.tscn" id="4_yv6d2"]
+[ext_resource type="PackedScene" uid="uid://druywn8deer6s" path="res://Assets/Scenes/Furniture mit Collisions/table_Collision.tscn" id="5_u07lt"]
+[ext_resource type="PackedScene" uid="uid://p8pcnhlpfx7x" path="res://Assets/Scenes/Furniture mit Collisions/teller.tscn" id="6_xddbc"]
+[ext_resource type="PackedScene" uid="uid://dvuso77tbtrux" path="res://Assets/Scenes/Furniture mit Collisions/bed_mit_collision.tscn" id="7_oo2v1"]
+[ext_resource type="PackedScene" uid="uid://cs7rlhenn6tn0" path="res://Assets/Scenes/Furniture mit Collisions/mehrere_teller.tscn" id="8_5qxuw"]
+[ext_resource type="PackedScene" uid="uid://c41o5x7usldn1" path="res://Assets/Scenes/Furniture mit Collisions/stair_wood_2.tscn" id="9_62odd"]
+[ext_resource type="PackedScene" uid="uid://bh3nvbscdhc3y" path="res://Assets/Scenes/Furniture mit Collisions/roof_wooden.tscn" id="10_o4yto"]
+[ext_resource type="PackedScene" uid="uid://dlt5uwld67j0t" path="res://Assets/Scenes/Furniture mit Collisions/metall_stangen.tscn" id="11_moiuw"]
+[ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_groß.tscn" id="12_nw1o6"]
+[ext_resource type="PackedScene" uid="uid://bxu66et0rcb68" path="res://Assets/Scenes/Furniture mit Collisions/floor_gitter.tscn" id="13_lhr3b"]
+[ext_resource type="PackedScene" uid="uid://bkiwju1qv6nua" path="res://Assets/Scenes/Furniture mit Collisions/balcony_straight.tscn" id="14_rwr42"]
+[ext_resource type="PackedScene" uid="uid://ceyyimoacf5se" path="res://Assets/Scenes/Furniture mit Collisions/floor.tscn" id="15_4b2bl"]
+[ext_resource type="PackedScene" uid="uid://issw50mva5tg" path="res://Assets/Scenes/Furniture mit Collisions/box.tscn" id="16_xux4l"]
+[ext_resource type="PackedScene" uid="uid://bndsda6m4w0oc" path="res://Assets/Scenes/Furniture mit Collisions/bannane.tscn" id="17_c62ag"]
+[ext_resource type="PackedScene" uid="uid://c2pt76ug0cu87" path="res://Assets/Scenes/Furniture mit Collisions/corn.tscn" id="18_a4psl"]
+[ext_resource type="PackedScene" uid="uid://dfqhwxymoi7w6" path="res://Assets/Scenes/Furniture mit Collisions/lemon.tscn" id="19_k5dlw"]
+[ext_resource type="PackedScene" uid="uid://oc8bjgdop6ov" path="res://Assets/Scenes/Furniture mit Collisions/carrot.tscn" id="20_bejgq"]
+[ext_resource type="PackedScene" uid="uid://d4kvh3goq8m3h" path="res://Assets/Scenes/Furniture mit Collisions/door.tscn" id="21_6401b"]
+[ext_resource type="PackedScene" uid="uid://pxlmr48ubdpy" path="res://Assets/Scenes/Checkpoint/checkpoint.tscn" id="22_w3ujo"]
+
+[node name="Parkour" type="Node3D"]
+
+[node name="chest" parent="." instance=ExtResource("1_voouq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.75726, 32.10849, -175.4385)
+
+[node name="stuhl" parent="." instance=ExtResource("2_3c6sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.63862, 55.902477, -158.11205)
+
+[node name="Table_Leer" parent="." instance=ExtResource("3_x1fy0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.25423, 39.39006, -169.61214)
+
+[node name="Table_Barrel_Collision" parent="." instance=ExtResource("4_yv6d2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.749756, 40.472115, -176.42343)
+
+[node name="Table" parent="." instance=ExtResource("5_u07lt")]
+transform = Transform3D(0.8280799, 0.17098455, 0.53389883, 0, 0.95235324, -0.30499727, -0.5606101, 0.2525621, 0.7886246, -97.00477, 42.757366, -181.8343)
+
+[node name="teller" parent="." instance=ExtResource("6_xddbc")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -100.62586, 45.353546, -184.31229)
+
+[node name="chest2" parent="." instance=ExtResource("1_voouq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.75757, 44.969624, -186.6749)
+
+[node name="bed mit collision" parent="." instance=ExtResource("7_oo2v1")]
+transform = Transform3D(0.20634085, 0.2857859, -0.9358151, 0, 0.9563966, 0.29207125, 0.97848016, -0.06026623, 0.19734368, -109.26439, 46.885246, -185.4297)
+
+[node name="mehrere Teller" parent="." instance=ExtResource("8_5qxuw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.25356, 48.688026, -182.39366)
+
+[node name="stuhl2" parent="." instance=ExtResource("2_3c6sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.746506, 49.796734, -179.47221)
+
+[node name="Table2" parent="." instance=ExtResource("5_u07lt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.24206, 50.190434, -171.68536)
+
+[node name="Stair_Wood" parent="." instance=ExtResource("9_62odd")]
+transform = Transform3D(-0.8347134, 0, -0.5506847, 0, 1, 0, 0.5506847, 0, -0.8347134, -111.28559, 51.18011, -161.58134)
+
+[node name="Roof Wooden" parent="." instance=ExtResource("10_o4yto")]
+transform = Transform3D(-0.5312655, 0, -0.84720534, 0, 1, 0, 0.84720534, 0, -0.5312655, -102.74546, 57.025215, -156.05185)
+
+[node name="Metall_Stangen" parent="." instance=ExtResource("11_moiuw")]
+transform = Transform3D(0.9552422, 0.20800816, 0.21034472, 0, 0.71104497, -0.7031465, -0.29582477, 0.67167526, 0.6792202, -101.17668, 58.55854, -151.45131)
+
+[node name="Floor_Groß" parent="." instance=ExtResource("12_nw1o6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.01743, 61.243668, -138.24988)
+
+[node name="Floor_Gitter" parent="." instance=ExtResource("13_lhr3b")]
+transform = Transform3D(1, 0, 0, 0, 0.9844511, 0.17565882, 0, -0.17565882, 0.9844511, -94.98805, 66.13085, -126.298035)
+
+[node name="Table_Leer2" parent="." instance=ExtResource("3_x1fy0")]
+transform = Transform3D(1, 0, 0, 0, 0.9965395, 0.0831213, 0, -0.0831213, 0.9965395, -93.279755, 67.71889, -119.06942)
+
+[node name="Balcony_Straight" parent="." instance=ExtResource("14_rwr42")]
+transform = Transform3D(-0.06423618, 0, -0.9979347, 0, 1, 0, 0.9979347, 0, -0.06423618, -94.38958, 69.16515, -111.70354)
+
+[node name="Floor" parent="." instance=ExtResource("15_4b2bl")]
+transform = Transform3D(0.87153065, -0.49034104, 0, 0.49034104, 0.87153065, 0, 0, 0, 1, -90.43972, 71.66671, -111.4655)
+
+[node name="Floor2" parent="." instance=ExtResource("15_4b2bl")]
+transform = Transform3D(1, 0, 0, 0, 0.867644, 0.497186, 0, -0.497186, 0.867644, -98.109146, 63.39511, -132.3337)
+
+[node name="Box" parent="." instance=ExtResource("16_xux4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.939995, 72.00659, -110.95332)
+
+[node name="bed mit collision2" parent="." instance=ExtResource("7_oo2v1")]
+transform = Transform3D(-0.022334915, -0.23897415, -0.97076917, -0.0054967287, 0.97102594, -0.2389109, 0.99973553, 0, -0.023001356, -81.78694, 73.789696, -110.13354)
+
+[node name="Box2" parent="." instance=ExtResource("16_xux4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.219635, 74.71158, -114.156334)
+
+[node name="Stair_Wood2" parent="." instance=ExtResource("9_62odd")]
+transform = Transform3D(1, 0, 0, 0, 0.99997264, 0.0074000955, 0, -0.0074000955, 0.99997264, -78.506744, 75.67159, -124.135895)
+
+[node name="chest3" parent="." instance=ExtResource("1_voouq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.20255, 80.28373, -132.18568)
+
+[node name="mehrere Teller2" parent="." instance=ExtResource("8_5qxuw")]
+transform = Transform3D(4.5785236, -2.0092595, 0, 2.0092595, 4.5785236, 0, 0, 0, 4.9999995, -72.24777, 80.391785, -136.54558)
+
+[node name="Bannane" parent="." instance=ExtResource("17_c62ag")]
+transform = Transform3D(-2.3924751, -6.6129236, 18.722853, -0.838208, 18.875095, 6.5595856, -19.838686, 7.8073626e-08, -2.5350604, -65.964836, 84.57635, -139.21071)
+
+[node name="Corn" parent="." instance=ExtResource("18_a4psl")]
+transform = Transform3D(7.6079392, 5.162396, 17.761446, -15.160955, 12.741989, 2.790563, -10.595505, -14.525546, 8.760353, -60.956715, 85.75059, -145.75772)
+
+[node name="Lemon" parent="." instance=ExtResource("19_k5dlw")]
+transform = Transform3D(3.1164472, 0, 24.804995, 0, 25, 0, -24.804995, 0, 3.1164472, -62.41424, 88.89267, -151.3605)
+
+[node name="Carrot" parent="." instance=ExtResource("20_bejgq")]
+transform = Transform3D(0.7058041, -8.713693, -23.421644, -1.4265444, 23.378729, -8.740712, 24.949282, 1.5832489, 0.16281319, -54.086082, 90.685905, -151.23885)
+
+[node name="Table_Barrel_Collision2" parent="." instance=ExtResource("4_yv6d2")]
+transform = Transform3D(0.9963169, 0, 0.085747324, 0, 1, 0, -0.085747324, 0, 0.9963169, -45.729183, 92.981224, -153.04543)
+
+[node name="Table3" parent="." instance=ExtResource("5_u07lt")]
+transform = Transform3D(0.03747219, -0.13038777, -0.99075466, 0.004927985, 0.99146307, -0.1302946, 0.9992855, 0, 0.03779484, -35.370186, 93.91414, -153.58873)
+
+[node name="Balcony_Straight2" parent="." instance=ExtResource("14_rwr42")]
+transform = Transform3D(0.7840403, 0, -0.62071, 0, 1, 0, 0.62071, 0, 0.7840403, -27.210024, 94.880325, -149.35095)
+
+[node name="Box3" parent="." instance=ExtResource("16_xux4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.196627, 95.73326, -144.33217)
+
+[node name="Door" parent="." instance=ExtResource("21_6401b")]
+transform = Transform3D(-0.7068444, 0.5614326, -0.4303074, -0.0023592177, 0.6064465, 0.7951208, 0.7073651, 0.56304187, -0.42733875, -19.259718, 98.02316, -140.27658)
+
+[node name="Checkpoint" parent="." instance=ExtResource("22_w3ujo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.02186, 61.618565, -138.99458)
