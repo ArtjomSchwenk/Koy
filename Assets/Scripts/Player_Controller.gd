@@ -76,6 +76,7 @@ const ANIM_RUN: String = "Running_A"
 var debug_flying: bool = false
 
 func _ready() -> void:
+	GameManager.register_player(self)
 	raycast.add_exception(self)
 
 func play_anim(name: String) -> void:
@@ -262,8 +263,14 @@ func _unhandled_input(event):
 		rotation_degrees.y -= event.screen_relative.x * camera_sensitivity
 		cameraGimbal.rotation_degrees.x -= event.screen_relative.y * camera_sensitivity
 		cameraGimbal.rotation_degrees.x = clamp(cameraGimbal.rotation_degrees.x, -30.0, 20.0)
+		
 
-	if event is InputEventKey:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_R:
+			GameManager.respawn_at_checkpoint()
+
+
+
 		if event.keycode == jump_Keybind and event.pressed:
 			jumpTapped = true
 

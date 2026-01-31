@@ -42,3 +42,15 @@ func _on_settings_button_mouse_entered() -> void:
 
 func _on_quit_button_mouse_entered() -> void:
 	_play_hover()
+	
+
+func _on_restart_button_pressed() -> void:
+	_play_click()
+	gm.setGameState(gm.GAME_STATE.CONTINUE)  # Pause zu
+	GameManager.restart_run()
+
+
+func _on_lastcheckpoint_button_pressed() -> void:
+	_play_click()
+	gm.setGameState(gm.GAME_STATE.CONTINUE)  # Pause zu
+	GameManager.respawn_at_checkpoint()

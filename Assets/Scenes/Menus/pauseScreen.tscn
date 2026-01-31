@@ -67,6 +67,14 @@ theme_override_constants/margin_top = 36
 layout_mode = 2
 text = "Continue"
 
+[node name="lastcheckpointButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Last Checkpoint"
+
+[node name="restartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
 [node name="settingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "settings"
@@ -86,6 +94,8 @@ volume_db = 4.0
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/lastcheckpointButton" to="." method="_on_lastcheckpoint_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/restartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/quitButton" to="." method="_on_quit_button_mouse_entered"]

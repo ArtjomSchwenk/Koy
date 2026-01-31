@@ -15,6 +15,15 @@ var isLoading: bool;
 var gameOverlay: Control = null;
 var load_progress = [];
 var load_Status: int = 0;
+var last_checkpoint_pos: Vector3 = Vector3.ZERO
+var has_checkpoint: bool = false
+var player_ref: CharacterBody3D = null
+var start_pos: Vector3 = Vector3.ZERO
+var has_start_pos: bool = false
+var checkpoints: Array = []
+
+
+
 
 signal loadingDone
 signal settingsTrigger
@@ -184,3 +193,64 @@ func showAvailableInteraction(args: String):
 	else:
 		promptLabel.text = "'E' to " + args;
 		gameOverlay.show()
+		
+	## Checkpoint	
+func set_checkpoint(pos: Vector3) -> void:
+	last_checkpoint_pos = pos
+	has_checkpoint = true
+	print("Checkpoint set: ", pos)
+	
+func register_player(p: CharacterBody3D) -> void:
+	player_ref = p
+
+	if not has_start_pos:
+		start_pos = p.global_position
+		has_start_pos = true
+
+	# Startpunkt als erster Checkpoint
+	if not has_checkpoint:
+		last_checkpoint_pos = start_pos
+		has_checkpoint = true
+
+	print("Player registered: ", p.name)
+
+func restart_run() -> void:
+	if player_ref == null or not has_start_pos:
+		print("No start pos")
+		return
+
+	# Checkpoints wieder erscheinen lassen
+	reset_all_checkpoints()
+
+	# Gesammelte Checkpoints löschen (Fortschritt reset)
+	last_checkpoint_pos = start_pos
+	has_checkpoint = true
+
+	# Player zurück
+	player_ref.global_position = start_pos
+	player_ref.velocity = Vector3.ZERO
+
+	print("Restarted at start: ", start_pos)
+
+
+	
+func respawn_at_checkpoint() -> void:
+	if not has_checkpoint:
+		print("No checkpoint yet")
+		return
+	if player_ref == null:
+		print("No player registered")
+		return
+
+	player_ref.global_position = last_checkpoint_pos
+	player_ref.velocity = Vector3.ZERO
+	print("Respawned at checkpoint: ", last_checkpoint_pos)
+	
+func register_checkpoint(cp: Node) -> void:
+	if not checkpoints.has(cp):
+		checkpoints.append(cp)
+
+func reset_all_checkpoints() -> void:
+	for cp in checkpoints:
+		if cp and cp.has_method("reset_checkpoint"):
+			cp.reset_checkpoint()
