@@ -2,8 +2,11 @@ extends CharacterBody3D
 
 @onready var gm: GameManager = GameManager
 @onready var player: CharacterBody3D = $"."
-
+#Aniamtion
 @onready var anim: AnimationPlayer = $Model/AnimationPlayer
+#Soundeffect schritte
+@onready var footstep: AudioStreamPlayer3D = $FootstepPlayer
+
 
 @export_group("Movement")
 @export var speed: float = 4.0
@@ -289,3 +292,12 @@ func _unhandled_input(event):
 func pauseGame():
 	isPaused = true
 	gm.setGameState(gm.GAME_STATE.PAUSE)
+	
+func play_footstep() -> void:
+	if footstep == null:
+		return
+	if not is_on_floor():
+		return
+	if isClimbing or isPullingUp:
+		return
+	footstep.play()
