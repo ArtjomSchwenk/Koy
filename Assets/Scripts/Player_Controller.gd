@@ -24,6 +24,7 @@ extends CharacterBody3D
 @export var pullup_up: float = 0.6
 @export var pullup_forward: float = 0.6
 
+# Das ist dein halber Kopf Bonus
 @export var pullup_extra_up: float = 0.25
 
 @export var snap_time: float = 0.08
@@ -68,8 +69,11 @@ const ANIM_JUMP_IDLE: String = "Jump_Idle"
 const ANIM_RUN: String = "Running_A"
 
 @export_group("Debug")
-@export var debug_fly: bool = true
-@export var debug_fly_speed: float = 20.0
+@export var debug_fly_enabled: bool = true
+@export var debug_fly_speed: float = 12.0
+@export var debug_fly_toggle_key: int = KEY_T
+
+var debug_flying: bool = false
 
 func _ready() -> void:
 	raycast.add_exception(self)
@@ -110,11 +114,11 @@ func _start_pullup(grab_point: Vector3, grab_normal: Vector3) -> void:
 	pullup_wall_normal = grab_normal.normalized()
 
 	velocity = Vector3.ZERO
-
 	pullup_from = global_position
 
 	pullup_mid = grab_point + pullup_wall_normal * snap_back_offset + Vector3(0.0, -snap_down_offset, 0.0)
 
+	# pullup_up + pullup_extra_up sorgt fuer den halben Kopf mehr
 	var up_amount := pullup_up + pullup_extra_up
 	pullup_to = pullup_mid + Vector3.UP * up_amount + (-pullup_wall_normal) * pullup_forward
 
@@ -130,6 +134,7 @@ func _move_towards(target: Vector3, delta: float) -> void:
 	velocity = Vector3.ZERO
 
 func _physics_process(delta: float) -> void:
+	# Interact Check
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
 		if target is Interactable:
@@ -138,6 +143,23 @@ func _physics_process(delta: float) -> void:
 	else:
 		canInteract = false
 		gm.interactionAvailable.emit("")
+
+	# Debug Fly Mode (T toggle, F up, G down)
+	if debug_fly_enabled and debug_flying:
+		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		var planar := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+		var y := 0.0
+		if Input.is_key_pressed(KEY_F):
+			y += 1.0
+		if Input.is_key_pressed(KEY_G):
+			y -= 1.0
+
+		velocity = Vector3(planar.x, y, planar.z) * debug_fly_speed
+		move_and_slide()
+
+		jumpTapped = false
+		return
 
 	var can_grab: bool = false
 	var grab_point: Vector3 = Vector3.ZERO
@@ -180,6 +202,7 @@ func _physics_process(delta: float) -> void:
 				velocity = Vector3.DOWN * pullup_end_down_push
 				move_and_slide()
 				velocity = Vector3.ZERO
+
 	else:
 		if not is_on_floor():
 			velocity.y -= gravity_force * delta
@@ -195,8 +218,8 @@ func _physics_process(delta: float) -> void:
 		if jumpTapped and is_on_floor():
 			velocity.y = jump_Velocity
 
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir2 := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	direction = (transform.basis * Vector3(input_dir2.x, 0, input_dir2.y)).normalized()
 
 	var allow_move: bool = true
 	if pullup_lock_input and (isClimbing or isPullingUp):
@@ -232,13 +255,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			play_anim(ANIM_IDLE_GROUND)
 
-	# DEBUG Flug zum Testen
-	if debug_fly:
-		if Input.is_key_pressed(KEY_F):
-			velocity.y = debug_fly_speed
-		elif Input.is_key_pressed(KEY_G):
-			velocity.y = -debug_fly_speed
-
 	jumpTapped = false
 
 func _unhandled_input(event):
@@ -253,6 +269,9 @@ func _unhandled_input(event):
 
 		if event.keycode == run_Keybind:
 			isRunning = event.pressed
+
+		if event.keycode == debug_fly_toggle_key and event.pressed:
+			debug_flying = !debug_flying
 
 		if event.keycode == KEY_ESCAPE:
 			pauseGame()

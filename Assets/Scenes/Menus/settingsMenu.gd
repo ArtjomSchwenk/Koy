@@ -27,7 +27,8 @@ func _on_settings_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	_play_click()
-	gm.setGameState(gm.GAME_STATE.QUIT)
+	gm.setGameState(gm.GAME_STATE.START) # zurück ins Main Menu
+
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:

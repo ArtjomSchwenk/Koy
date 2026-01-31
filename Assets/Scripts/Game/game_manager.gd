@@ -117,8 +117,20 @@ func changeGameState():
 			quitGame();
 			
 func loadMainMenu():
-	isLoading = true;
+	# wichtig: pausieren aufheben sonst bleibt das menu eingefroren
+	get_tree().paused = false
+
+	pauseScreen.hide()
+	settingsScreen.hide()
+	settingsScreenBool = false
+
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+	# optional: wenn du den Lade-Flow nutzen willst
+	isLoading = true
+
 	goto_scene(MAIN_MENU)
+
 	
 		
 func loadGame():
