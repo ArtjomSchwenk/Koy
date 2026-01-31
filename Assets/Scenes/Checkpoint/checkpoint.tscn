@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://pxlmr48ubdpy"]
 
 [ext_resource type="Script" uid="uid://d4n07yvbn3bbg" path="res://Assets/Scenes/Checkpoint/checkpoint.gd" id="1_0i5kf"]
-[ext_resource type="PackedScene" uid="uid://dkwoi45qvukws" path="res://Assets/Character/KayKit_Adventurers_2.0_FREE/Assets/gltf/dagger.gltf" id="1_m54ct"]
+[ext_resource type="PackedScene" uid="uid://btqgncqlu02qs" path="res://Assets/Character/KayKit_Adventurers_2.0_FREE/Assets/gltf/mug_full.gltf" id="2_0i5kf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0i5kf"]
 
@@ -11,7 +11,7 @@ script = ExtResource("1_0i5kf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_0i5kf")
 
-[node name="dagger2" parent="." instance=ExtResource("1_m54ct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.095766306, 0, -0.030816615)
+[node name="mug_full2" parent="." instance=ExtResource("2_0i5kf")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.57627535, 0.14711905, 0.08009289)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

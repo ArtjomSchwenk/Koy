@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://q2vag27cbj2t"]
+[gd_scene load_steps=22 format=3 uid="uid://q2vag27cbj2t"]
 
 [ext_resource type="PackedScene" uid="uid://2sx67puyybe0" path="res://Assets/Scenes/Furniture mit Collisions/chest.tscn" id="1_voouq"]
 [ext_resource type="PackedScene" uid="uid://i2gl1ficb0rx" path="res://Assets/Scenes/Furniture mit Collisions/stuhl.tscn" id="2_3c6sm"]
@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dfqhwxymoi7w6" path="res://Assets/Scenes/Furniture mit Collisions/lemon.tscn" id="19_k5dlw"]
 [ext_resource type="PackedScene" uid="uid://oc8bjgdop6ov" path="res://Assets/Scenes/Furniture mit Collisions/carrot.tscn" id="20_bejgq"]
 [ext_resource type="PackedScene" uid="uid://d4kvh3goq8m3h" path="res://Assets/Scenes/Furniture mit Collisions/door.tscn" id="21_6401b"]
-[ext_resource type="PackedScene" uid="uid://pxlmr48ubdpy" path="res://Assets/Scenes/Checkpoint/checkpoint.tscn" id="22_w3ujo"]
 
 [node name="Parkour" type="Node3D"]
 
@@ -129,6 +128,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.196627, 95.73326, -144.33
 
 [node name="Door" parent="." instance=ExtResource("21_6401b")]
 transform = Transform3D(-0.7068444, 0.5614326, -0.4303074, -0.0023592177, 0.6064465, 0.7951208, 0.7073651, 0.56304187, -0.42733875, -19.259718, 98.02316, -140.27658)
-
-[node name="Checkpoint" parent="." instance=ExtResource("22_w3ujo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.02186, 61.618565, -138.99458)
