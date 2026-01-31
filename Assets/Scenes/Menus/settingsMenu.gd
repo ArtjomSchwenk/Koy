@@ -55,3 +55,11 @@ func _on_lastcheckpoint_button_pressed() -> void:
 	_play_click()
 	gm.setGameState(gm.GAME_STATE.CONTINUE)  # Pause zu
 	GameManager.respawn_at_checkpoint()
+
+
+func _on_lastcheckpoint_button_mouse_entered() -> void:
+	_play_hover()
+
+
+func _on_restart_button_mouse_entered() -> void:
+	_play_hover()

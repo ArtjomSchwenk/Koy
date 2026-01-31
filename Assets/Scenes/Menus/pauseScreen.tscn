@@ -94,7 +94,9 @@ volume_db = 4.0
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/lastcheckpointButton" to="." method="_on_lastcheckpoint_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/lastcheckpointButton" to="." method="_on_lastcheckpoint_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/restartButton" to="." method="_on_restart_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/restartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/settingsButton" to="." method="_on_settings_button_pressed"]
