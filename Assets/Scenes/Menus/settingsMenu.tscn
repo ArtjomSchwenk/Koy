@@ -22,8 +22,6 @@ visibility_layer = 512
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1280.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 1
@@ -61,6 +59,9 @@ text = "Volume"
 
 [node name="volume" type="HSlider" parent="BoxContainer"]
 layout_mode = 2
+max_value = 1.0
+step = 0.01
+page = 0.7
 rounded = true
 tick_count = 100
 ticks_on_borders = true
@@ -113,7 +114,6 @@ theme = ExtResource("2_h4ka2")
 text = "Back"
 
 [connection signal="value_changed" from="BoxContainer/volume" to="." method="_on_volume_value_changed"]
-[connection signal="toggled" from="BoxContainer/volume/MuteButton" to="." method="_on_mute_button_toggled"]
 [connection signal="item_selected" from="BoxContainer/resolutionLabel/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="toggled" from="BoxContainer/FullscreenToggle" to="." method="_on_fullscreen_toggle_toggled"]
 [connection signal="pressed" from="BoxContainer/backButton" to="." method="_on_back_button_pressed"]

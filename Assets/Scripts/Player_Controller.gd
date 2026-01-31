@@ -24,7 +24,6 @@ extends CharacterBody3D
 @export var pullup_up: float = 0.6
 @export var pullup_forward: float = 0.6
 
-# Das ist dein halber Kopf Bonus
 @export var pullup_extra_up: float = 0.25
 
 @export var snap_time: float = 0.08
@@ -67,6 +66,10 @@ const ANIM_IDLE_GROUND: String = "general/idle"
 const ANIM_WALK: String = "walking"
 const ANIM_JUMP_IDLE: String = "Jump_Idle"
 const ANIM_RUN: String = "Running_A"
+
+@export_group("Debug")
+@export var debug_fly: bool = true
+@export var debug_fly_speed: float = 20.0
 
 func _ready() -> void:
 	raycast.add_exception(self)
@@ -112,8 +115,6 @@ func _start_pullup(grab_point: Vector3, grab_normal: Vector3) -> void:
 
 	pullup_mid = grab_point + pullup_wall_normal * snap_back_offset + Vector3(0.0, -snap_down_offset, 0.0)
 
-	# Hier ist der Fix
-	# pullup_up + pullup_extra_up sorgt fuer den halben Kopf mehr
 	var up_amount := pullup_up + pullup_extra_up
 	pullup_to = pullup_mid + Vector3.UP * up_amount + (-pullup_wall_normal) * pullup_forward
 
@@ -179,7 +180,6 @@ func _physics_process(delta: float) -> void:
 				velocity = Vector3.DOWN * pullup_end_down_push
 				move_and_slide()
 				velocity = Vector3.ZERO
-
 	else:
 		if not is_on_floor():
 			velocity.y -= gravity_force * delta
@@ -231,6 +231,13 @@ func _physics_process(delta: float) -> void:
 				play_anim(ANIM_WALK)
 		else:
 			play_anim(ANIM_IDLE_GROUND)
+
+	# DEBUG Flug zum Testen
+	if debug_fly:
+		if Input.is_key_pressed(KEY_F):
+			velocity.y = debug_fly_speed
+		elif Input.is_key_pressed(KEY_G):
+			velocity.y = -debug_fly_speed
 
 	jumpTapped = false
 

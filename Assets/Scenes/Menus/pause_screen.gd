@@ -2,6 +2,11 @@ extends Control
 
 
 var gm: GameManager = GameManager;
+@onready var volume_slider: HSlider = $BoxContainer/volume
+
+func _ready() -> void:
+	var master := 0
+	volume_slider.value = db_to_linear(AudioServer.get_bus_volume_db(master))
 
 func _unhandled_input(event: InputEvent) -> void:
 	if self.is_visible_in_tree():
@@ -13,10 +18,13 @@ func _on_continue_button_pressed() -> void:
 	gm.setGameState(gm.GAME_STATE.CONTINUE);
 
 func _on_volume_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(0, value);
+	var master := 0
+	AudioServer.set_bus_volume_db(master, linear_to_db(max(value, 0.001)))
 
 func _on_mute_button_toggled(toggled_on: bool) -> void:
-	AudioServer.set_bus_mute(0, toggled_on);
+	var master := 0
+	AudioServer.set_bus_mute(master, toggled_on)
+
 	
 func _on_option_button_item_selected(index: int) -> void:
 	var res: Vector2i;

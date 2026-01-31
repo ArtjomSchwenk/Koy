@@ -2,6 +2,7 @@ extends Control
 
 @onready var gm: GameManager = GameManager
 
+
 func _ready() -> void:
 	# Damit UI + Audio auch im Pause Zustand reagiert
 	process_mode = Node.PROCESS_MODE_ALWAYS
