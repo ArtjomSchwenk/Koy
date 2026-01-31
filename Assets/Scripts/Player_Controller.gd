@@ -77,7 +77,6 @@ const ANIM_RUN: String = "Running_A"
 @export var debug_fly_toggle_key: int = KEY_T
 
 var debug_flying: bool = false
-
 func _ready() -> void:
 	GameManager.register_player(self)
 	raycast.add_exception(self)
