@@ -2333,14 +2333,17 @@ color = Color(18.892157, 18.892157, 18.892157, 1)
 transform = Transform3D(1, 1.01868636e-07, 1.05694326e-07, 4.3840417e-11, -0.7202252, 0.6937383, 1.4679443e-07, -0.69373983, -0.72022545, -0.17094503, 0.10383479, 0.07421063)
 stream = ExtResource("12_m4wiw")
 max_db = 1.5
+bus = &"Soundeffekte Schritte"
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Rig_Medium/Skeleton3D/Foot_L" index="2"]
 stream = ExtResource("13_hv3ws")
 max_db = 1.5
+bus = &"Soundeffekte Schritte"
 
 [node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Rig_Medium/Skeleton3D/Foot_L" index="3"]
 stream = ExtResource("14_6exap")
 max_db = 1.5
+bus = &"Soundeffekte Schritte"
 
 [node name="Foot_R" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="16"]
 transform = Transform3D(1, 1.1849052e-06, 1.6879073e-07, -9.956494e-08, 0.22289416, -0.9748429, -1.1927197e-06, 0.9748432, 0.22289225, -0.17094503, -0.2519237, -0.22356102)
@@ -2368,14 +2371,17 @@ scale_amount_curve = SubResource("Curve_nuc1d")
 transform = Transform3D(1, 1.01868636e-07, 1.05694326e-07, 4.3840417e-11, -0.7202252, 0.6937383, 1.4679443e-07, -0.69373983, -0.72022545, -0.17094503, 0.10383479, 0.07421063)
 stream = ExtResource("13_jmkid")
 max_db = 1.35
+bus = &"Soundeffekte Schritte"
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Rig_Medium/Skeleton3D/Foot_R" index="2"]
 stream = ExtResource("16_mrue1")
 max_db = 1.5
+bus = &"Soundeffekte Schritte"
 
 [node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Rig_Medium/Skeleton3D/Foot_R" index="3"]
 stream = ExtResource("17_kgjk4")
 max_db = 1.5
+bus = &"Soundeffekte Schritte"
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
