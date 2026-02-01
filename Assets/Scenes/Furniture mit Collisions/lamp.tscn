@@ -17,6 +17,6 @@ size = Vector3(1, 0.70565796, 0.94369507)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2400444, 0)
 shape = SubResource("CylinderShape3D_5jcvu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90513253, 0.029403687)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.145177, 0.029403687)
 shape = SubResource("BoxShape3D_g1djm")
