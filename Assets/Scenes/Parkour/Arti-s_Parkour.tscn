@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://h70xlx4wxs0w"]
 
-[ext_resource type="PackedScene" uid="uid://bilbuhrwsqgki" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
+[ext_resource type="PackedScene" uid="uid://ccoehygh3ipxp" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
 [ext_resource type="PackedScene" uid="uid://bqyi6ygkqfijo" path="res://Assets/Scenes/Furniture mit Collisions/bomb.tscn" id="2_lk8y1"]
 [ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="3_cm0fb"]
 [ext_resource type="PackedScene" uid="uid://byf7m3ovee33s" path="res://Assets/Scenes/Furniture mit Collisions/armchair.tscn" id="4_liv8q"]

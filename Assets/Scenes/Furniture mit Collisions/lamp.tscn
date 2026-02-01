@@ -1,15 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bilbuhrwsqgki"]
+[gd_scene load_steps=4 format=3 uid="uid://ccoehygh3ipxp"]
 
 [ext_resource type="PackedScene" uid="uid://bvuigeqycxpap" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/lamp_standing.gltf" id="1_g1djm"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5jcvu"]
-height = 2.628418
-radius = 0.1586914
+height = 2.4595947
+radius = 0.28710938
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1djm"]
+size = Vector3(1, 0.70565796, 0.94369507)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
 [node name="lamp_standing2" parent="." instance=ExtResource("1_g1djm")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2623222, 0)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2400444, 0)
+>>>>>>> main
 shape = SubResource("CylinderShape3D_5jcvu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.145177, 0.029403687)
+shape = SubResource("BoxShape3D_g1djm")

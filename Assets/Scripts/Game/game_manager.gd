@@ -38,9 +38,6 @@ var collected_checkpoint_ids: Array[String] = []
 # possition nach checkpoint
 var last_checkpoint_yaw: float = 0.0
 
-
-
-
 signal loadingDone
 signal settingsTrigger
 signal resolutionChange
@@ -52,10 +49,12 @@ enum GAME_STATE { QUIT = -1, START = 0, PLAY = 1, LOAD = 2, PAUSE = 3, CONTINUE 
 static var currentGameState: int
 static var current_Scene: Node = null
 
+
 func _ready() -> void:
 	_setup()
-	load_run() # Save beim Start laden
+	load_run()
 	ResourceLoader.load_threaded_request(GAME_WORLD)
+
 
 func _process(delta: float) -> void:
 	if isLoading:
@@ -64,6 +63,7 @@ func _process(delta: float) -> void:
 			isLoading = false
 			world_scene = ResourceLoader.load_threaded_get(GAME_WORLD)
 			loadingDone.emit()
+
 
 func _setup() -> void:
 	pauseScreen = PAUSE_SCREEN.instantiate()
@@ -88,6 +88,7 @@ func _setup() -> void:
 
 	setGameState(GAME_STATE.START)
 
+
 func _on_settings_trigger() -> void:
 	if not settingsScreenBool:
 		showSettingsMenu()
@@ -96,21 +97,26 @@ func _on_settings_trigger() -> void:
 		hideSettingsMenu()
 		settingsScreenBool = false
 
+
 func _on_resolution_change(res: Vector2i) -> void:
 	var window: Window = get_window()
 	window.size = Vector2i(res)
 	window.move_to_center()
 
+
 func _on_fullscreen_trigger() -> void:
 	fullscreenBool = !fullscreenBool
 	changeDisplayMode()
 
+
 func _on_interaction_available(args: String) -> void:
 	showAvailableInteraction(args)
+
 
 func _on_interaction_trigger(args: Interactable) -> void:
 	if args:
 		args.triggerInteraction.emit()
+
 
 func goto_scene(scene_Resource: PackedScene) -> void:
 	if scene_Resource == null:
@@ -122,14 +128,17 @@ func goto_scene(scene_Resource: PackedScene) -> void:
 func _deferred_goto_scene(scene_Resource: PackedScene) -> void:
 	if current_Scene:
 		current_Scene.free()
+
 	var new_Scene = scene_Resource.instantiate()
 	get_tree().root.add_child(new_Scene)
 	current_Scene = new_Scene
+
 
 func setGameState(State: GAME_STATE) -> void:
 	print("State changed to: " + str(State))
 	currentGameState = State
 	changeGameState()
+
 
 func changeGameState() -> void:
 	match currentGameState:
@@ -146,6 +155,7 @@ func changeGameState() -> void:
 		GAME_STATE.QUIT:
 			quitGame()
 
+
 func loadMainMenu() -> void:
 	get_tree().paused = false
 	pauseScreen.hide()
@@ -153,6 +163,7 @@ func loadMainMenu() -> void:
 	settingsScreenBool = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	goto_scene(MAIN_MENU)
+
 
 func loadGame() -> void:
 	if world_scene == null:
@@ -163,17 +174,15 @@ func loadGame() -> void:
 	goto_scene(world_scene)
 
 
-	var game: PackedScene = ResourceLoader.load_threaded_get(GAME_WORLD)
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	goto_scene(game)
-
 func loadLoadingScreen() -> void:
 	pass
+
 
 func pauseGame() -> void:
 	pauseScreen.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().paused = true
+
 
 func unpauseGame() -> void:
 	pauseScreen.hide()
@@ -181,17 +190,21 @@ func unpauseGame() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	get_tree().paused = false
 
+
 func quitGame() -> void:
 	save_run()
 	get_tree().quit()
+
 
 func showSettingsMenu() -> void:
 	pauseScreen.hide()
 	settingsScreen.show()
 
+
 func hideSettingsMenu() -> void:
 	pauseScreen.show()
 	settingsScreen.hide()
+
 
 func changeDisplayMode() -> void:
 	var window: Window = get_window()
@@ -200,6 +213,7 @@ func changeDisplayMode() -> void:
 	else:
 		window.mode = window.MODE_WINDOWED
 
+
 func showAvailableInteraction(args: String) -> void:
 	var promptLabel: Label = $Prompt
 	if args == "":
@@ -207,6 +221,27 @@ func showAvailableInteraction(args: String) -> void:
 	else:
 		promptLabel.text = "'E' to " + args
 		gameOverlay.show()
+
+
+# -------------------------
+# Spawn Helpers
+# -------------------------
+
+func _get_spawn_point() -> Marker3D:
+	if current_Scene == null:
+		return null
+	return current_Scene.get_node_or_null("SpawnPoint") as Marker3D
+
+
+func _refresh_start_pos_from_scene(fallback_pos: Vector3) -> void:
+	var sp := _get_spawn_point()
+	if sp:
+		start_pos = sp.global_position
+		has_start_pos = true
+	else:
+		start_pos = fallback_pos
+		has_start_pos = true
+
 
 # -------------------------
 # Checkpoints
@@ -218,24 +253,26 @@ func set_checkpoint(pos: Vector3) -> void:
 	save_run()
 	print("Checkpoint set: ", pos)
 
+
 func register_player(p: CharacterBody3D) -> void:
 	player_ref = p
 
-	# Start speichern
-	if not has_start_pos:
-		start_pos = p.global_position
-		has_start_pos = true
+	# Startpos immer aus der Szene holen
+	_refresh_start_pos_from_scene(p.global_position)
 
-	# Falls noch nie ein Checkpoint existiert: Start ist der erste
+	# Wenn noch nie ein Checkpoint existiert dann Start ist der erste
 	if not has_checkpoint:
 		last_checkpoint_pos = start_pos
 		has_checkpoint = true
 
-	# Wenn Save geladen wurde: spawn am letzten Checkpoint
-	player_ref.global_position = last_checkpoint_pos
+	# Spawn Logik
+	# Wenn ein Save Checkpoint existiert dann dort spawnen sonst am Start
+	var spawn_pos := last_checkpoint_pos if has_checkpoint else start_pos
+	player_ref.global_position = spawn_pos
 	player_ref.velocity = Vector3.ZERO
 
 	print("Player registered: ", p.name)
+
 
 func respawn_at_checkpoint() -> void:
 	if not has_checkpoint:
@@ -249,10 +286,14 @@ func respawn_at_checkpoint() -> void:
 	player_ref.velocity = Vector3.ZERO
 	print("Respawned at checkpoint: ", last_checkpoint_pos)
 
+
 func restart_run() -> void:
-	if player_ref == null or not has_start_pos:
-		print("No start pos")
+	if player_ref == null:
+		print("No player registered")
 		return
+
+	# Startpos nochmal aus der Szene holen falls du den SpawnPoint verschoben hast
+	_refresh_start_pos_from_scene(player_ref.global_position)
 
 	# Checkpoints wieder erscheinen lassen
 	reset_all_checkpoints()
@@ -276,10 +317,12 @@ func register_checkpoint(cp: Node) -> void:
 	if not checkpoints.has(cp):
 		checkpoints.append(cp)
 
+
 func reset_all_checkpoints() -> void:
 	for cp in checkpoints:
 		if cp and cp.has_method("reset_checkpoint"):
 			cp.reset_checkpoint()
+
 
 # -------------------------
 # Save Load
@@ -333,7 +376,6 @@ func load_run() -> void:
 	if sp.size() == 3:
 		start_pos = Vector3(float(sp[0]), float(sp[1]), float(sp[2]))
 
-	# HIER rein kommt das:
 	var ids: Array = parsed.get("collected_ids", [])
 	collected_checkpoint_ids.clear()
 	for v in ids:
@@ -347,12 +389,14 @@ func clear_save() -> void:
 		DirAccess.remove_absolute(SAVE_PATH)
 		print("Save deleted")
 
+
 func mark_checkpoint_collected(id: String) -> void:
 	if id == "":
 		return
 	if not collected_checkpoint_ids.has(id):
 		collected_checkpoint_ids.append(id)
 		save_run()
+
 
 func is_checkpoint_collected(id: String) -> bool:
 	if id == "":
