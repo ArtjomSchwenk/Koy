@@ -10,6 +10,6 @@ radius = 0.1586914
 
 [node name="lamp_standing2" parent="." instance=ExtResource("1_g1djm")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="lamp_standing2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2623222, 0)
 shape = SubResource("CylinderShape3D_5jcvu")

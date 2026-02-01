@@ -7,8 +7,8 @@ size = Vector3(0.7318115, 0.30322266, 0.59851074)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
-[node name="pillow_A2" parent="." instance=ExtResource("1_2bnig")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pillow_A2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007507324, -0.0036621094, 0.014587402)
 shape = SubResource("BoxShape3D_33xcm")
+
+[node name="pillow_A2" parent="." instance=ExtResource("1_2bnig")]
