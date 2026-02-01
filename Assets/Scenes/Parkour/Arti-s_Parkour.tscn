@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://h70xlx4wxs0w"]
 
-[ext_resource type="PackedScene" uid="uid://bilbuhrwsqgki" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
+[ext_resource type="PackedScene" uid="uid://ccoehygh3ipxp" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
 [ext_resource type="PackedScene" uid="uid://bqyi6ygkqfijo" path="res://Assets/Scenes/Furniture mit Collisions/bomb.tscn" id="2_lk8y1"]
 [ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="3_cm0fb"]
 [ext_resource type="PackedScene" uid="uid://byf7m3ovee33s" path="res://Assets/Scenes/Furniture mit Collisions/armchair.tscn" id="4_liv8q"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://l1o83eq1lyg3" path="res://Assets/Scenes/Elvevator_Jumppad/jump_pad.tscn" id="20_liv8q"]
 [ext_resource type="PackedScene" uid="uid://drqhwm8kya514" path="res://Assets/Scenes/Elvevator_Jumppad/elevator.tscn" id="21_bnxo8"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Parkour_Arti" type="Node3D"]
 
 [node name="Lamp" parent="." instance=ExtResource("1_y7yx4")]
 transform = Transform3D(-2.1195564, -4.5921917, 0, 4.5921917, -2.1195564, 0, 0, 0, 5.057741, -11.461852, 0.6761675, -17.656212)
@@ -64,7 +64,7 @@ transform = Transform3D(3.4407518, 0.103105664, 1.5345098, 0.18708503, 3.7043726
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.933848, 0, 0)
 
 [node name="Railing" parent="." instance=ExtResource("15_tg4w1")]
-transform = Transform3D(1.1175628, 0.19884281, -2.9683359, -1.4650246, 0.87812495, 0, 2.4457045, 0.4351529, 1.356379, 5.892341, 14.832285, -33.17112)
+transform = Transform3D(0.3122758, 0.055561807, -3.2414708, -0.64652425, 0.9769007, 0.10759964, 2.976777, 0.20634387, 0.36341292, 5.892341, 14.832285, -33.17112)
 
 [node name="Rug" parent="." instance=ExtResource("16_3mpp3")]
 

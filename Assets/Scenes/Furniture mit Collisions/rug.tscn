@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://tq58vwrhq8m0" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/rug_rectangle_stripes_B.gltf" id="1_b045x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u5ft"]
-size = Vector3(3.0526733, 0.19195557, 2.0474854)
+size = Vector3(3.0526733, 0.26296997, 2.0474854)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
 [node name="rug_rectangle_stripes_B2" parent="." instance=ExtResource("1_b045x")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rug_rectangle_stripes_B2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022369385, 0.036956787, 0.0071411133)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022369385, 0.001449585, 0.0071411133)
 shape = SubResource("BoxShape3D_7u5ft")
