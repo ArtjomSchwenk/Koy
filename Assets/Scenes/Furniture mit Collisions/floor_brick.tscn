@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8fctglqhx3a"]
+
+[ext_resource type="PackedScene" uid="uid://bwj4eh0lmgcqq" path="res://Assets/Imports/Medieval buildings/glTF/Floor_RedBrick.gltf" id="1_h80by"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_srptg"]
+size = Vector3(1.9605713, 0.17744446, 2.0173798)
+
+[node name="Floor_Brick" type="StaticBody3D"]
+
+[node name="Floor_RedBrick2" parent="." instance=ExtResource("1_h80by")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10865724, 0, 0.27566242)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09881592, -0.062294006, 0.27703094)
+shape = SubResource("BoxShape3D_srptg")

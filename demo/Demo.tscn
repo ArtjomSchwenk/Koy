@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://chol2xlfbq7cu"]
+[gd_scene load_steps=13 format=3 uid="uid://chol2xlfbq7cu"]
 
 [ext_resource type="Script" uid="uid://chstoagn42gbr" path="res://demo/src/DemoScene.gd" id="1_k7qca"]
 [ext_resource type="PackedScene" uid="uid://d2jihfohphuue" path="res://demo/components/UI.tscn" id="2_nqak5"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bb2lp50sjndus" path="res://demo/components/Environment.tscn" id="3_yqldq"]
 [ext_resource type="PackedScene" uid="uid://d3sr0a7dxfkr8" path="res://addons/terrain_3d/extras/particle_example/Terrain3DParticles.tscn" id="8_fwrtk"]
 [ext_resource type="Terrain3DAssets" uid="uid://dal3jhw6241qg" path="res://demo/data/assets.tres" id="8_g2of2"]
-[ext_resource type="PackedScene" uid="uid://hdsxxwi28ao7" path="res://addons/proto_controller/Player_New.tscn" id="9_egbwy"]
 
 [sub_resource type="Gradient" id="Gradient_vr1m7"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -98,6 +97,3 @@ metadata/_edit_lock_ = true
 
 [node name="Terrain3DParticles" parent="Terrain3D" node_paths=PackedStringArray("terrain") instance=ExtResource("8_fwrtk")]
 terrain = NodePath("..")
-
-[node name="ProtoController" parent="." instance=ExtResource("9_egbwy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4, 28.2, 45)
