@@ -74,7 +74,7 @@ const ANIM_RUN: String = "Running_A"
 @export_group("Debug")
 @export var debug_fly_enabled: bool = true
 @export var debug_fly_speed: float = 12.0
-@export var debug_fly_toggle_key: int = KEY_T
+@export var debug_fly_toggle_key: int = KEY_P
 
 var debug_flying: bool = false
 func _ready() -> void:
@@ -137,6 +137,8 @@ func _move_towards(target: Vector3, delta: float) -> void:
 	velocity = Vector3.ZERO
 
 func _physics_process(delta: float) -> void:
+	isRunning = Input.is_key_pressed(run_Keybind)
+
 	# Interact Check
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
@@ -271,9 +273,7 @@ func _unhandled_input(event):
 		if event.keycode == KEY_R:
 			GameManager.respawn_at_checkpoint()
 
-
-
-		if event.keycode == jump_Keybind and event.pressed:
+		if event.keycode == jump_Keybind and not event.echo:
 			jumpTapped = true
 
 		if event.keycode == run_Keybind:

@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://cauq5t1l3m3w8" path="res://Assets/Imports/Medieval buildings/glTF/Roof_RoundTiles_8x10.gltf" id="1_vephv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vephv"]
-size = Vector3(8.116516, 0.41552734, 11.692932)
+size = Vector3(8.116516, 0.49194336, 11.692932)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i4t8e"]
-size = Vector3(8.116516, 0.41552734, 11.733536)
+size = Vector3(8.116516, 0.5418701, 11.733536)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
@@ -14,9 +14,9 @@ size = Vector3(8.116516, 0.41552734, 11.733536)
 transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 3.2000003, -4.1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.6868972, -0.7267545, 0, 0.7267545, 0.6868972, 0, 0, 0, 1, -2.076027, 5.582847, -4.1058044)
+transform = Transform3D(0.7330535, -0.68017083, 0, 0.68017083, 0.7330535, 0, 0, 0, 1, -2.050039, 5.5548387, -4.1058044)
 shape = SubResource("BoxShape3D_vephv")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.68509394, -0.72845465, 0, 0.72845465, -0.68509394, 0, 0, 0, 1, 3.7731647, 5.582847, -4.0855026)
+transform = Transform3D(-0.7038906, -0.7103082, 0, 0.7103082, -0.7038906, 0, 0, 0, 1, 3.7271473, 5.539569, -4.0855026)
 shape = SubResource("BoxShape3D_i4t8e")
