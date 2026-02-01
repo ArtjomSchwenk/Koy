@@ -276,7 +276,7 @@ func _unhandled_input(event):
 
 
 
-		if event.keycode == jump_Keybind and event.pressed:
+		if event.keycode == jump_Keybind and not event.echo:
 			jumpTapped = true
 
 		if event.keycode == run_Keybind:
