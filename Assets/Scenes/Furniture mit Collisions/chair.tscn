@@ -12,10 +12,10 @@ size = Vector3(0.8129883, 0.8498535, 0.37451172)
 
 [node name="chair_B_wood2" parent="." instance=ExtResource("1_y18tt")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="chair_B_wood2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0073242188, 0.25497437, 0.01083374)
 shape = SubResource("BoxShape3D_mj7bs")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="chair_B_wood2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9770233, 0.2131327, 0, -0.2131327, 0.9770233, 0.0036621094, 0.8952779, -0.27972078)
 shape = SubResource("BoxShape3D_2n30r")
