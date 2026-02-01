@@ -74,7 +74,7 @@ const ANIM_RUN: String = "Running_A"
 @export_group("Debug")
 @export var debug_fly_enabled: bool = true
 @export var debug_fly_speed: float = 12.0
-@export var debug_fly_toggle_key: int = KEY_T
+@export var debug_fly_toggle_key: int = KEY_P
 
 var debug_flying: bool = false
 
@@ -273,8 +273,6 @@ func _unhandled_input(event):
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_R:
 			GameManager.respawn_at_checkpoint()
-
-
 
 		if event.keycode == jump_Keybind and not event.echo:
 			jumpTapped = true

@@ -31,9 +31,14 @@ func _on_quit_button_pressed() -> void:
 	gm.setGameState(gm.GAME_STATE.START) # zurück ins Main Menu
 
 
-func _unhandled_key_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+func _input(event: InputEvent) -> void:
+	if not visible:
+		return
+
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE and not event.echo:
+		accept_event()
 		gm.setGameState(gm.GAME_STATE.CONTINUE)
+
 
 func _on_continue_button_mouse_entered() -> void:
 	_play_hover()
