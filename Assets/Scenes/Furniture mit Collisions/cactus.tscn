@@ -4,7 +4,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_bdmbw"]
 height = 0.9016113
-radius = 0.46923828
+radius = 0.60791016
 
 [node name="StaticBody3D" type="StaticBody3D"]
 

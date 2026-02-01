@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bpgfbucom62iq" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/pillow_A.gltf" id="1_2bnig"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_33xcm"]
-size = Vector3(0.7318115, 0.30322266, 0.59851074)
+size = Vector3(0.81814575, 0.30322266, 0.71725464)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
 [node name="pillow_A2" parent="." instance=ExtResource("1_2bnig")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007507324, -0.0036621094, 0.014587402)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00944519, -0.0036621094, 0.019210815)
 shape = SubResource("BoxShape3D_33xcm")
