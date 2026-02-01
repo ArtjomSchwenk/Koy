@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://clis5jdjvl8u5"]
+
+[ext_resource type="PackedScene" uid="uid://cphfoukyxjoq" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/table_medium_long.gltf" id="1_4pf28"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixjvr"]
+size = Vector3(3.1192017, 0.5073242, 2.0993652)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l3vus"]
+size = Vector3(0.28918457, 1, 0.28955078)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="table_medium_long2" parent="." instance=ExtResource("1_4pf28")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_medium_long2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0038146973, 0.8154777, 0.003540039)
+shape = SubResource("BoxShape3D_ixjvr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="table_medium_long2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3458586, 0.44348556, 0.8652334)
+shape = SubResource("BoxShape3D_l3vus")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="table_medium_long2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3428435, 0.44348556, 0.8652334)
+shape = SubResource("BoxShape3D_l3vus")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="table_medium_long2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3458586, 0.44348556, -0.84957767)
+shape = SubResource("BoxShape3D_l3vus")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="table_medium_long2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3594031, 0.44348556, -0.8569689)
+shape = SubResource("BoxShape3D_l3vus")

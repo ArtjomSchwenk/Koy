@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqyi6ygkqfijo"]
+
+[ext_resource type="PackedScene" uid="uid://buhgcq22xhi4l" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/red/bomb_B_red.gltf" id="1_q5aat"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4ta4b"]
+radius = 0.4390476
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_gclwk"]
+height = 0.40826416
+radius = 0.18603516
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="bomb_B_red2" parent="." instance=ExtResource("1_q5aat")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bomb_B_red2"]
+shape = SubResource("SphereShape3D_4ta4b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="bomb_B_red2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4760437, 0)
+shape = SubResource("CylinderShape3D_gclwk")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://db6ursb5nrrb5"]
+
+[ext_resource type="PackedScene" uid="uid://b7a5ipjsaqh02" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/fbx/red/railing_corner_double_red.fbx" id="1_i4omj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_llb0c"]
+size = Vector3(0.4903623, 1.2669678, 2.0148926)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="railing_corner_double_red" parent="." instance=ExtResource("1_i4omj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="railing_corner_double_red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80613416, 0.6083167, 0.053833008)
+shape = SubResource("BoxShape3D_llb0c")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="railing_corner_double_red"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.04131987, 0.6083167, -0.7953191)
+shape = SubResource("BoxShape3D_llb0c")

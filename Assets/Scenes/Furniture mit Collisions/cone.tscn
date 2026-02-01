@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://s72wjl6g5d3b"]
+
+[ext_resource type="PackedScene" uid="uid://coug082v0cey" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/yellow/cone_yellow.gltf" id="1_6fk4p"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jt8eh"]
+height = 0.5074463
+radius = 0.09423828
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p5tmk"]
+height = 0.2722168
+radius = 0.14257813
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l4lwh"]
+size = Vector3(0.5472412, 0.18408203, 0.5371094)
+
+[node name="Node" type="Node"]
+
+[node name="cone_yellow2" parent="." instance=ExtResource("1_6fk4p")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cone_yellow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40118408, 0)
+shape = SubResource("CylinderShape3D_jt8eh")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="cone_yellow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2793579, 0)
+shape = SubResource("CylinderShape3D_p5tmk")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="cone_yellow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00079345703, 0.071573466, 0)
+shape = SubResource("BoxShape3D_l4lwh")

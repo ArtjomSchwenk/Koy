@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnw8mek8ra7eh"]
+
+[ext_resource type="PackedScene" uid="uid://b0tt81kobl2sj" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/couch_pillows.gltf" id="1_fmkp8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1ycuk"]
+size = Vector3(2.4985352, 0.6993408, 1.3793945)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5cfvo"]
+size = Vector3(0.45214844, 1.1280518, 1.581604)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fqtv4"]
+size = Vector3(2.483429, 1.3156738, 0.48765564)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="couch_pillows2" parent="." instance=ExtResource("1_fmkp8")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="couch_pillows2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 0.24880749, 0.18969727)
+shape = SubResource("BoxShape3D_1ycuk")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="couch_pillows2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3374057, 0.50751144, 0.007171631)
+shape = SubResource("BoxShape3D_5cfvo")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="couch_pillows2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3308992, 0.50751144, 0.007171631)
+shape = SubResource("BoxShape3D_5cfvo")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="couch_pillows2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0035247803, 0.61343765, -0.5506668)
+shape = SubResource("BoxShape3D_fqtv4")

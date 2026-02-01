@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://4owlmj6le740"]
+
+[ext_resource type="PackedScene" uid="uid://c8butiaty6x1s" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/neutral/ball.gltf" id="1_gxfvg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_v6ojk"]
+radius = 1.0279053
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="ball2" parent="." instance=ExtResource("1_gxfvg")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_v6ojk")
