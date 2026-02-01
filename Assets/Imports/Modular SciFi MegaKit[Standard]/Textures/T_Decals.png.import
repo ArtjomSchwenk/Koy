@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qg7tb4gcn10"
-path.s3tc="res://.godot/imported/T_Decals.png-9484197b6c08dbd14c9168761f554c10.s3tc.ctex"
+path.s3tc="res://.godot/imported/T_Decals.png-ca4a77b70b8cbf86c379a764978a1eaa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Imports/Modular SciFi MegaKit[Standard]/textures/T_Decals.png"
-dest_files=["res://.godot/imported/T_Decals.png-9484197b6c08dbd14c9168761f554c10.s3tc.ctex"]
+source_file="res://Assets/Imports/Modular SciFi MegaKit[Standard]/Textures/T_Decals.png"
+dest_files=["res://.godot/imported/T_Decals.png-ca4a77b70b8cbf86c379a764978a1eaa.s3tc.ctex"]
 
 [params]
 

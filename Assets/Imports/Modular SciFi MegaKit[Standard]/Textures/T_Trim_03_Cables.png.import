@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbwyfat7mdlx"
-path.s3tc="res://.godot/imported/T_Trim_03_Cables.png-d48df01887cd59522209f0f446f2fda5.s3tc.ctex"
+path.s3tc="res://.godot/imported/T_Trim_03_Cables.png-e4b135fa55ae308ff4203c2f18e56740.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Imports/Modular SciFi MegaKit[Standard]/textures/T_Trim_03_Cables.png"
-dest_files=["res://.godot/imported/T_Trim_03_Cables.png-d48df01887cd59522209f0f446f2fda5.s3tc.ctex"]
+source_file="res://Assets/Imports/Modular SciFi MegaKit[Standard]/Textures/T_Trim_03_Cables.png"
+dest_files=["res://.godot/imported/T_Trim_03_Cables.png-e4b135fa55ae308ff4203c2f18e56740.s3tc.ctex"]
 
 [params]
 

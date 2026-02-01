@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c62naxkai1b7b"
-path.s3tc="res://.godot/imported/T_Trim_01_BaseColor.png-54418be03d52eda167f51973034e99be.s3tc.ctex"
+path.s3tc="res://.godot/imported/T_Trim_01_BaseColor.png-2481abe278fb58f3d43ba6b6db220817.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Imports/Modular SciFi MegaKit[Standard]/textures/T_Trim_01_BaseColor.png"
-dest_files=["res://.godot/imported/T_Trim_01_BaseColor.png-54418be03d52eda167f51973034e99be.s3tc.ctex"]
+source_file="res://Assets/Imports/Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_BaseColor.png"
+dest_files=["res://.godot/imported/T_Trim_01_BaseColor.png-2481abe278fb58f3d43ba6b6db220817.s3tc.ctex"]
 
 [params]
 
