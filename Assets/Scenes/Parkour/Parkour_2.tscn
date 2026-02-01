@@ -1,5 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://blakoprlweodn"]
-
+[gd_scene load_steps=33 format=3 uid="uid://blakoprlweodn"]
 
 [ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="2_r0v7r"]
 [ext_resource type="PackedScene" uid="uid://ce8fctglqhx3a" path="res://Assets/Scenes/Furniture mit Collisions/floor_brick.tscn" id="3_25aiy"]
@@ -169,7 +168,7 @@ transform = Transform3D(0.71426505, 0, -0.6998753, 0, 1, 0, 0.6998753, 0, 0.7142
 transform = Transform3D(0.67436683, 0, -0.73839647, 0, 1, 0, 0.73839647, 0, 0.67436683, 64.01059, 55.34758, -1.0154495)
 
 [node name="Sprite3D" type="Sprite3D" parent="Abgelegetes gebaude"]
-transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, -0.6, 0, 0.6, -2.6226834e-08, 0.8521082, 0.51026547, -3.421276)
+transform = Transform3D(-0.5973247, 0.034282476, 0.045038804, -0.027066357, 0.24630286, -0.54644525, -0.04971108, -0.54604036, -0.24365796, 1.0470123, 1.2463646, -5.4224777)
 texture = ExtResource("12_6e2os")
 
 [node name="Stair_Wood" parent="." instance=ExtResource("12_pdi7e")]
