@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ryy5nshrkpb"]
+
+[ext_resource type="PackedScene" uid="uid://c23v73yaxyvgi" path="res://Assets/Imports/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/banner_patternA_brown.gltf" id="1_72j1p"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tpqc0"]
+points = PackedVector3Array(-0.74999285, 0.5999072, 0.38056892, -0.6103589, 0.55610824, 0.38056892, -0.74999285, 0.97470164, 0.4733481, -0.74999285, 3.1996918, 0.38056892, 0.37001526, 3.5629106, 0.3776381, 7.390976e-06, 0.53139305, 0.38056892, 0.7500076, 0.97470164, 0.4733481, -0.43768853, 3.576363, 0.6895276, -0.74999285, 3.4499717, 0.5108994, -0.74999285, 3.7274697, 0.5108994, -0.35443673, 3.6282964, 0.38670537, 0.74986076, 3.7274697, 0.5108994, 0.74986076, 3.1996918, 0.38056892, 0.7500076, 1.3998649, 0.38056892, 0.7500076, 0.5999072, 0.38056892, 0.61022687, 0.56611943, 0.38056892, 0.22362727, 0.53139305, 0.38056892, 0.74986076, 3.4499717, 0.5108994, 0.44240177, 3.605771, 0.6846734, -0.36574253, 3.626732, 0.6851313, -0.4385695, 3.662084, 0.67127097, 0.43638182, 3.6830451, 0.64290905)
+
+[node name="Flagge" type="StaticBody3D"]
+
+[node name="banner_patternA_brown2" parent="." instance=ExtResource("1_72j1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14800203, 0, 0.011515856)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.6735634, 0.14800203, 0, -0.3320229)
+shape = SubResource("ConvexPolygonShape3D_tpqc0")
