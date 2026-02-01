@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://drqhwm8kya514"]
+
+[ext_resource type="Script" uid="uid://ukqkiunf6gu4" path="res://Assets/Scenes/Elvevator_Jumppad/elevator.gd" id="1_3mtnw"]
+[ext_resource type="PackedScene" uid="uid://dwk1knoodc5g4" path="res://Assets/Imports/Modular SciFi MegaKit[Standard]/glTF/Aliens/Alien_Oculichrysalis.gltf" id="2_xxsac"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5goth"]
+size = Vector3(1.0725327, 0.43554688, 1.7098389)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mtnw"]
+size = Vector3(0.9447632, 0.78186035, 1.5064697)
+
+[node name="Elevator" type="Node3D"]
+script = ExtResource("1_3mtnw")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16138077, -0.28222656, -0.9258423)
+shape = SubResource("BoxShape3D_5goth")
+
+[node name="Alien_Oculichrysalis2" parent="AnimatableBody3D" instance=ExtResource("2_xxsac")]
+transform = Transform3D(1, 0, 0, 0, 0.050784625, 0.9987096, 0, -0.9987096, 0.050784625, 0.20517415, -0.45572257, -1.0398617)
+
+[node name="Area3D" type="Area3D" parent="AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1556189, -0.109069824, -0.86712646)
+shape = SubResource("BoxShape3D_3mtnw")
