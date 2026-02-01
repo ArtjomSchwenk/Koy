@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://blakoprlweodn"]
+[gd_scene load_steps=15 format=3 uid="uid://blakoprlweodn"]
 
 [ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="2_r0v7r"]
 [ext_resource type="PackedScene" uid="uid://ce8fctglqhx3a" path="res://Assets/Scenes/Furniture mit Collisions/floor_brick.tscn" id="3_25aiy"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://yvnc7npkuotq" path="res://Assets/Scenes/Gebaude_3/abgelegetes_gebaude.tscn" id="11_pdi7e"]
 [ext_resource type="PackedScene" uid="uid://c41o5x7usldn1" path="res://Assets/Scenes/Furniture mit Collisions/stair_wood_2.tscn" id="12_pdi7e"]
 [ext_resource type="PackedScene" uid="uid://bxu66et0rcb68" path="res://Assets/Scenes/Furniture mit Collisions/floor_gitter.tscn" id="13_lmb8p"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="14_xfryl"]
 
 [node name="Parkour2" type="Node3D"]
 
@@ -186,3 +187,6 @@ transform = Transform3D(2.7352645, 0, -1.2322043, 0, 3, 0, 1.2322043, 0, 2.73526
 
 [node name="Elevator3" parent="." instance=ExtResource("4_ry0r0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.27214, 55.98707, -8.852993)
+
+[node name="StaticBody3D" parent="." instance=ExtResource("14_xfryl")]
+transform = Transform3D(1.4616785, 2.762029, 2.4969368, -3.5354545, 1.870979, -5.2682378e-08, -1.167929, -2.2069516, 3.1249492, 90.913925, 74.359314, -37.80788)
