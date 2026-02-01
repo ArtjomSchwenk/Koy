@@ -9,6 +9,6 @@ size = Vector3(3.0526733, 0.19195557, 2.0474854)
 
 [node name="rug_rectangle_stripes_B2" parent="." instance=ExtResource("1_b045x")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rug_rectangle_stripes_B2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022369385, 0.036956787, 0.0071411133)
 shape = SubResource("BoxShape3D_7u5ft")

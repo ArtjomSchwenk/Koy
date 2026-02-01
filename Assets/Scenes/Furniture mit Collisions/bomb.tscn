@@ -13,9 +13,9 @@ radius = 0.18603516
 
 [node name="bomb_B_red2" parent="." instance=ExtResource("1_q5aat")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="bomb_B_red2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_4ta4b")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="bomb_B_red2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4760437, 0)
 shape = SubResource("CylinderShape3D_gclwk")

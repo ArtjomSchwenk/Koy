@@ -12,10 +12,10 @@ size = Vector3(0.7871704, 0.29345703, 1.0153809)
 
 [node name="lever_wall_base_B_blue2" parent="." instance=ExtResource("1_cpqnf")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="lever_wall_base_B_blue2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00015258789, 0.20251465)
 shape = SubResource("BoxShape3D_s8fn7")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="lever_wall_base_B_blue2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047912598, 0.007080078, 0.52404785)
 shape = SubResource("BoxShape3D_2eoyg")

@@ -9,10 +9,10 @@ size = Vector3(0.4903623, 1.2669678, 2.0148926)
 
 [node name="railing_corner_double_red" parent="." instance=ExtResource("1_i4omj")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="railing_corner_double_red"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80613416, 0.6083167, 0.053833008)
 shape = SubResource("BoxShape3D_llb0c")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="railing_corner_double_red"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.04131987, 0.6083167, -0.7953191)
 shape = SubResource("BoxShape3D_llb0c")

@@ -2,20 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://d3e5o45ae8fdl" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/chair_B_wood.gltf" id="1_y18tt"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mj7bs"]
-size = Vector3(0.80566406, 0.6133423, 0.8574829)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_2n30r"]
 size = Vector3(0.8129883, 0.8498535, 0.37451172)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mj7bs"]
+size = Vector3(0.80566406, 0.6133423, 0.8574829)
+
 [node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9770233, 0.2131327, 0, -0.2131327, 0.9770233, 0.0036621094, 0.8952779, -0.27972078)
+shape = SubResource("BoxShape3D_2n30r")
 
 [node name="chair_B_wood2" parent="." instance=ExtResource("1_y18tt")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="chair_B_wood2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0073242188, 0.25497437, 0.01083374)
 shape = SubResource("BoxShape3D_mj7bs")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="chair_B_wood2"]
-transform = Transform3D(1, 0, 0, 0, 0.9770233, 0.2131327, 0, -0.2131327, 0.9770233, 0.0036621094, 0.8952779, -0.27972078)
-shape = SubResource("BoxShape3D_2n30r")

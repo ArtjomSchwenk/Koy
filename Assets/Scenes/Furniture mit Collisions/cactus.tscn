@@ -10,6 +10,6 @@ radius = 0.46923828
 
 [node name="cactus_medium_A2" parent="." instance=ExtResource("1_af533")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="cactus_medium_A2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3843994, 0)
 shape = SubResource("CylinderShape3D_bdmbw")
