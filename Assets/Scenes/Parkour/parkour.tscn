@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://q2vag27cbj2t"]
+[gd_scene load_steps=34 format=3 uid="uid://q2vag27cbj2t"]
 
 [ext_resource type="PackedScene" uid="uid://2sx67puyybe0" path="res://Assets/Scenes/Furniture mit Collisions/chest.tscn" id="1_voouq"]
 [ext_resource type="PackedScene" uid="uid://i2gl1ficb0rx" path="res://Assets/Scenes/Furniture mit Collisions/stuhl.tscn" id="2_3c6sm"]
@@ -22,6 +22,17 @@
 [ext_resource type="PackedScene" uid="uid://oc8bjgdop6ov" path="res://Assets/Scenes/Furniture mit Collisions/carrot.tscn" id="20_bejgq"]
 [ext_resource type="PackedScene" uid="uid://d4kvh3goq8m3h" path="res://Assets/Scenes/Furniture mit Collisions/door.tscn" id="21_6401b"]
 [ext_resource type="PackedScene" uid="uid://drqhwm8kya514" path="res://Assets/Scenes/Elvevator_Jumppad/elevator.tscn" id="22_voouq"]
+[ext_resource type="PackedScene" uid="uid://bpxqf6tnsui1o" path="res://Assets/Scenes/Furniture mit Collisions/book.tscn" id="23_3c6sm"]
+[ext_resource type="PackedScene" uid="uid://bnw8mek8ra7eh" path="res://Assets/Scenes/Furniture mit Collisions/couch.tscn" id="24_yv6d2"]
+[ext_resource type="PackedScene" uid="uid://db6ursb5nrrb5" path="res://Assets/Scenes/Furniture mit Collisions/railing.tscn" id="25_u07lt"]
+[ext_resource type="PackedScene" uid="uid://mos0ewqk1cic" path="res://Assets/Scenes/Furniture mit Collisions/schornstein.tscn" id="26_62odd"]
+[ext_resource type="PackedScene" uid="uid://bvohbg6l62pbe" path="res://Assets/Scenes/Furniture mit Collisions/pipe.tscn" id="27_o4yto"]
+[ext_resource type="PackedScene" uid="uid://c7oyjdjmvceg7" path="res://Assets/Scenes/Furniture mit Collisions/torch.tscn" id="28_moiuw"]
+[ext_resource type="PackedScene" uid="uid://emha2i0ogyuc" path="res://Assets/Scenes/Furniture mit Collisions/wall_stein.tscn" id="29_nw1o6"]
+[ext_resource type="PackedScene" uid="uid://ocxda0kp0v7i" path="res://Assets/Scenes/Furniture mit Collisions/pictureframe.tscn" id="30_lhr3b"]
+[ext_resource type="PackedScene" uid="uid://qqp46hxmyx3c" path="res://Assets/Scenes/Furniture mit Collisions/cabinet.tscn" id="31_nw1o6"]
+[ext_resource type="PackedScene" uid="uid://s72wjl6g5d3b" path="res://Assets/Scenes/Furniture mit Collisions/cone.tscn" id="32_lhr3b"]
+[ext_resource type="PackedScene" uid="uid://gv7oo67dmrv5" path="res://Assets/Scenes/Furniture mit Collisions/door_frame.tscn" id="33_rwr42"]
 
 [node name="Parkour" type="Node3D"]
 
@@ -112,6 +123,9 @@ transform = Transform3D(7.6079392, 5.162396, 17.761446, -15.160955, 12.741989, 2
 [node name="Lemon" parent="." instance=ExtResource("19_k5dlw")]
 transform = Transform3D(3.1164472, 0, 24.804995, 0, 25, 0, -24.804995, 0, 3.1164472, -62.41424, 88.89267, -151.3605)
 
+[node name="Lemon" parent="Lemon" instance=ExtResource("19_k5dlw")]
+transform = Transform3D(0.12465789, 0, 0.9921998, 0, 1, 0, -0.9921998, 0, 0.12465789, 0.45343515, -1.7993597, -1.3073287)
+
 [node name="Carrot" parent="." instance=ExtResource("20_bejgq")]
 transform = Transform3D(0.7058041, -8.713693, -23.421644, -1.4265444, 23.378729, -8.740712, 24.949282, 1.5832489, 0.16281319, -54.086082, 90.685905, -151.23885)
 
@@ -132,3 +146,51 @@ transform = Transform3D(-0.7068444, 0.5614326, -0.4303074, -0.0023592177, 0.6064
 
 [node name="Elevator" parent="." instance=ExtResource("22_voouq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.17281, 62.203053, -135.6827)
+
+[node name="Floor_Gitter2" parent="." instance=ExtResource("13_lhr3b")]
+transform = Transform3D(1, 0, 0, 0, 0.938288, 0.34585506, 0, -0.34585506, 0.938288, -98.33228, 49.14911, -187.54553)
+
+[node name="StaticBody3D" parent="." instance=ExtResource("23_3c6sm")]
+transform = Transform3D(0.9339667, -0.21887073, 0.28249213, 0.22816394, 0.97362274, 0, -0.27504078, 0.06445452, 0.9592696, -112.49332, 48.06411, -180.42471)
+
+[node name="StaticBody3D2" parent="." instance=ExtResource("24_yv6d2")]
+transform = Transform3D(0.6578486, -0.53031284, 0.53479296, -0.7531502, -0.46320847, 0.4671217, 0, -0.7100748, -0.70412624, -115.277084, 58.99002, -173.07788)
+
+[node name="Metall_Stangen2" parent="." instance=ExtResource("11_moiuw")]
+transform = Transform3D(0.9355674, 0.35314828, 0, -0.30532873, 0.80888283, -0.5024768, -0.17744882, 0.4701009, 0.8645907, -107.374435, 50.466633, -159.82591)
+
+[node name="StaticBody3D3" parent="." instance=ExtResource("25_u07lt")]
+transform = Transform3D(1, 0, 0, 0, -0.7171417, -0.69692737, 0, 0.69692737, -0.7171417, -111.40563, 46.86401, -171.62238)
+
+[node name="Schornstein" parent="." instance=ExtResource("26_62odd")]
+transform = Transform3D(0.88240623, 0.21143602, 0.42030236, -0.47048834, 0.39655066, 0.7882819, 0, -0.8933322, 0.44939694, -108.07445, 60.34648, -149.40091)
+
+[node name="stuhl3" parent="." instance=ExtResource("2_3c6sm")]
+transform = Transform3D(-0.05395358, 0.9761725, -0.21018153, -0.6630195, 0.12236948, 0.7385329, 0.74665534, 0.17920096, 0.6406191, -91.49852, 65.16197, -124.01723)
+
+[node name="StaticBody3D4" parent="." instance=ExtResource("27_o4yto")]
+transform = Transform3D(0.84471613, 0.42617884, 0.32376882, -0.4504413, 0.89280605, 0, -0.28906277, -0.14583886, 0.94613624, -97.10995, 70.16647, -110.142395)
+
+[node name="torch" parent="." instance=ExtResource("28_moiuw")]
+transform = Transform3D(-0.77315325, -0.63038373, -0.06964578, 0.5177824, -0.5639776, -0.64329684, 0.3662452, -0.53342843, 0.7624425, -84.61765, 75.41025, -113.3301)
+
+[node name="Wall_Stein" parent="." instance=ExtResource("29_nw1o6")]
+transform = Transform3D(0.7714689, -0.13901055, -0.6208961, 0.6305117, 0.29798123, 0.7167023, 0.08538625, -0.94439566, 0.31753105, -81.88112, 75.5743, -131.95782)
+
+[node name="StaticBody3D5" parent="." instance=ExtResource("30_lhr3b")]
+transform = Transform3D(0.7714859, -0.17881167, -0.6106026, -0.42339325, 0.5720697, -0.70247746, 0.47491837, 0.80047655, 0.3656361, -69.90949, 85.47909, -134.3232)
+
+[node name="Door2" parent="." instance=ExtResource("21_6401b")]
+transform = Transform3D(0.9174495, -0.3978526, 0, 0.33499593, 0.77250177, -0.53946173, 0.2146262, 0.49492878, 0.84201014, -65.9061, 82.9711, -147.7409)
+
+[node name="StaticBody3D6" parent="." instance=ExtResource("31_nw1o6")]
+transform = Transform3D(-0.98458314, -0.15730242, -0.07649875, 0.022569714, 0.31943867, -0.9473381, 0.1734553, -0.9344597, -0.31096357, -52.787758, 96.42008, -151.6222)
+
+[node name="Node" parent="." instance=ExtResource("32_lhr3b")]
+transform = Transform3D(0.9125146, -0.40413448, -0.06318631, 0.38163826, 0.78556603, 0.48707125, -0.14720525, -0.4685739, 0.87107366, -42.687355, 95.694954, -156.29663)
+
+[node name="Door_Frame" parent="." instance=ExtResource("33_rwr42")]
+transform = Transform3D(0.84818935, -0.52892447, -0.028527588, 0.41678858, 0.6331907, 0.6521938, -0.3268979, -0.5650737, 0.7575152, -28.95231, 98.17176, -148.33011)
+
+[node name="Floor_Gitter3" parent="." instance=ExtResource("13_lhr3b")]
+transform = Transform3D(0.15406926, 0.11146794, 0.06194801, -0.12752514, 0.13466978, 0.07484237, 0, -0.097154185, 0.1748172, -22.737528, 95.537285, -140.96127)

@@ -13,7 +13,7 @@ radius = 0.14257813
 [sub_resource type="BoxShape3D" id="BoxShape3D_l4lwh"]
 size = Vector3(0.5472412, 0.18408203, 0.5371094)
 
-[node name="Node" type="Node"]
+[node name="StaticBody3D" type="StaticBody3D"]
 
 [node name="cone_yellow2" parent="." instance=ExtResource("1_6fk4p")]
 
