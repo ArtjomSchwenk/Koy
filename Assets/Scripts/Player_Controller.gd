@@ -34,6 +34,7 @@ extends CharacterBody3D
 @export var pullup_end_down_push: float = 2.0
 @export var pullup_lock_input: bool = true
 
+
 var isPullingUp: bool = false
 var pullup_t: float = 0.0
 var pullup_from: Vector3 = Vector3.ZERO
