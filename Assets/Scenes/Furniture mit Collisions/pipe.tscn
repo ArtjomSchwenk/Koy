@@ -2,15 +2,50 @@
 
 [ext_resource type="PackedScene" uid="uid://m1kiareg0skl" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/fbx/green/pipe_straight_A_green.fbx" id="1_ky0u3"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_kpnmp"]
-height = 2.2404785
-radius = 1.0864258
+[sub_resource type="BoxShape3D" id="BoxShape3D_ky0u3"]
+size = Vector3(0.9213867, 2.0634346, 0.19824219)
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
 [node name="pipe_straight_A_green" parent="." instance=ExtResource("1_ky0u3")]
 transform = Transform3D(1, 0, 0, 0, 2.1383035, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pipe_straight_A_green"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0091553, 0)
-shape = SubResource("CylinderShape3D_kpnmp")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.1383035, 0, 0, 0, 1, 0.008493423, 2.152252, -0.8507652)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8455602, 0, -0.5338802, 0, 2.1383035, 0, 0.5338802, 0, 0.8455602, 0.5925702, 2.152252, -0.62363636)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3204312, 0, -0.9472718, 0, 2.1383035, 0, 0.9472718, 0, 0.3204312, 0.87032676, 2.152252, -0.06579512)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.38086057, 0, -0.92463255, 0, 2.1383035, 0, 0.92463255, 0, -0.38086057, 0.7953665, 2.152252, 0.41013032)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.85494816, 0, -0.5187136, 0, 2.1383035, 0, 0.5187136, 0, -0.85494816, 0.35320893, 2.152252, 0.8007526)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.97037596, 0, 0.24160013, 0, 2.1383035, 0, -0.24160013, 0, -0.97037596, -0.21198821, 2.152252, 0.82159615)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.7408866, 0, 0.67163014, 0, 2.1383035, 0, -0.67163014, 0, -0.7408866, -0.7093541, 2.152252, 0.5047059)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.18299049, 0, 0.9831147, 0, 2.1383035, 0, -0.9831147, 0, -0.18299049, -0.87841624, 2.152252, 0.021347683)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.32541972, 0, 0.9455697, 0, 2.1383035, 0, -0.9455697, 0, 0.32541972, -0.7615705, 2.152252, -0.4255033)
+shape = SubResource("BoxShape3D_ky0u3")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8118799, 0, 0.58382463, 0, 2.1383035, 0, -0.58382463, 0, 0.8118799, -0.46926385, 2.1136653, -0.74053717)
+shape = SubResource("BoxShape3D_ky0u3")
