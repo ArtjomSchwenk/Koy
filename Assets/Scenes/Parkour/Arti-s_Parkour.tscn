@@ -1,6 +1,6 @@
-[gd_scene load_steps=33 format=3 uid="uid://h70xlx4wxs0w"]
+[gd_scene load_steps=32 format=3 uid="uid://h70xlx4wxs0w"]
 
-[ext_resource type="PackedScene" uid="uid://bilbuhrwsqgki" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
+[ext_resource type="PackedScene" uid="uid://ccoehygh3ipxp" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
 [ext_resource type="PackedScene" uid="uid://bqyi6ygkqfijo" path="res://Assets/Scenes/Furniture mit Collisions/bomb.tscn" id="2_lk8y1"]
 [ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="3_cm0fb"]
 [ext_resource type="PackedScene" uid="uid://byf7m3ovee33s" path="res://Assets/Scenes/Furniture mit Collisions/armchair.tscn" id="4_liv8q"]
@@ -18,12 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://bf10ug22wf6hr" path="res://Assets/Scenes/Furniture mit Collisions/single_bed.tscn" id="17_ujntm"]
 [ext_resource type="PackedScene" uid="uid://clis5jdjvl8u5" path="res://Assets/Scenes/Furniture mit Collisions/table.tscn" id="18_hmdhq"]
 [ext_resource type="PackedScene" uid="uid://l1o83eq1lyg3" path="res://Assets/Scenes/Elvevator_Jumppad/jump_pad.tscn" id="20_liv8q"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/Furniture mit Collisions/floor_brick.tscn" id="20_tg4w1"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/Furniture mit Collisions/flagge.tscn" id="21_3mpp3"]
+[ext_resource type="PackedScene" uid="uid://ce8fctglqhx3a" path="res://Assets/Scenes/Furniture mit Collisions/floor_brick.tscn" id="20_tg4w1"]
+[ext_resource type="PackedScene" uid="uid://b8ryy5nshrkpb" path="res://Assets/Scenes/Furniture mit Collisions/flagge.tscn" id="21_3mpp3"]
 [ext_resource type="PackedScene" uid="uid://drqhwm8kya514" path="res://Assets/Scenes/Elvevator_Jumppad/elevator.tscn" id="21_bnxo8"]
 [ext_resource type="PackedScene" uid="uid://i2gl1ficb0rx" path="res://Assets/Scenes/Furniture mit Collisions/stuhl.tscn" id="22_ujntm"]
 [ext_resource type="PackedScene" uid="uid://d0t658wv3d0mx" path="res://Assets/Scenes/Furniture mit Collisions/traube.tscn" id="23_hmdhq"]
-[ext_resource type="PackedScene" uid="uid://cvn00xl5w5dad" path="res://Assets/Scenes/Furniture mit Collisions/Barrel_Colliusion_Rigit.tscn" id="24_0fgee"]
 [ext_resource type="PackedScene" uid="uid://c7oyjdjmvceg7" path="res://Assets/Scenes/Furniture mit Collisions/torch.tscn" id="25_kqp5s"]
 [ext_resource type="PackedScene" uid="uid://s72wjl6g5d3b" path="res://Assets/Scenes/Furniture mit Collisions/cone.tscn" id="26_1hw0y"]
 [ext_resource type="PackedScene" uid="uid://2sx67puyybe0" path="res://Assets/Scenes/Furniture mit Collisions/chest.tscn" id="27_8l36x"]
@@ -118,9 +117,6 @@ transform = Transform3D(0.99175775, -0.10889733, -0.067512155, 0.11144839, 0.993
 
 [node name="Traube" parent="." instance=ExtResource("23_hmdhq")]
 transform = Transform3D(31.51454, 0, 0, 0, 19.198362, 24.991785, 0, -24.991785, 19.198362, 0.4642501, 29.955761, -31.04597)
-
-[node name="RigidBody3D" parent="." instance=ExtResource("24_0fgee")]
-transform = Transform3D(0.61909395, -0.78531694, 0, 0.78531694, 0.61909395, 0, 0, 0, 1, 8.50922, 34.589165, -34.40509)
 
 [node name="torch" parent="." instance=ExtResource("25_kqp5s")]
 transform = Transform3D(2.7006145, 1.3064005, -3.893377e-08, -1.0977335, 2.2692542, 1.6264889, 0.708282, -1.4641731, 2.5208201, 17.951006, 39.98014, -36.787884)
