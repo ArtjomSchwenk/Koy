@@ -1,5 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://blakoprlweodn"]
 
+
 [ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="2_r0v7r"]
 [ext_resource type="PackedScene" uid="uid://ce8fctglqhx3a" path="res://Assets/Scenes/Furniture mit Collisions/floor_brick.tscn" id="3_25aiy"]
 [ext_resource type="PackedScene" uid="uid://bkiwju1qv6nua" path="res://Assets/Scenes/Furniture mit Collisions/balcony_straight.tscn" id="3_jh1gp"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dfqhwxymoi7w6" path="res://Assets/Scenes/Furniture mit Collisions/lemon.tscn" id="9_hbn4x"]
 [ext_resource type="PackedScene" uid="uid://ctrapwk3eseps" path="res://Assets/Scenes/Furniture mit Collisions/long_table.tscn" id="10_wignv"]
 [ext_resource type="PackedScene" uid="uid://yvnc7npkuotq" path="res://Assets/Scenes/Gebaude_3/abgelegetes_gebaude.tscn" id="11_pdi7e"]
+[ext_resource type="Texture2D" uid="uid://cwxjbm0j84vcu" path="res://Assets/Texture/cat2.jpg" id="12_6e2os"]
 [ext_resource type="PackedScene" uid="uid://c41o5x7usldn1" path="res://Assets/Scenes/Furniture mit Collisions/stair_wood_2.tscn" id="12_pdi7e"]
 [ext_resource type="PackedScene" uid="uid://bxu66et0rcb68" path="res://Assets/Scenes/Furniture mit Collisions/floor_gitter.tscn" id="13_lmb8p"]
 [ext_resource type="PackedScene" uid="uid://br2lcu07g2h34" path="res://Assets/Scenes/Furniture mit Collisions/lever.tscn" id="14_xfryl"]
@@ -165,6 +167,10 @@ transform = Transform3D(0.71426505, 0, -0.6998753, 0, 1, 0, 0.6998753, 0, 0.7142
 
 [node name="Abgelegetes gebaude" parent="." instance=ExtResource("11_pdi7e")]
 transform = Transform3D(0.67436683, 0, -0.73839647, 0, 1, 0, 0.73839647, 0, 0.67436683, 64.01059, 55.34758, -1.0154495)
+
+[node name="Sprite3D" type="Sprite3D" parent="Abgelegetes gebaude"]
+transform = Transform3D(0.6, 0, 0, 0, -2.6226834e-08, -0.6, 0, 0.6, -2.6226834e-08, 0.8521082, 0.51026547, -3.421276)
+texture = ExtResource("12_6e2os")
 
 [node name="Stair_Wood" parent="." instance=ExtResource("12_pdi7e")]
 transform = Transform3D(0.89452904, 0, -0.44700986, 0, 1, 0, 0.44700986, 0, 0.89452904, 75.37878, 65.43627, -17.405872)
