@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://pcg1qme7adq1"]
+[gd_scene load_steps=4 format=3 uid="uid://pcg1qme7adq1"]
 
 [ext_resource type="PackedScene" uid="uid://dn81w3jrrdgx6" path="res://Assets/Imports/Furniture/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/floor_tile_extralarge_grates_open.gltf" id="1_aimwr"]
+[ext_resource type="PackedScene" uid="uid://pxlmr48ubdpy" path="res://Assets/Scenes/Checkpoint/checkpoint.tscn" id="2_5pd47"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aimwr"]
 size = Vector3(7.838379, 1.1759644, 7.814575)
 
-[node name="Floor_Groß" type="StaticBody3D"]
+[node name="Floor_Checkpoint" type="StaticBody3D"]
 
 [node name="floor_tile_extralarge_grates_open2" parent="." instance=ExtResource("1_aimwr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06980789, 1.1920929e-07, -0.7454829)
@@ -13,3 +14,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06980789, 1.1920929e-07, -0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091552734, -0.5470886, -0.6810913)
 shape = SubResource("BoxShape3D_aimwr")
+
+[node name="Checkpoint" parent="." instance=ExtResource("2_5pd47")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47699475, 0.3714672, -0.9442375)

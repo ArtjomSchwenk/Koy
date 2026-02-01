@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c41o5x7usldn1" path="res://Assets/Scenes/Furniture mit Collisions/stair_wood_2.tscn" id="9_62odd"]
 [ext_resource type="PackedScene" uid="uid://bh3nvbscdhc3y" path="res://Assets/Scenes/Furniture mit Collisions/roof_wooden.tscn" id="10_o4yto"]
 [ext_resource type="PackedScene" uid="uid://dlt5uwld67j0t" path="res://Assets/Scenes/Furniture mit Collisions/metall_stangen.tscn" id="11_moiuw"]
-[ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_groß.tscn" id="12_nw1o6"]
+[ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="12_nw1o6"]
 [ext_resource type="PackedScene" uid="uid://bxu66et0rcb68" path="res://Assets/Scenes/Furniture mit Collisions/floor_gitter.tscn" id="13_lhr3b"]
 [ext_resource type="PackedScene" uid="uid://bkiwju1qv6nua" path="res://Assets/Scenes/Furniture mit Collisions/balcony_straight.tscn" id="14_rwr42"]
 [ext_resource type="PackedScene" uid="uid://ceyyimoacf5se" path="res://Assets/Scenes/Furniture mit Collisions/floor.tscn" id="15_4b2bl"]
