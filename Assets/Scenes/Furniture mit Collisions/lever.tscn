@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://br2lcu07g2h34"]
+
+[ext_resource type="PackedScene" uid="uid://b8so5rn315oe3" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/blue/lever_wall_base_B_blue.gltf" id="1_cpqnf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s8fn7"]
+size = Vector3(1, 1.2670288, 0.49389648)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2eoyg"]
+size = Vector3(0.7871704, 0.29345703, 1.0153809)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="lever_wall_base_B_blue2" parent="." instance=ExtResource("1_cpqnf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lever_wall_base_B_blue2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00015258789, 0.20251465)
+shape = SubResource("BoxShape3D_s8fn7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="lever_wall_base_B_blue2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047912598, 0.007080078, 0.52404785)
+shape = SubResource("BoxShape3D_2eoyg")

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c8st2g4328leo"]
 
-[ext_resource type="Shader" path="res://addons/SunshineVolumetricClouds/RayMarchedCloudsPost.gdshader" id="1_vmhg5"]
+[ext_resource type="Shader" uid="uid://bwqwcasph6ov5" path="res://addons/SunshineVolumetricClouds/RayMarchedCloudsPost.gdshader" id="1_vmhg5"]
 
 [resource]
 render_priority = 0

@@ -1,3 +1,65 @@
-[gd_scene format=3 uid="uid://h70xlx4wxs0w"]
+[gd_scene load_steps=20 format=3 uid="uid://h70xlx4wxs0w"]
+
+[ext_resource type="PackedScene" uid="uid://bilbuhrwsqgki" path="res://Assets/Scenes/Furniture mit Collisions/lamp.tscn" id="1_y7yx4"]
+[ext_resource type="PackedScene" uid="uid://bqyi6ygkqfijo" path="res://Assets/Scenes/Furniture mit Collisions/bomb.tscn" id="2_lk8y1"]
+[ext_resource type="PackedScene" uid="uid://pcg1qme7adq1" path="res://Assets/Scenes/Furniture mit Collisions/floor_Checkpoint.tscn" id="3_cm0fb"]
+[ext_resource type="PackedScene" uid="uid://byf7m3ovee33s" path="res://Assets/Scenes/Furniture mit Collisions/armchair.tscn" id="4_liv8q"]
+[ext_resource type="PackedScene" uid="uid://4owlmj6le740" path="res://Assets/Scenes/Furniture mit Collisions/ball.tscn" id="5_bnxo8"]
+[ext_resource type="PackedScene" uid="uid://bpxqf6tnsui1o" path="res://Assets/Scenes/Furniture mit Collisions/book.tscn" id="6_urqu7"]
+[ext_resource type="PackedScene" uid="uid://qqp46hxmyx3c" path="res://Assets/Scenes/Furniture mit Collisions/cabinet.tscn" id="7_m7lba"]
+[ext_resource type="PackedScene" uid="uid://buaclc3dpidw6" path="res://Assets/Scenes/Furniture mit Collisions/cactus.tscn" id="8_lf2r3"]
+[ext_resource type="PackedScene" uid="uid://c6jibhunbyqap" path="res://Assets/Scenes/Furniture mit Collisions/chair.tscn" id="9_3bj3x"]
+[ext_resource type="PackedScene" uid="uid://bnw8mek8ra7eh" path="res://Assets/Scenes/Furniture mit Collisions/couch.tscn" id="10_0mqm2"]
+[ext_resource type="PackedScene" uid="uid://br2lcu07g2h34" path="res://Assets/Scenes/Furniture mit Collisions/lever.tscn" id="11_2s445"]
+[ext_resource type="PackedScene" uid="uid://ocxda0kp0v7i" path="res://Assets/Scenes/Furniture mit Collisions/pictureframe.tscn" id="12_8kni0"]
+[ext_resource type="PackedScene" uid="uid://fpygbbalmb03" path="res://Assets/Scenes/Furniture mit Collisions/pillow.tscn" id="13_itbsv"]
+[ext_resource type="PackedScene" uid="uid://bvohbg6l62pbe" path="res://Assets/Scenes/Furniture mit Collisions/pipe.tscn" id="14_o32hx"]
+[ext_resource type="PackedScene" uid="uid://db6ursb5nrrb5" path="res://Assets/Scenes/Furniture mit Collisions/railing.tscn" id="15_tg4w1"]
+[ext_resource type="PackedScene" uid="uid://dr2pe565wjfj5" path="res://Assets/Scenes/Furniture mit Collisions/rug.tscn" id="16_3mpp3"]
+[ext_resource type="PackedScene" uid="uid://bf10ug22wf6hr" path="res://Assets/Scenes/Furniture mit Collisions/single_bed.tscn" id="17_ujntm"]
+[ext_resource type="PackedScene" uid="uid://clis5jdjvl8u5" path="res://Assets/Scenes/Furniture mit Collisions/table.tscn" id="18_hmdhq"]
+[ext_resource type="PackedScene" uid="uid://6xvwayvefitg" path="res://Assets/Scenes/Furniture mit Collisions/double_bed.tscn" id="19_lk8y1"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Lamp" parent="." instance=ExtResource("1_y7yx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5634317, 0, 0)
+
+[node name="Bomb" parent="." instance=ExtResource("2_lk8y1")]
+
+[node name="Floor_Checkpoint" parent="." instance=ExtResource("3_cm0fb")]
+transform = Transform3D(1, 0, 0, 0, 0.94745624, -0.3198855, 0, 0.3198855, 0.94745624, -0.97336984, 0, 1.4588649)
+
+[node name="Armchair" parent="." instance=ExtResource("4_liv8q")]
+
+[node name="Ball" parent="." instance=ExtResource("5_bnxo8")]
+
+[node name="Book" parent="." instance=ExtResource("6_urqu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1288767, 0, 0)
+
+[node name="Cabinet" parent="." instance=ExtResource("7_m7lba")]
+
+[node name="Cactus" parent="." instance=ExtResource("8_lf2r3")]
+
+[node name="Chair" parent="." instance=ExtResource("9_3bj3x")]
+
+[node name="Sofa" parent="." instance=ExtResource("10_0mqm2")]
+
+[node name="lever" parent="." instance=ExtResource("11_2s445")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0130484, 0, 0)
+
+[node name="Pictureframe" parent="." instance=ExtResource("12_8kni0")]
+
+[node name="Pillow" parent="." instance=ExtResource("13_itbsv")]
+
+[node name="Pipe" parent="." instance=ExtResource("14_o32hx")]
+
+[node name="Railing" parent="." instance=ExtResource("15_tg4w1")]
+
+[node name="Rug" parent="." instance=ExtResource("16_3mpp3")]
+
+[node name="Single_bed" parent="." instance=ExtResource("17_ujntm")]
+
+[node name="Table" parent="." instance=ExtResource("18_hmdhq")]
+
+[node name="Double_bed" parent="." instance=ExtResource("19_lk8y1")]

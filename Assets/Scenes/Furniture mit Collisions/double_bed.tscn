@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://6xvwayvefitg"]
+
+[ext_resource type="PackedScene" uid="uid://m0gynbueq2du" path="res://Assets/Imports/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/bed_double_B.gltf" id="1_bwhin"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmn85"]
+size = Vector3(3.192871, 0.6234741, 2.49115)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_df3kg"]
+size = Vector3(3.0967407, 1.1356812, 0.4360962)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0ike"]
+size = Vector3(3.0823975, 1.1875, 0.4128418)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="bed_double_B2" parent="." instance=ExtResource("1_bwhin")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bed_double_B2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010986328, 0.27216303, 0.007232666)
+shape = SubResource("BoxShape3D_vmn85")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="bed_double_B2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0074157715, 0.5261089, 1.3453064)
+shape = SubResource("BoxShape3D_df3kg")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="bed_double_B2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014831543, 0.5076698, -1.334692)
+shape = SubResource("BoxShape3D_s0ike")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvohbg6l62pbe"]
+
+[ext_resource type="PackedScene" uid="uid://m1kiareg0skl" path="res://Assets/Imports/KayKit_Platformer_Pack_1.0_FREE/Assets/fbx/green/pipe_straight_A_green.fbx" id="1_ky0u3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kpnmp"]
+height = 2.2404785
+radius = 1.0864258
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="pipe_straight_A_green" parent="." instance=ExtResource("1_ky0u3")]
+transform = Transform3D(1, 0, 0, 0, 2.1383035, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pipe_straight_A_green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0091553, 0)
+shape = SubResource("CylinderShape3D_kpnmp")
