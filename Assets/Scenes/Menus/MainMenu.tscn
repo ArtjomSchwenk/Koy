@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://db20u4owrygdr"]
+[gd_scene load_steps=11 format=3 uid="uid://db20u4owrygdr"]
 
 [ext_resource type="PackedScene" uid="uid://couh7uhw2rnod" path="res://Assets/Scenes/Menus/MainMenuBG_Test.tscn" id="1_4fq6n"]
 [ext_resource type="Script" uid="uid://cq6aydqejncbx" path="res://Assets/Scripts/Menu/MainMenu.gd" id="1_dvmkf"]
@@ -6,6 +6,28 @@
 [ext_resource type="Theme" uid="uid://bxn7g65qx5rk1" path="res://Assets/Themes/MenuTheme.tres" id="2_dvmkf"]
 [ext_resource type="AudioStream" uid="uid://b2mapwkxsf07o" path="res://Assets/Scenes/Audio/ui_click.wav" id="5_u7rcv"]
 [ext_resource type="AudioStream" uid="uid://ihy0nx7pwnrx" path="res://Assets/Scenes/Audio/ui_Hover.wav" id="6_8x1ma"]
+[ext_resource type="PackedScene" uid="uid://byjn5yc1m1okl" path="res://addons/SunshineVolumetricClouds/CloudsPrefab.tscn" id="7_1m06p"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2aydw"]
+
+[sub_resource type="Sky" id="Sky_v3s75"]
+sky_material = SubResource("ProceduralSkyMaterial_2aydw")
+
+[sub_resource type="Environment" id="Environment_ix5wv"]
+background_mode = 2
+sky = SubResource("Sky_v3s75")
+ambient_light_color = Color(0.29803923, 0.38431373, 0.45882353, 1)
+tonemap_mode = 3
+tonemap_white = 1.5
+ssao_enabled = true
+glow_enabled = true
+glow_intensity = 6.68
+fog_enabled = true
+fog_density = 0.0001
+fog_aerial_perspective = 0.353
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.7
 
 [node name="MainMenuGUI" type="CanvasLayer"]
 script = ExtResource("1_dvmkf")
@@ -99,6 +121,30 @@ volume_db = 14.136
 [node name="UIHoverPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_8x1ma")
 volume_db = 4.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.7017438, 0.47276026, -0.5329666, -0.21556295, 0.8539306, 0.47364044, 0.6790348, -0.2174863, 0.70115, 373.23236, 343.59888, 0)
+light_color = Color(1, 0.9647059, 0.9098039, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_bias = 0.2
+shadow_normal_bias = 1.0
+shadow_opacity = 0.7
+shadow_blur = 2.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ix5wv")
+
+[node name="CloudsSystem" parent="." node_paths=PackedStringArray("sunLight", "worldEnvironment") instance=ExtResource("7_1m06p")]
+sunLight = NodePath("../DirectionalLight3D")
+worldEnvironment = NodePath("../WorldEnvironment")
+windSpeed = 0.009
+cloudsCutoff = 0.8
+cloudsFloor = 150.0
+globalCloudScale = 4000.0
+baseNoiseScale = 1.2
+sunColorDefault = Color(0.4, 0.38588235, 0.36392158, 0.4)
+fogColorDefault = Color(0.518, 0.553, 0.608, 1)
 
 [connection signal="mouse_entered" from="Menu/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
