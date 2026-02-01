@@ -9,6 +9,6 @@ size = Vector3(2.1361694, 1.2788086, 0.30297852)
 
 [node name="pictureframe_large_B2" parent="." instance=ExtResource("1_15a4k")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pictureframe_large_B2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015258789, -0.0036621094, 0.11071777)
 shape = SubResource("BoxShape3D_m6khx")

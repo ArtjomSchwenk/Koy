@@ -9,6 +9,6 @@ size = Vector3(0.31243896, 0.54052734, 0.41687012)
 
 [node name="book_single2" parent="." instance=ExtResource("1_e6ki8")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="book_single2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0047912598, -0.0007324219, 0.007751465)
 shape = SubResource("BoxShape3D_ydcl1")
